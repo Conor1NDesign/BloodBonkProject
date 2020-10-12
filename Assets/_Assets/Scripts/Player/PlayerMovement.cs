@@ -6,7 +6,9 @@ public class PlayerMovement : MonoBehaviour
 {
     public Transform mainCam;
     public float moveSpeed = 5f;
+    public float dashSpeed = 10f;
 
+    float actualSpeed;
 
     void FixedUpdate()
     {
@@ -30,7 +32,21 @@ public class PlayerMovement : MonoBehaviour
         camF = camF.normalized;
         camR = camR.normalized;
 
-        transform.position += (camF * input.y + camR * input.x) * moveSpeed * Time.fixedDeltaTime;
+        Dashing();
+
+        transform.position += (camF * input.y + camR * input.x) * actualSpeed * Time.fixedDeltaTime;
+    }
+
+    private void Dashing()
+    {
+        if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.LeftShift))
+        {
+            actualSpeed = dashSpeed;
+        }
+        else
+        {
+            actualSpeed = moveSpeed;
+        }
     }
 
     private void LookDirection()
