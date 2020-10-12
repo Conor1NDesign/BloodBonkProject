@@ -41,7 +41,6 @@ public class PlayerMovement : MonoBehaviour
         float angle = Mathf.Atan2(Input.mousePosition.x - posOnScreen.x, Input.mousePosition.y - posOnScreen.y) * Mathf.Rad2Deg;
         // Apply rotation
         transform.rotation = Quaternion.AngleAxis(angle + WrapAngle(mainCam.eulerAngles.y), Vector3.up);
-        Debug.Log(angle + WrapAngle(mainCam.eulerAngles.y));
     }
 
     private static float WrapAngle(float angle)
