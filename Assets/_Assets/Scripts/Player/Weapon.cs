@@ -14,13 +14,12 @@ public class Weapon : MonoBehaviour
 
     void Attack()
     {
-        EnableWeapon();
+        transform.GetComponent<Renderer>().enabled = true;
         animator.Play("Attack");
     }
 
-    private void EnableWeapon()
+    public void EnableWeapon()
     {
-        transform.GetComponent<Renderer>().enabled = true;
         transform.GetComponent<BoxCollider>().enabled = true;
     }
 
