@@ -1,8 +1,12 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class EnemySpawnPoint : MonoBehaviour
 {
-    [SerializeField]GameObject enemyPrefab;
+    [SerializeField]List<GameObject> spawnPoints = new List<GameObject>();
+
+    [SerializeField]GameObject akashitaPrefab;
+    [SerializeField]GameObject shutenDojiPrefab;
 
     void FixedUpdate()
     {
@@ -15,6 +19,8 @@ public class EnemySpawnPoint : MonoBehaviour
 
     void SpawnEnemy()
     {
-        Instantiate(enemyPrefab, transform.position + Vector3.up, Quaternion.identity);
+        GameObject spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
+        Instantiate(Random.Range(0, 2) == 0 ? shutenDojiPrefab : akashitaPrefab,
+            spawnPoint.transform.position + Vector3.up, Quaternion.identity);
     }
 }
