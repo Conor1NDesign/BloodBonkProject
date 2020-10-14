@@ -797,8 +797,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a9707ecf0239d40b0f3d113fd33b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mat: {fileID: 2100000, guid: 14265cd6ae442dd489bccd9073780c54, type: 2}
+  redMat: {fileID: 2100000, guid: 14265cd6ae442dd489bccd9073780c54, type: 2}
   defaultMat: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  colourChangeDelay: 0.2
 --- !u!1 &1249987474
 GameObject:
   m_ObjectHideFlags: 0
