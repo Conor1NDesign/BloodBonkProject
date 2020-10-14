@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WeaponDetect : MonoBehaviour
 {
+    public Score score;
+
     public Material redMat;
     public Material defaultMat;
 
@@ -12,12 +14,13 @@ public class WeaponDetect : MonoBehaviour
 
     bool colourChangeCollision = false;
 
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Weapon"))
         {
+            score.UpdateScore();
             colourChangeCollision = true;
-            Debug.Log("Test");
             currentDelay = Time.time + colourChangeDelay;
         }
     }
