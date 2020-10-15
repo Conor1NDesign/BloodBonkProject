@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawnPoint : MonoBehaviour
@@ -13,14 +13,20 @@ public class EnemySpawnPoint : MonoBehaviour
         // Temp debugging spawn key
         if (Input.GetKeyDown(KeyCode.Backslash))
         {
-            SpawnEnemy();
+            SpawnWave();
         }
     }
 
-    void SpawnEnemy()
+    void SpawnWave()
     {
-        GameObject spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
-        Instantiate(Random.Range(0, 2) == 0 ? shutenDojiPrefab : akashitaPrefab,
-            spawnPoint.transform.position + Vector3.up, Quaternion.identity);
+        foreach(GameObject spawnPoint in spawnPoints)
+        {
+            SpawnEnemy(spawnPoint, Random.Range(0, 2) == 0 ? shutenDojiPrefab : akashitaPrefab);
+        }
+    }
+
+    void SpawnEnemy(GameObject spawnPoint, GameObject enemyPrefab)
+    {
+        Instantiate(enemyPrefab, spawnPoint.transform.position + Vector3.up, Quaternion.identity);
     }
 }
