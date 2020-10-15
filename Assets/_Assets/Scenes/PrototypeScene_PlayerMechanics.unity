@@ -162,7 +162,7 @@ Camera:
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
-  m_FOVAxisMode: 0
+  m_FOVAxisMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
   m_FocalLength: 50
@@ -174,7 +174,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 58.715508
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -199,8 +199,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307597283}
-  m_LocalRotation: {x: -0.174354, y: 0.820086, z: -0.32907912, w: -0.43447283}
-  m_LocalPosition: {x: 4.277216, y: 4.2339916, z: 1.9754491}
+  m_LocalRotation: {x: 0.16801287, y: -0.81902575, z: 0.29935667, w: 0.4597327}
+  m_LocalPosition: {x: 4.964698, y: 4.754573, z: 2.3893862}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 626205204}
-  smoothSpeed: 0.125
+  smoothSpeed: 1
 --- !u!1 &626205203
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,7 +278,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 626205203}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.43, y: 0.942, z: -0.37}
+  m_LocalPosition: {x: 0.75, y: 0.942, z: -0.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 944206328}
@@ -1119,7 +1119,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189249064}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.291, y: 0.81, z: 1.9}
+  m_LocalPosition: {x: -0.05, y: 0.81, z: 1.34}
   m_LocalScale: {x: 1.0955551, y: 1.0955551, z: 1.0955551}
   m_Children: []
   m_Father: {fileID: 0}
