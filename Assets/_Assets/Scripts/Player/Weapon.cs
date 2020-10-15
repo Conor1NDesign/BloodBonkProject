@@ -60,7 +60,7 @@ public class Weapon : MonoBehaviour
         {
             for (int i = 0; i < emptyPosition.Length; i++)
             {
-                Debug.DrawLine(previousPosition[l][i], previousPosition[l + 1][i]);
+                Debug.DrawLine(previousPosition[l][i], previousPosition[l + 1][i], Color.green);
             }
         }
     }
