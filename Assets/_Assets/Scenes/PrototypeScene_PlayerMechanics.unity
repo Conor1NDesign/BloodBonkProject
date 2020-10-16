@@ -250,7 +250,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 626205204}
-  smoothSpeed: 1
 --- !u!1 &626205203
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,6 +920,7 @@ MonoBehaviour:
   - {fileID: 1975780780}
   - {fileID: 1013768864}
   - {fileID: 1610284490}
+  isSwinging: 0
 --- !u!54 &1073543309
 Rigidbody:
   m_ObjectHideFlags: 0

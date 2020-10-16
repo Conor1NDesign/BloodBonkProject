@@ -8,8 +8,8 @@ public class Weapon : MonoBehaviour
 
     private List<Vector3[]> previousPosition;
 
+    public bool isSwinging;
     bool isAttacking;
-
 
     Animator animator;
 
@@ -19,12 +19,15 @@ public class Weapon : MonoBehaviour
         DisableWeapon();
     }
 
+    // Plays attacking animation
     void Attack()
     {
+        isSwinging = true;
         transform.GetComponent<Renderer>().enabled = true;
         animator.Play("Attack");
     }
 
+    // Enable weapon collider
     public void EnableWeapon()
     {
         previousPosition = new List<Vector3[]>();
@@ -32,26 +35,29 @@ public class Weapon : MonoBehaviour
         isAttacking = true;
     }
 
+    // Disable weapon collider
     public void DisableWeapon()
     {
         transform.GetComponent<Renderer>().enabled = false;
         transform.GetComponent<BoxCollider>().enabled = false;
+        isSwinging = false;
         isAttacking = false;
     }
 
+    // Positions for raycast
     void SetPreviousPosition()
     {
+        Vector3[] position = new Vector3[emptyPosition.Length];
 
-        Vector3[] position = { emptyPosition[0].transform.position,
-                               emptyPosition[1].transform.position, 
-                               emptyPosition[2].transform.position, 
-                               emptyPosition[3].transform.position,
-                               emptyPosition[4].transform.position,
-                               emptyPosition[5].transform.position,};
+        for (int i = 0; i < emptyPosition.Length; i++)
+        {
+            position[i] = emptyPosition[i].transform.position;
+        }
 
         previousPosition.Add(position);
     }
 
+    // Testing raycast
     private void DebugLine()
     {
         SetPreviousPosition();
@@ -68,7 +74,7 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !isSwinging)
         {
             Attack();
         }
