@@ -5,8 +5,10 @@ public class EnemySpawnPoint : MonoBehaviour
 {
     [SerializeField]List<GameObject> spawnPoints = new List<GameObject>();
 
+#pragma warning disable 0649
     [SerializeField]GameObject akashitaPrefab;
     [SerializeField]GameObject shutenDojiPrefab;
+#pragma warning restore 0649
 
     void FixedUpdate()
     {
