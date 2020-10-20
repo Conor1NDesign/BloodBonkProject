@@ -8,7 +8,9 @@ public class Weapon : MonoBehaviour
 
     private List<Vector3[]> previousPosition;
 
+    [HideInInspector]
     public bool isSwinging;
+
     bool isAttacking;
 
     Animator animator;
