@@ -733,8 +733,10 @@ MonoBehaviour:
   mainCam: {fileID: 307597286}
   moveSpeed: 5
   dashSpeed: 10
+  reduceDashMeter: 1
   fillDashMeter: 1
   maxDashMeter: 100
+  refillTimer: 1
   dashMeter: {fileID: 1612025354}
 --- !u!136 &626205207
 CapsuleCollider:
@@ -1688,7 +1690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &986035778
 RectTransform:
   m_ObjectHideFlags: 0

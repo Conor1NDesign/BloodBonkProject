@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public GameObject[] emptyPosition;
-
-    private List<Vector3[]> previousPosition;
+    private List<List<Vector3>> previousPosition;
 
     [HideInInspector]
     public bool isSwinging;
@@ -32,7 +30,7 @@ public class Weapon : MonoBehaviour
     // Enable weapon collider
     public void EnableWeapon()
     {
-        previousPosition = new List<Vector3[]>();
+        previousPosition = new List<List<Vector3>>();
         transform.GetComponent<BoxCollider>().enabled = true;
         isAttacking = true;
     }
@@ -49,11 +47,11 @@ public class Weapon : MonoBehaviour
     // Positions for raycast
     void SetPreviousPosition()
     {
-        Vector3[] position = new Vector3[emptyPosition.Length];
+        List<Vector3> position = new List<Vector3>();
 
-        for (int i = 0; i < emptyPosition.Length; i++)
+        foreach (Transform child in transform)
         {
-            position[i] = emptyPosition[i].transform.position;
+            position.Add(child.position);
         }
 
         previousPosition.Add(position);
@@ -66,7 +64,7 @@ public class Weapon : MonoBehaviour
 
         for (int l = 0; l < previousPosition.Count - 1; l++)
         {
-            for (int i = 0; i < emptyPosition.Length; i++)
+            for (int i = 0; i < previousPosition[0].Count; i++)
             {
                 Debug.DrawLine(previousPosition[l][i], previousPosition[l + 1][i], Color.green);
             }
