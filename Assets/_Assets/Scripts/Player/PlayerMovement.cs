@@ -5,8 +5,16 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public Transform mainCam;
+
+    [Header("Movement Settings")]
     public float moveSpeed = 5f;
     public float dashSpeed = 10f;
+
+    [Header("Dash Meter Settings")]
+    public float reduceDashMeter = 1f;
+    public float fillDashMeter = 1f;
+    public float maxDashMeter = 100f;
+    private float currentDashMeter;
 
     Vector2 input;
 
@@ -14,12 +22,15 @@ public class PlayerMovement : MonoBehaviour
 
     float actualSpeed;
 
-    // Weapon class
+    // Classes
+    public DashMeter dashMeter;
     Weapon weapon;
 
     void Start()
     {
         weapon = GetComponentInChildren<Weapon>();
+        currentDashMeter = maxDashMeter;
+        dashMeter.SetMaxDashMeter(currentDashMeter);
     }
 
     void FixedUpdate()
@@ -30,12 +41,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Movement()
     {
-        
         // Get Player Input
-        if (!isDashing)
-        {
-            input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        }
+        input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+        //if (!isDashing)
+        //{
+        //    input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        //}
 
         // Player moves in camera view direction
         input = Vector2.ClampMagnitude(input, 1);
@@ -50,7 +62,9 @@ public class PlayerMovement : MonoBehaviour
 
         
         Dashing();
-
+        DashMeter();
+        
+        
         transform.position += (camF * input.y + camR * input.x) * actualSpeed * Time.fixedDeltaTime;
     }
 
@@ -66,11 +80,29 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
                 {
-                    actualSpeed = dashSpeed;
-                    isDashing = false;
-
-                    //isDashing = true;
+                    if (currentDashMeter >= reduceDashMeter)
+                    {
+                        actualSpeed = dashSpeed;
+                        isDashing = true;
+                    }
                 }
+            }
+        }
+    }
+
+    private void DashMeter()
+    {
+        if (isDashing)
+        {
+            currentDashMeter -= reduceDashMeter;
+            dashMeter.SetDashMeter(currentDashMeter);
+        }
+        else
+        {
+            if (currentDashMeter < maxDashMeter)
+            {
+                currentDashMeter += fillDashMeter;
+                dashMeter.SetDashMeter(currentDashMeter);
             }
         }
     }
