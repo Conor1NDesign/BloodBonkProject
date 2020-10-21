@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public float reduceDashMeter = 1f;
     public float fillDashMeter = 1f;
     public float maxDashMeter = 100f;
+    public float refillTimer = 1f;
     private float currentDashMeter;
 
     Vector2 input;
@@ -21,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     bool isDashing;
 
     float actualSpeed;
+    float maxTime;
 
     // Classes
     public DashMeter dashMeter;
@@ -30,7 +32,6 @@ public class PlayerMovement : MonoBehaviour
     {
         weapon = GetComponentInChildren<Weapon>();
         currentDashMeter = maxDashMeter;
-        dashMeter.SetMaxDashMeter(currentDashMeter);
     }
 
     void FixedUpdate()
@@ -80,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
                 {
+                    // Check if player has enough dash
                     if (currentDashMeter >= reduceDashMeter)
                     {
                         actualSpeed = dashSpeed;
@@ -94,17 +96,23 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isDashing)
         {
+            // Decreases Dash Meter
             currentDashMeter -= reduceDashMeter;
-            dashMeter.SetDashMeter(currentDashMeter);
+            maxTime = Time.time + refillTimer;
         }
         else
         {
+            // Refills Dash Meter
             if (currentDashMeter < maxDashMeter)
             {
-                currentDashMeter += fillDashMeter;
-                dashMeter.SetDashMeter(currentDashMeter);
+                if (maxTime <= Time.time)
+                {
+                    currentDashMeter += fillDashMeter;
+                }
             }
         }
+
+        dashMeter.SetDashMeter(currentDashMeter);
     }
 
     private void LookDirection()
