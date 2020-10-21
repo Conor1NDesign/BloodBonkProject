@@ -1,8 +1,15 @@
 ﻿using UnityEngine;
 
-public class ShutenDojiAI : MonoBehaviour
+public class ShutenDojiAI : MonoBehaviour, IAttacker
 {
+	public float currentDistanceToPlayer { get; private set; } = 10.0f;
+	public float range { get; } = 1.4f;
+	public float attackTime { get; private set; } = 0.0f;
+
 #pragma warning disable 0649
+	// temp
+	[SerializeField]GameObject weapon;
+	// not temp
 	[SerializeField]GameObject player;
 #pragma warning restore 0649
 	// The movement speed of the Shuten Doji
@@ -28,9 +35,16 @@ public class ShutenDojiAI : MonoBehaviour
 
 	void FixedUpdate()
 	{
+		if (attackTime > 0.0f)
+		{
+			attackTime -= 1.0f / 60.0f;
+			weapon.transform.Rotate(new Vector3(5.0f, 0.0f, 0.0f));
+		}
+
 		// Find the direction to the player
 		Vector3 toPlayer = player.transform.position - transform.position;
 		toPlayer.y = 0.0f;
+		currentDistanceToPlayer = toPlayer.magnitude;
 		
 		// If the enemy isn't within range of the player, move to range
 		Vector3 toDistanceFromPlayer = toPlayer - toPlayer.normalized * distanceFromPlayer;
@@ -44,5 +58,16 @@ public class ShutenDojiAI : MonoBehaviour
 			directionToPlayer < -allowedRotationVariation ? -1.0f : 0.0f;
 
 		shutenDojiRigidbody.angularVelocity = new Vector3(0, directionToPlayer * rotationSpeed, 0);
+	}
+
+	public void Attack()
+	{
+		if (attackTime <= 0.0f)
+		{
+			// Do the attacky thing
+			//Debug.Log("Attack!");
+			attackTime = 0.5f;
+			weapon.transform.Rotate(-150.0f, 0.0f, 0.0f);
+		}
 	}
 }
