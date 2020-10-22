@@ -17,7 +17,7 @@ public class EnemyManager : MonoBehaviour
 		// temp
 		foreach (GameObject enemy in enemies)
 		{
-			enemy.GetComponent<IAttacker>().player = player;
+			enemy.GetComponent<EnemyAI>().player = player;
 		}
 	}	
 
@@ -32,7 +32,7 @@ public class EnemyManager : MonoBehaviour
 
 		foreach (GameObject enemy in enemies)
 		{
-			IAttacker attacker = enemy.GetComponent<IAttacker>();
+			EnemyAI attacker = enemy.GetComponent<EnemyAI>();
 			if (attacker.currentDistanceToPlayer < attacker.range)
 				attacker.Attack();
 		}
@@ -47,7 +47,7 @@ public class EnemyManager : MonoBehaviour
 		{
 			enemies.Add(SpawnEnemy(Random.Range(0, 2) == 0 ? shutenDojiPrefab : akashitaPrefab));
 			enemies[i].transform.position = spawnPoints[i % spawnPoints.Count].transform.position + new Vector3(Random.Range(-1.0f, 1.0f), 1.0f, Random.Range(-1.0f, 1.0f));
-			enemies[i].GetComponent<IAttacker>().player = player;
+			enemies[i].GetComponent<EnemyAI>().player = player;
 		}
     }
 

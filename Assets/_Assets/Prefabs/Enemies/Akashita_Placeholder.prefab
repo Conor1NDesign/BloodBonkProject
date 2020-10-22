@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8105825437128881017}
   - component: {fileID: 8105825437128881016}
   - component: {fileID: 7366757224127854833}
-  - component: {fileID: 406457681413358824}
+  - component: {fileID: 4761193313990779995}
   m_Layer: 0
   m_Name: Akashita_Placeholder
   m_TagString: Untagged
@@ -111,7 +111,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &406457681413358824
+--- !u!114 &4761193313990779995
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,10 +120,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8105825437128881019}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb738b2db65769d83b1da530847fbe6c, type: 3}
+  m_Script: {fileID: 11500000, guid: 252dea917b6cad67e8903cb270176274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentDistanceToPlayer: 10
   player: {fileID: 0}
+  range: 4.3
+  timeBetweenAttacks: 1
   movementSpeed: 1
   rotationSpeed: 1
   distanceFromPlayer: 4

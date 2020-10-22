@@ -249,10 +249,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f31cfc88b414953a91c4b19c06acc85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 5397706228586769496}
+  currentDistanceToPlayer: 10
   player: {fileID: 0}
+  range: 1.4
+  timeBetweenAttacks: 0.5
   movementSpeed: 1
   rotationSpeed: 1
   distanceFromPlayer: 1
   allowedRotationVariation: 0.1
   allowedDistanceVariation: 0.1
+  weapon: {fileID: 5397706228586769496}
