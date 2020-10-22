@@ -49,6 +49,8 @@ public class AkashitaAI : MonoBehaviour, IAttacker
 		Vector3 toDistanceFromPlayer = toPlayer - toPlayer.normalized * distanceFromPlayer;
 		if (toDistanceFromPlayer.sqrMagnitude > allowedDistanceVariation)
 			akashitaRigidbody.velocity = toDistanceFromPlayer.normalized * movementSpeed;
+		else
+			akashitaRigidbody.velocity = Vector3.zero;
 
 		// Rotate towards the player
 		float directionToPlayer = Vector3.Dot(Vector3.Cross(transform.forward, toPlayer), transform.up);

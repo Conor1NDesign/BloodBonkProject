@@ -53,6 +53,8 @@ public class ShutenDojiAI : MonoBehaviour, IAttacker
 		Vector3 toDistanceFromPlayer = toPlayer - toPlayer.normalized * distanceFromPlayer;
 		if (toDistanceFromPlayer.sqrMagnitude > allowedDistanceVariation)
 			shutenDojiRigidbody.velocity = toDistanceFromPlayer.normalized * movementSpeed;
+		else
+			shutenDojiRigidbody.velocity = Vector3.zero;
 
 		// Rotate towards the player
 		float directionToPlayer = Vector3.Dot(Vector3.Cross(transform.forward, toPlayer), transform.up);
