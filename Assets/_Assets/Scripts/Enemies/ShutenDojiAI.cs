@@ -5,15 +5,14 @@ public class ShutenDojiAI : MonoBehaviour, IAttacker
 	// Designers! Feel free to change these two!
 	public float range { get; } = 1.4f;
 	public float timeBetweenAttacks { get; set; } = 0.5f;
-	// These two are used internally
+	// These are used internally
 	public float currentDistanceToPlayer { get; private set; } = 10.0f;
 	public float timeToNextAttack { get; private set; } = 0.0f;
+	public GameObject player { get; set; }
 
 #pragma warning disable 0649
 	// temp
 	[SerializeField]GameObject weapon;
-	// not temp
-	[SerializeField]GameObject player;
 #pragma warning restore 0649
 	// The movement speed of the Shuten Doji
 	[SerializeField]float movementSpeed = 1.0f;

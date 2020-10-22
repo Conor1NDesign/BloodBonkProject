@@ -5,13 +5,11 @@ public class AkashitaAI : MonoBehaviour, IAttacker
 	// Designers! Feel free to change these two!
 	public float range { get; } = 4.3f;
 	public float timeBetweenAttacks { get; set; } = 1.0f;
-	// These two are used internally
+	// These are used internally
 	public float currentDistanceToPlayer { get; private set; } = 10.0f;
 	public float timeToNextAttack { get; private set; } = 0.0f;
+	public GameObject player { get; set; }
 
-#pragma warning disable 0649
-	[SerializeField]GameObject player;
-#pragma warning restore 0649
 	// The movement speed of the Akashita
 	[SerializeField]float movementSpeed = 1.0f;
 	// The speed at which the Akashita turns to face the player
@@ -66,7 +64,7 @@ public class AkashitaAI : MonoBehaviour, IAttacker
 		if (timeToNextAttack <= 0.0f)
 		{
 			// Do the attacky thing
-			Debug.Log("Akashita Attack!");
+			//Debug.Log("Akashita Attack!");
 			timeToNextAttack = timeBetweenAttacks;
 		}
 	}
