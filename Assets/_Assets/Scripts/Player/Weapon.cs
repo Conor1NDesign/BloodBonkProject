@@ -10,6 +10,11 @@ public class Weapon : MonoBehaviour
     public bool isSwinging;
 
     bool isAttacking;
+    public bool raycastHit = false;
+
+    public RaycastHit hit;
+
+    public WeaponDetect detect;
 
     Animator animator;
 
@@ -49,6 +54,7 @@ public class Weapon : MonoBehaviour
     {
         List<Vector3> position = new List<Vector3>();
 
+        // Loop through child objects
         foreach (Transform child in transform)
         {
             position.Add(child.position);
@@ -57,15 +63,26 @@ public class Weapon : MonoBehaviour
         previousPosition.Add(position);
     }
 
-    // Testing raycast
-    private void DebugLine()
+    // Raycast
+    private void RaycastDetect()
     {
+        // Add current positions to list
         SetPreviousPosition();
 
         for (int l = 0; l < previousPosition.Count - 1; l++)
         {
             for (int i = 0; i < previousPosition[0].Count; i++)
             {
+                ////float distance = Vector3.Distance(previousPosition[l][i], previousPosition[l + 1][i]);
+                //if (Physics.Raycast(previousPosition[l][i], previousPosition[l + 1][i], out hit))
+                //{
+                //    if (hit.collider.CompareTag("Enemy"))
+                //    {
+                //        detect.TakeDamage();
+                //    }
+                //}
+
+                // Debugging
                 Debug.DrawLine(previousPosition[l][i], previousPosition[l + 1][i], Color.green);
             }
         }
@@ -81,7 +98,7 @@ public class Weapon : MonoBehaviour
 
         if (isAttacking)
         {
-            DebugLine();
+            RaycastDetect();
         }
     }
 }

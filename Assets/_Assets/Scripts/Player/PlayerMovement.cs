@@ -17,6 +17,9 @@ public class PlayerMovement : MonoBehaviour
     public float refillTimer = 1f;
     private float currentDashMeter;
 
+
+    Vector3 camF;
+    Vector3 camR;
     Vector2 input;
 
     bool isDashing;
@@ -34,13 +37,18 @@ public class PlayerMovement : MonoBehaviour
         currentDashMeter = maxDashMeter;
     }
 
+    void Update()
+    {
+        PlayerInput();
+    }
+
     void FixedUpdate()
     {
         Movement();
         LookDirection();
     }
 
-    private void Movement()
+    private void PlayerInput()
     {
         // Get Player Input
         input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
@@ -53,22 +61,27 @@ public class PlayerMovement : MonoBehaviour
         // Player moves in camera view direction
         input = Vector2.ClampMagnitude(input, 1);
 
-        Vector3 camF = mainCam.forward;
-        Vector3 camR = mainCam.right;
+        camF = mainCam.forward;
+        camR = mainCam.right;
 
         camF.y = 0;
         camR.y = 0;
         camF = camF.normalized;
         camR = camR.normalized;
 
-        
         Dashing();
         DashMeter();
-        
-        
+
+        //actualSpeed = Mathf.Lerp(0, actualSpeed, 0.9f * Time.deltaTime);
+    }
+
+
+    private void Movement()
+    {
         transform.position += (camF * input.y + camR * input.x) * actualSpeed * Time.fixedDeltaTime;
     }
 
+    
     private void Dashing()
     {
         actualSpeed = moveSpeed;

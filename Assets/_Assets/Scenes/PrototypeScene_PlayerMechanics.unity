@@ -733,7 +733,7 @@ MonoBehaviour:
   mainCam: {fileID: 307597286}
   moveSpeed: 5
   dashSpeed: 10
-  reduceDashMeter: 1
+  reduceDashMeter: 0.1
   fillDashMeter: 1
   maxDashMeter: 100
   refillTimer: 1
