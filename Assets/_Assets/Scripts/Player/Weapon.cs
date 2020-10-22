@@ -10,11 +10,18 @@ public class Weapon : MonoBehaviour
     public bool isSwinging;
 
     bool isAttacking;
+
+    // Raycast Stuff
     public bool raycastHit = false;
-
     public RaycastHit hit;
-
     public WeaponDetect detect;
+
+    // Hit Detection
+    public float range;
+    public LayerMask enemyMask;
+    Vector2 mouseInput;
+    public float posRange;
+    public float negRange;
 
     Animator animator;
 
@@ -27,6 +34,8 @@ public class Weapon : MonoBehaviour
     // Plays attacking animation
     void Attack()
     {
+        mouseInput = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+
         isSwinging = true;
         transform.GetComponent<Renderer>().enabled = true;
         animator.Play("Attack");
@@ -88,9 +97,64 @@ public class Weapon : MonoBehaviour
         }
     }
 
+    public void HitDetection()
+    {
+        Vector3 playerPos = transform.parent.position;
+        float playerAngle = transform.eulerAngles.y * Mathf.Deg2Rad;
+
+        // Player Angle
+        Vector3 endPos = new Vector3(playerPos.x + (3f * Mathf.Sin(playerAngle)), playerPos.y, playerPos.z + (3f * Mathf.Cos(playerAngle)));
+        Debug.DrawLine(playerPos, endPos, Color.white);
+
+        // Positive
+        float posAngle = playerAngle + posRange;
+        endPos = new Vector3(playerPos.x + (3f * Mathf.Sin(posAngle)), playerPos.y, playerPos.z + (3f * Mathf.Cos(posAngle)));
+        Debug.DrawLine(playerPos, endPos, Color.green);
+
+        // Negative
+        float negAngle = playerAngle - negRange;
+        endPos = new Vector3(playerPos.x + (3f * Mathf.Sin(negAngle)), playerPos.y, playerPos.z + (3f * Mathf.Cos(negAngle)));
+        Debug.DrawLine(playerPos, endPos, Color.red);
+
+
+        // All enemies within range
+        Collider[] enemiesInRange = Physics.OverlapSphere(playerPos, range, enemyMask);
+
+        foreach (Collider e in enemiesInRange)
+        {
+            Vector3 enemyPos = e.gameObject.transform.position;
+            float angle = Mathf.Atan2(enemyPos.x - playerPos.x, enemyPos.z - playerPos.z) * Mathf.Rad2Deg;
+
+            endPos = new Vector3(playerPos.x + (3f * Mathf.Sin(angle)), playerPos.y, playerPos.z + (3f * Mathf.Cos(angle)));
+            Debug.DrawLine(playerPos, endPos, Color.blue);
+
+            if (angle >= negAngle && angle <= posAngle)
+            {
+                Debug.Log("Hit");
+            }
+        }
+    }
+
+    private static float WrapAngle(float angle)
+    {
+        angle %= 360;
+        if (angle > 180)
+            return angle - 360;
+
+        return angle;
+    }
+
     // Update is called once per frame
     void Update()
     {
+        //Vector3 playerPos = transform.parent.position;
+        //float playerAngle = Mathf.Atan2(mouseInput.x - playerPos.x, mouseInput.y - playerPos.z * Mathf.Rad2Deg) + WrapAngle(Camera.main.transform.eulerAngles.y);
+
+        //Vector3 endPos = new Vector3(range * Mathf.Cos(playerAngle) + playerPos.x, 0, range * Mathf.Sin(playerAngle) + playerPos.z);
+
+        //Debug.DrawLine(playerPos, endPos, Color.white);
+
+
         if (Input.GetKeyDown(KeyCode.Mouse0) && !isSwinging)
         {
             Attack();
@@ -98,7 +162,8 @@ public class Weapon : MonoBehaviour
 
         if (isAttacking)
         {
-            RaycastDetect();
+            HitDetection();
+            //RaycastDetect();
         }
     }
 }
