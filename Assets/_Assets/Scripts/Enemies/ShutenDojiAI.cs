@@ -2,9 +2,12 @@
 
 public class ShutenDojiAI : MonoBehaviour, IAttacker
 {
-	public float currentDistanceToPlayer { get; private set; } = 10.0f;
+	// Designers! Feel free to change these two!
 	public float range { get; } = 1.4f;
-	public float attackTime { get; private set; } = 0.0f;
+	public float timeBetweenAttacks { get; set; } = 0.5f;
+	// These two are used internally
+	public float currentDistanceToPlayer { get; private set; } = 10.0f;
+	public float timeToNextAttack { get; private set; } = 0.0f;
 
 #pragma warning disable 0649
 	// temp
@@ -35,9 +38,9 @@ public class ShutenDojiAI : MonoBehaviour, IAttacker
 
 	void FixedUpdate()
 	{
-		if (attackTime > 0.0f)
+		if (timeToNextAttack > 0.0f)
 		{
-			attackTime -= 1.0f / 60.0f;
+			timeToNextAttack -= 1.0f / 60.0f;
 			weapon.transform.Rotate(new Vector3(5.0f, 0.0f, 0.0f));
 		}
 
@@ -62,11 +65,11 @@ public class ShutenDojiAI : MonoBehaviour, IAttacker
 
 	public void Attack()
 	{
-		if (attackTime <= 0.0f)
+		if (timeToNextAttack <= 0.0f)
 		{
 			// Do the attacky thing
 			//Debug.Log("Attack!");
-			attackTime = 0.5f;
+			timeToNextAttack = timeBetweenAttacks;
 			weapon.transform.Rotate(-150.0f, 0.0f, 0.0f);
 		}
 	}

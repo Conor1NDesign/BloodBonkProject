@@ -1,8 +1,11 @@
-﻿public interface IAttacker
+﻿using UnityEngine;
+
+public interface IAttacker
 {
-	float currentDistanceToPlayer { get; }
 	float range { get; }
-	float attackTime { get; }
+	float timeBetweenAttacks { get; set; }
+	float currentDistanceToPlayer { get; }
+	float timeToNextAttack { get; }
 
 	void Attack();
 }

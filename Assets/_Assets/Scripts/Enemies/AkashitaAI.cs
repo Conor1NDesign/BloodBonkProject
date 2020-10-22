@@ -2,9 +2,12 @@ using UnityEngine;
 
 public class AkashitaAI : MonoBehaviour, IAttacker
 {
-	public float currentDistanceToPlayer { get; private set; } = 10.0f;
+	// Designers! Feel free to change these two!
 	public float range { get; } = 4.3f;
-	public float attackTime { get; private set; } = 0.0f;
+	public float timeBetweenAttacks { get; set; } = 1.0f;
+	// These two are used internally
+	public float currentDistanceToPlayer { get; private set; } = 10.0f;
+	public float timeToNextAttack { get; private set; } = 0.0f;
 
 #pragma warning disable 0649
 	[SerializeField]GameObject player;
@@ -32,16 +35,15 @@ public class AkashitaAI : MonoBehaviour, IAttacker
 
 	void FixedUpdate()
 	{
-		if (attackTime > 0.0f)
+		if (timeToNextAttack > 0.0f)
 		{
-			attackTime -= 1.0f / 60.0f;
+			timeToNextAttack -= 1.0f / 60.0f;
 		}
 
 		// Find the direction to the player
 		Vector3 toPlayer = player.transform.position - transform.position;
 		toPlayer.y = 0.0f;
 		currentDistanceToPlayer = toPlayer.magnitude;
-		Debug.Log(currentDistanceToPlayer);
 		
 		// If the enemy isn't within range of the player, move to range
 		Vector3 toDistanceFromPlayer = toPlayer - toPlayer.normalized * distanceFromPlayer;
@@ -59,11 +61,11 @@ public class AkashitaAI : MonoBehaviour, IAttacker
 
 	public void Attack()
 	{
-		if (attackTime <= 0.0f)
+		if (timeToNextAttack <= 0.0f)
 		{
 			// Do the attacky thing
 			Debug.Log("Akashita Attack!");
-			attackTime = 1.0f;
+			timeToNextAttack = timeBetweenAttacks;
 		}
 	}
 }
