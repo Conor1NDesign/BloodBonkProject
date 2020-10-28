@@ -36,9 +36,9 @@ public class Menu : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            paused = toggleMenu();
-        }
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    paused = toggleMenu();
+        //}
     }
 }
