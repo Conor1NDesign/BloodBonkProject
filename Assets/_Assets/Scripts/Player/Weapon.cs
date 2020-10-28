@@ -4,24 +4,20 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    private List<List<Vector3>> previousPosition;
+    public float damage = 10f;
+    public float speed = 1f;
 
     [HideInInspector]
     public bool isSwinging;
 
-    bool isAttacking;
-
-    // Raycast Stuff
-    public bool raycastHit = false;
-    public RaycastHit hit;
-    public WeaponDetect detect;
+    // Debug
+    private bool isAttacking;
 
     // Hit Detection
-    public float range;
+    public float range = 3f;
     public LayerMask enemyMask;
+    public float hitDetectionRange = 40f;
     Vector2 mouseInput;
-    public float posRange;
-    public float negRange;
 
     Animator animator;
 
@@ -44,9 +40,13 @@ public class Weapon : MonoBehaviour
     // Enable weapon collider
     public void EnableWeapon()
     {
-        previousPosition = new List<List<Vector3>>();
-        transform.GetComponent<BoxCollider>().enabled = true;
-        isAttacking = true;
+        HitDetection();
+
+        // COLLIDER
+        //transform.GetComponent<BoxCollider>().enabled = true;
+
+        // DEBUG LINES
+        //isAttacking = true;
     }
 
     // Disable weapon collider
@@ -58,112 +58,60 @@ public class Weapon : MonoBehaviour
         isAttacking = false;
     }
 
-    // Positions for raycast
-    void SetPreviousPosition()
-    {
-        List<Vector3> position = new List<Vector3>();
-
-        // Loop through child objects
-        foreach (Transform child in transform)
-        {
-            position.Add(child.position);
-        }
-
-        previousPosition.Add(position);
-    }
-
-    // Raycast
-    private void RaycastDetect()
-    {
-        // Add current positions to list
-        SetPreviousPosition();
-
-        for (int l = 0; l < previousPosition.Count - 1; l++)
-        {
-            for (int i = 0; i < previousPosition[0].Count; i++)
-            {
-                ////float distance = Vector3.Distance(previousPosition[l][i], previousPosition[l + 1][i]);
-                //if (Physics.Raycast(previousPosition[l][i], previousPosition[l + 1][i], out hit))
-                //{
-                //    if (hit.collider.CompareTag("Enemy"))
-                //    {
-                //        detect.TakeDamage();
-                //    }
-                //}
-
-                // Debugging
-                Debug.DrawLine(previousPosition[l][i], previousPosition[l + 1][i], Color.green);
-            }
-        }
-    }
-
     public void HitDetection()
     {
         Vector3 playerPos = transform.parent.position;
-        float playerAngle = transform.eulerAngles.y * Mathf.Deg2Rad;
 
-        // Player Angle
-        Vector3 endPos = new Vector3(playerPos.x + (3f * Mathf.Sin(playerAngle)), playerPos.y, playerPos.z + (3f * Mathf.Cos(playerAngle)));
-        Debug.DrawLine(playerPos, endPos, Color.white);
+        // DEBUGGING
+        // =====================================================================================================
+        //float playerAngle = transform.parent.eulerAngles.y * Mathf.Deg2Rad;
 
-        // Positive
-        float posAngle = playerAngle + posRange;
-        endPos = new Vector3(playerPos.x + (3f * Mathf.Sin(posAngle)), playerPos.y, playerPos.z + (3f * Mathf.Cos(posAngle)));
-        Debug.DrawLine(playerPos, endPos, Color.green);
+        //// Player Angle
+        //Vector3 endPos = new Vector3(playerPos.x + (range * Mathf.Sin(playerAngle)), playerPos.y, playerPos.z + (range * Mathf.Cos(playerAngle)));
+        //Debug.DrawLine(playerPos, endPos, Color.yellow);
 
-        // Negative
-        float negAngle = playerAngle - negRange;
-        endPos = new Vector3(playerPos.x + (3f * Mathf.Sin(negAngle)), playerPos.y, playerPos.z + (3f * Mathf.Cos(negAngle)));
-        Debug.DrawLine(playerPos, endPos, Color.red);
+        //// Positive
+        //float posAngle = playerAngle + posRange;
+        //endPos = new Vector3(playerPos.x + (range * Mathf.Sin(posAngle)), playerPos.y, playerPos.z + (range * Mathf.Cos(posAngle)));
+        //Debug.DrawLine(playerPos, endPos, Color.green);
 
+        //// Negative
+        //float negAngle = playerAngle - negRange;
+        //endPos = new Vector3(playerPos.x + (range * Mathf.Sin(negAngle)), playerPos.y, playerPos.z + (range * Mathf.Cos(negAngle)));
+        //Debug.DrawLine(playerPos, endPos, Color.red);
+        // =====================================================================================================
 
         // All enemies within range
         Collider[] enemiesInRange = Physics.OverlapSphere(playerPos, range, enemyMask);
 
+        // Loop through all enemies
         foreach (Collider e in enemiesInRange)
         {
-            Vector3 enemyPos = e.gameObject.transform.position;
-            float angle = Mathf.Atan2(enemyPos.x - playerPos.x, enemyPos.z - playerPos.z) * Mathf.Rad2Deg;
+            // DEBUGGING
+            //float angle = Vector3.Angle(transform.parent.forward, e.gameObject.transform.position - playerPos);
 
-            endPos = new Vector3(playerPos.x + (3f * Mathf.Sin(angle)), playerPos.y, playerPos.z + (3f * Mathf.Cos(angle)));
-            Debug.DrawLine(playerPos, endPos, Color.blue);
-
-            if (angle >= negAngle && angle <= posAngle)
+            // Hit Detection cone facing enemy
+            if (Vector3.Angle(transform.parent.forward, e.gameObject.transform.position - playerPos) < hitDetectionRange)
             {
-                Debug.Log("Hit");
+                WeaponDetect detect = e.gameObject.GetComponent<WeaponDetect>();
+                detect.TakeDamage();
             }
         }
     }
 
-    private static float WrapAngle(float angle)
-    {
-        angle %= 360;
-        if (angle > 180)
-            return angle - 360;
-
-        return angle;
-    }
 
     // Update is called once per frame
     void Update()
     {
-        //Vector3 playerPos = transform.parent.position;
-        //float playerAngle = Mathf.Atan2(mouseInput.x - playerPos.x, mouseInput.y - playerPos.z * Mathf.Rad2Deg) + WrapAngle(Camera.main.transform.eulerAngles.y);
-
-        //Vector3 endPos = new Vector3(range * Mathf.Cos(playerAngle) + playerPos.x, 0, range * Mathf.Sin(playerAngle) + playerPos.z);
-
-        //Debug.DrawLine(playerPos, endPos, Color.white);
-
-
         if (Input.GetKeyDown(KeyCode.Mouse0) && !isSwinging)
         {
             Attack();
         }
 
+        // Debugging
         if (isAttacking)
         {
-            HitDetection();
-            //RaycastDetect();
+           HitDetection();
         }
     }
 }

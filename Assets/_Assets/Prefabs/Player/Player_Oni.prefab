@@ -215,12 +215,12 @@ MonoBehaviour:
   isSwinging: 0
   raycastHit: 0
   detect: {fileID: 0}
-  range: 0
+  range: 5
   enemyMask:
     serializedVersion: 2
     m_Bits: 0
-  posRange: 0
-  negRange: 0
+  posRange: 1.5
+  negRange: 1.5
 --- !u!54 &72158663970126793
 Rigidbody:
   m_ObjectHideFlags: 0
