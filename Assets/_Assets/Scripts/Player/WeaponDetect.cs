@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponDetect : MonoBehaviour
 {
-    public Score score;
+    //public Score score;
 
     public Material redMat;
     public Material defaultMat;
@@ -14,33 +14,23 @@ public class WeaponDetect : MonoBehaviour
 
     bool colourChangeCollision = false;
 
-    public Weapon weapon;
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Weapon"))
-        {
-            score.UpdateScore();
-            colourChangeCollision = true;
-            currentDelay = Time.time + colourChangeDelay;
-        }
-    }
-
     public void TakeDamage()
     {
-        score.UpdateScore();
+        //score.UpdateScore();
         colourChangeCollision = true;
         currentDelay = Time.time + colourChangeDelay;
+
+        Debug.Log("Hit");
     }
 
     void Update()
     {
         if (colourChangeCollision)
         {
-            transform.GetComponent<MeshRenderer>().material = redMat;
+            transform.GetComponentInChildren<MeshRenderer>().material = redMat;
             if (Time.time > currentDelay)
             {
-                transform.GetComponent<MeshRenderer>().material = defaultMat;
+                transform.GetComponentInChildren<MeshRenderer>().material = defaultMat;
                 colourChangeCollision = false;
             }
         }

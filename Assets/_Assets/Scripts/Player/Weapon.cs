@@ -84,6 +84,8 @@ public class Weapon : MonoBehaviour
         // All enemies within range
         Collider[] enemiesInRange = Physics.OverlapSphere(playerPos, range, enemyMask);
 
+        Debug.Log(enemiesInRange.Length);
+
         // Loop through all enemies
         foreach (Collider e in enemiesInRange)
         {
@@ -93,7 +95,7 @@ public class Weapon : MonoBehaviour
             // Hit Detection cone facing enemy
             if (Vector3.Angle(transform.parent.forward, e.gameObject.transform.position - playerPos) < hitDetectionRange)
             {
-                WeaponDetect detect = e.gameObject.GetComponent<WeaponDetect>();
+                WeaponDetect detect = e.gameObject.GetComponentInParent<WeaponDetect>();
                 detect.TakeDamage();
             }
         }

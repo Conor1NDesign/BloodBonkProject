@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4079170794079750761}
   - component: {fileID: 6238330906483934734}
   - component: {fileID: 9134825333093586148}
+  - component: {fileID: 3813941380192926894}
   m_Layer: 0
   m_Name: Enemy_ShutenDoji
   m_TagString: Enemy
@@ -74,6 +75,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &3813941380192926894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501601279726359312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a9707ecf0239d40b0f3d113fd33b26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  redMat: {fileID: 2100000, guid: 14265cd6ae442dd489bccd9073780c54, type: 2}
+  defaultMat: {fileID: 5561349426305759274, guid: edb88b7b903102340a2e83aced7265f7,
+    type: 3}
+  colourChangeDelay: 0.1
 --- !u!1 &1730159085621681363
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,7 +713,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8020136227210233257}
   - component: {fileID: 1845813271462665906}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ShutenDoji_Collider
   m_TagString: Enemy
   m_Icon: {fileID: 0}
