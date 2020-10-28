@@ -19,8 +19,6 @@ public class WeaponDetect : MonoBehaviour
         //score.UpdateScore();
         colourChangeCollision = true;
         currentDelay = Time.time + colourChangeDelay;
-
-        Debug.Log("Hit");
     }
 
     void Update()

@@ -84,8 +84,6 @@ public class Weapon : MonoBehaviour
         // All enemies within range
         Collider[] enemiesInRange = Physics.OverlapSphere(playerPos, range, enemyMask);
 
-        Debug.Log(enemiesInRange.Length);
-
         // Loop through all enemies
         foreach (Collider e in enemiesInRange)
         {
