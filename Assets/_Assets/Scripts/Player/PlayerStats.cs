@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponDetect : MonoBehaviour
+public class PlayerStats : MonoBehaviour
 {
-    //public Score score;
+    public float maxHealth = 100f;
+    public float lifesteal = 1.1f;
+
+    private float currentHealth;
 
     public Material redMat;
     public Material defaultMat;
@@ -14,15 +17,28 @@ public class WeaponDetect : MonoBehaviour
 
     bool colourChangeCollision = false;
 
-    public void TakeDamage()
+    // Classes
+    public HealthBar health;
+
+    public void TakeDamage(float damage)
     {
-        //score.UpdateScore();
-        colourChangeCollision = true;
+        currentHealth -= damage;
         currentDelay = Time.time + colourChangeDelay;
+
+        if (currentHealth <= 0f)
+        {
+            Debug.Log("You ded");
+        }
+    }
+    void Start()
+    {
+        currentHealth = maxHealth;
     }
 
     void Update()
     {
+        health.SetHealth(currentHealth);
+
         if (colourChangeCollision)
         {
             transform.GetComponentInChildren<MeshRenderer>().material = redMat;
