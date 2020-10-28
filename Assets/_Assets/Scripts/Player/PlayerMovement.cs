@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Transform mainCam;
-
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
     public float dashSpeed = 10f;
@@ -17,7 +15,6 @@ public class PlayerMovement : MonoBehaviour
     public float refillTimer = 1f;
     private float currentDashMeter;
 
-
     Vector3 camF;
     Vector3 camR;
     Vector2 input;
@@ -28,11 +25,17 @@ public class PlayerMovement : MonoBehaviour
     float maxTime;
 
     // Classes
-    public DashMeter dashMeter;
+    DashMeter dashMeter;
     Weapon weapon;
+
+    Transform mainCam;
 
     void Start()
     {
+        mainCam = FindObjectOfType<CameraFollow>().transform;
+        dashMeter = FindObjectOfType<DashMeter>();
+
+
         weapon = GetComponentInChildren<Weapon>();
         currentDashMeter = maxDashMeter;
     }

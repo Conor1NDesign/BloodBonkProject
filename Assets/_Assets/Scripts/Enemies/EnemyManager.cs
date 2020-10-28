@@ -26,15 +26,20 @@ public class EnemyManager : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.Backslash))
 		{
 			foreach(GameObject enemy in enemies)
-			Destroy(enemy);
-			enemies.Clear();
+			enemy.GetComponent<EnemyAI>().Damage(10.0f);
 		}
 
-		foreach (GameObject enemy in enemies)
+		for (int i = 0; i < enemies.Count; i++)
 		{
+			GameObject enemy = enemies[i];
 			EnemyAI attacker = enemy.GetComponent<EnemyAI>();
 			if (attacker.currentDistanceToPlayer < attacker.range)
 				attacker.Attack();
+			if (attacker.GetHealth() <= 0.0f)
+			{
+				enemies.Remove(enemy);
+				Destroy(enemy);
+			}
 		}
 		
 		if (enemies.Count == 0)

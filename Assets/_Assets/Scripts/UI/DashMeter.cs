@@ -5,7 +5,12 @@ using UnityEngine.UI;
 
 public class DashMeter : MonoBehaviour
 {
-    public Slider slider;
+    Slider slider;
+
+    void Start()
+    {
+        slider = GetComponent<Slider>();
+    }
 
     public void SetDashMeter(float value)
     {
