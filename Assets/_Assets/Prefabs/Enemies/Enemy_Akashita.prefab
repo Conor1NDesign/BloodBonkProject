@@ -65,13 +65,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentDistanceToPlayer: 10
   player: {fileID: 0}
-  range: 6
+  range: 9
   timeBetweenAttacks: 3
   movementSpeed: 3
   rotationSpeed: 2.5
   distanceFromPlayer: 6
   allowedRotationVariation: 0.1
   allowedDistanceVariation: 0.1
+  maxHealth: 100
 --- !u!114 &5782149097165530195
 MonoBehaviour:
   m_ObjectHideFlags: 0
