@@ -26,6 +26,7 @@ public class Menu : MonoBehaviour
 
     public void PlayAgain()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainScene_001_Arena");
     }
 
