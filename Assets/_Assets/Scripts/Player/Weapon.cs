@@ -93,7 +93,7 @@ public class Weapon : MonoBehaviour
             // Hit Detection cone facing enemy
             if (Vector3.Angle(transform.parent.forward, e.gameObject.transform.position - playerPos) < hitDetectionRange)
             {
-                WeaponDetect detect = e.gameObject.GetComponent<WeaponDetect>();
+                WeaponDetect detect = e.gameObject.GetComponentInParent<WeaponDetect>();
                 detect.TakeDamage();
             }
         }
