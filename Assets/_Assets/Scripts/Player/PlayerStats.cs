@@ -12,13 +12,14 @@ public class PlayerStats : MonoBehaviour
     public Material redMat;
     public Material defaultMat;
 
-    public float colourChangeDelay = 0.5f;
+    float colourChangeDelay = 0.1f;
     float currentDelay = 0f;
 
     bool colourChangeCollision = false;
 
     // Classes
-    public HealthBar health;
+    HealthBar health;
+    Menu menu;
 
     public void TakeDamage(float damage)
     {
@@ -27,11 +28,13 @@ public class PlayerStats : MonoBehaviour
 
         if (currentHealth <= 0f)
         {
-            Debug.Log("You ded");
+            menu.toggleMenu();
         }
     }
     void Start()
     {
+        health = FindObjectOfType<HealthBar>();
+        menu = FindObjectOfType<Menu>();
         currentHealth = maxHealth;
     }
 

@@ -5,7 +5,12 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    public Slider slider;
+    Slider slider;
+
+    void Start()
+    {
+        slider = GetComponent<Slider>();
+    }
 
     public void SetHealth(float value)
     {
