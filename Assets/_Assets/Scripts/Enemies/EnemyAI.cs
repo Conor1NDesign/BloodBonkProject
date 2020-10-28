@@ -29,6 +29,11 @@ public class EnemyAI : MonoBehaviour
 	{
 		health -= damage;
 	}
+
+	public float GetHealth()
+	{
+		return health;
+	}
 	
 	void Awake()
 	{
@@ -45,6 +50,14 @@ public class EnemyAI : MonoBehaviour
 		}
 
 		MovementUpdate();
+	}
+
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.gameObject.CompareTag("Weapon"))
+		{
+			health -= 10.0f;
+		}
 	}
 
 	protected void MovementUpdate()
