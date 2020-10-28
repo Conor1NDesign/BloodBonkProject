@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    private List<List<Vector3>> previousPosition;
+    public float damage = 10f;
+    public float speed = 1f;
 
     [HideInInspector]
     public bool isSwinging;
@@ -39,7 +40,6 @@ public class Weapon : MonoBehaviour
     // Enable weapon collider
     public void EnableWeapon()
     {
-        previousPosition = new List<List<Vector3>>();
         HitDetection();
 
         // COLLIDER
