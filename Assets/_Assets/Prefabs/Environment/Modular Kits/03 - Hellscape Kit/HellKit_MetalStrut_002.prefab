@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 7176548078871772494}
   - component: {fileID: 7405977777827277404}
   m_Layer: 0
-  m_Name: HellKit_MetalStrut_001_Mesh
+  m_Name: HellKit_MetalStrut_002_Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
