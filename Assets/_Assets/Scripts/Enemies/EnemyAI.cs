@@ -24,8 +24,8 @@ public class EnemyAI : MonoBehaviour
 	// The rigidbody of the enemy
 	Rigidbody enemyRigidBody;
 	protected float timeToNextAttack = 0.0f;
-	
-	public void Damage(float damage)
+
+	public void TakeDamage(float damage)
 	{
 		health -= damage;
 	}
@@ -50,11 +50,6 @@ public class EnemyAI : MonoBehaviour
 		}
 
 		MovementUpdate();
-	}
-
-	public void TakeDamage(float damage)
-	{
-		health -= damage;
 	}
 
 	protected void MovementUpdate()

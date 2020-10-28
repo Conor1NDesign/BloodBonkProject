@@ -26,7 +26,7 @@ public class EnemyManager : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.Backslash))
 		{
 			foreach(GameObject enemy in enemies)
-			enemy.GetComponent<EnemyAI>().Damage(10.0f);
+			enemy.GetComponent<EnemyAI>().TakeDamage(10.0f);
 		}
 
 		for (int i = 0; i < enemies.Count; i++)
