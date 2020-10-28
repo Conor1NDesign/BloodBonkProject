@@ -17,16 +17,24 @@ public class EnemyAI : MonoBehaviour
 	[SerializeField]float allowedRotationVariation = 0.1f;
 	// The amount of variation allowed in the distance from the player
 	[SerializeField]float allowedDistanceVariation = 0.1f;
+	//HEALTH!
+	[SerializeField]float maxHealth = 100.0f;
+	float health = 100.0f;
 	
 	// The rigidbody of the enemy
 	Rigidbody enemyRigidBody;
 	protected float timeToNextAttack = 0.0f;
 	
+	public void Damage(float damage)
+	{
+		health -= damage;
+	}
 	
 	void Awake()
 	{
 		// Cache this GameObject's rigidbody
 		enemyRigidBody = GetComponent<Rigidbody>();
+		health = maxHealth;
 	}
 
 	void FixedUpdate()
