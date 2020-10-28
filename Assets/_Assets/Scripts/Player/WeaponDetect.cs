@@ -28,7 +28,6 @@ public class WeaponDetect : MonoBehaviour
 
     public void TakeDamage()
     {
-        Debug.Log("test");
         score.UpdateScore();
         colourChangeCollision = true;
         currentDelay = Time.time + colourChangeDelay;
@@ -36,7 +35,6 @@ public class WeaponDetect : MonoBehaviour
 
     void Update()
     {
-
         if (colourChangeCollision)
         {
             transform.GetComponent<MeshRenderer>().material = redMat;

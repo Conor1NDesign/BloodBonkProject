@@ -17,12 +17,11 @@ public class Weapon : MonoBehaviour
     public WeaponDetect detect;
 
     // Hit Detection
-    public float range = 5f;
+    public float range = 3f;
     public LayerMask enemyMask;
     Vector2 mouseInput;
     // Debugging
-    public float posRange = 1.5f;
-    public float negRange = 1.5f;
+    public float hitDetectionRange = 40f;
 
     Animator animator;
 
@@ -46,8 +45,9 @@ public class Weapon : MonoBehaviour
     public void EnableWeapon()
     {
         previousPosition = new List<List<Vector3>>();
-        transform.GetComponent<BoxCollider>().enabled = true;
-        isAttacking = true;
+        //transform.GetComponent<BoxCollider>().enabled = true;
+        //isAttacking = true;
+        HitDetection();
     }
 
     // Disable weapon collider
@@ -103,19 +103,19 @@ public class Weapon : MonoBehaviour
         Vector3 playerPos = transform.parent.position;
         float playerAngle = transform.parent.eulerAngles.y * Mathf.Deg2Rad;
 
-        // Player Angle
-        Vector3 endPos = new Vector3(playerPos.x + (range * Mathf.Sin(playerAngle)), playerPos.y, playerPos.z + (range * Mathf.Cos(playerAngle)));
-        Debug.DrawLine(playerPos, endPos, Color.yellow);
+        //// Player Angle
+        //Vector3 endPos = new Vector3(playerPos.x + (range * Mathf.Sin(playerAngle)), playerPos.y, playerPos.z + (range * Mathf.Cos(playerAngle)));
+        //Debug.DrawLine(playerPos, endPos, Color.yellow);
 
-        // Positive
-        float posAngle = playerAngle + posRange;
-        endPos = new Vector3(playerPos.x + (range * Mathf.Sin(posAngle)), playerPos.y, playerPos.z + (range * Mathf.Cos(posAngle)));
-        Debug.DrawLine(playerPos, endPos, Color.green);
+        //// Positive
+        //float posAngle = playerAngle + posRange;
+        //endPos = new Vector3(playerPos.x + (range * Mathf.Sin(posAngle)), playerPos.y, playerPos.z + (range * Mathf.Cos(posAngle)));
+        //Debug.DrawLine(playerPos, endPos, Color.green);
 
-        // Negative
-        float negAngle = playerAngle - negRange;
-        endPos = new Vector3(playerPos.x + (range * Mathf.Sin(negAngle)), playerPos.y, playerPos.z + (range * Mathf.Cos(negAngle)));
-        Debug.DrawLine(playerPos, endPos, Color.red);
+        //// Negative
+        //float negAngle = playerAngle - negRange;
+        //endPos = new Vector3(playerPos.x + (range * Mathf.Sin(negAngle)), playerPos.y, playerPos.z + (range * Mathf.Cos(negAngle)));
+        //Debug.DrawLine(playerPos, endPos, Color.red);
 
 
         // All enemies within range
@@ -123,16 +123,36 @@ public class Weapon : MonoBehaviour
 
         foreach (Collider e in enemiesInRange)
         {
-            Vector3 enemyPos = e.gameObject.transform.position;
-            float angle = Mathf.Atan2(enemyPos.x - playerPos.x, enemyPos.z - playerPos.z) * Mathf.Rad2Deg;
+            float angle = Vector3.Angle(transform.parent.forward, e.gameObject.transform.position - playerPos);
+            Debug.Log(angle);
 
-            endPos = new Vector3(playerPos.x + (3f * Mathf.Sin(angle)), playerPos.y, playerPos.z + (3f * Mathf.Cos(angle)));
-            Debug.DrawLine(playerPos, endPos, Color.blue);
-
-            if (angle >= negAngle && angle <= posAngle)
+            if (Vector3.Angle(transform.parent.forward, e.gameObject.transform.position - playerPos) < hitDetectionRange)
             {
-                Debug.Log("Hit");
+                detect = e.gameObject.GetComponent<WeaponDetect>();
+                detect.TakeDamage();
             }
+
+            //Vector3 enemyPos = e.gameObject.transform.position;
+            //float angle = Mathf.Atan2(enemyPos.x - playerPos.x, enemyPos.z - playerPos.z);
+
+            //endPos = new Vector3(playerPos.x + (range * Mathf.Sin(angle)), playerPos.y, playerPos.z + (range * Mathf.Cos(angle)));
+            //Debug.DrawLine(playerPos, endPos, Color.blue);
+
+            //angle = (angle * Mathf.Rad2Deg + 360) % 360;
+            //posAngle *= Mathf.Rad2Deg;
+            //negAngle *= Mathf.Rad2Deg;
+
+            //negAngle %= 360;
+
+            //posAngle %= 360;
+
+            //Debug.Log(negAngle + " > " + angle + " < " + posAngle);
+            //if (angle >= negAngle && angle <= posAngle)
+            //{
+            //    Debug.Log("Hit");
+            //    detect = e.gameObject.GetComponent<WeaponDetect>();
+            //    detect.TakeDamage();
+            //}
         }
     }
 
@@ -143,6 +163,16 @@ public class Weapon : MonoBehaviour
             return angle - 360;
 
         return angle;
+    }
+
+    private static float UnwrapAngle(float angle)
+    {
+        if (angle >= 0)
+            return angle;
+
+        angle = -angle % 360;
+
+        return 360 - angle;
     }
 
     // Update is called once per frame
