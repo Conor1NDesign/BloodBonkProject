@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
@@ -21,6 +22,16 @@ public class Menu : MonoBehaviour
             Time.timeScale = 0f;
             return (true);
         }
+    }
+
+    public void PlayAgain()
+    {
+        SceneManager.LoadScene("MainScene_001_Arena");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
     void Update()

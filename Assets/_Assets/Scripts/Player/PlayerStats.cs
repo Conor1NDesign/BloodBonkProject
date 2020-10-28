@@ -31,6 +31,7 @@ public class PlayerStats : MonoBehaviour
             menu.toggleMenu();
         }
     }
+
     void Start()
     {
         health = FindObjectOfType<HealthBar>();
