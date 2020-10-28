@@ -17,11 +17,12 @@ public class Weapon : MonoBehaviour
     public WeaponDetect detect;
 
     // Hit Detection
-    public float range;
+    public float range = 5f;
     public LayerMask enemyMask;
     Vector2 mouseInput;
-    public float posRange;
-    public float negRange;
+    // Debugging
+    public float posRange = 1.5f;
+    public float negRange = 1.5f;
 
     Animator animator;
 
@@ -100,20 +101,20 @@ public class Weapon : MonoBehaviour
     public void HitDetection()
     {
         Vector3 playerPos = transform.parent.position;
-        float playerAngle = transform.eulerAngles.y * Mathf.Deg2Rad;
+        float playerAngle = transform.parent.eulerAngles.y * Mathf.Deg2Rad;
 
         // Player Angle
-        Vector3 endPos = new Vector3(playerPos.x + (3f * Mathf.Sin(playerAngle)), playerPos.y, playerPos.z + (3f * Mathf.Cos(playerAngle)));
-        Debug.DrawLine(playerPos, endPos, Color.white);
+        Vector3 endPos = new Vector3(playerPos.x + (range * Mathf.Sin(playerAngle)), playerPos.y, playerPos.z + (range * Mathf.Cos(playerAngle)));
+        Debug.DrawLine(playerPos, endPos, Color.yellow);
 
         // Positive
         float posAngle = playerAngle + posRange;
-        endPos = new Vector3(playerPos.x + (3f * Mathf.Sin(posAngle)), playerPos.y, playerPos.z + (3f * Mathf.Cos(posAngle)));
+        endPos = new Vector3(playerPos.x + (range * Mathf.Sin(posAngle)), playerPos.y, playerPos.z + (range * Mathf.Cos(posAngle)));
         Debug.DrawLine(playerPos, endPos, Color.green);
 
         // Negative
         float negAngle = playerAngle - negRange;
-        endPos = new Vector3(playerPos.x + (3f * Mathf.Sin(negAngle)), playerPos.y, playerPos.z + (3f * Mathf.Cos(negAngle)));
+        endPos = new Vector3(playerPos.x + (range * Mathf.Sin(negAngle)), playerPos.y, playerPos.z + (range * Mathf.Cos(negAngle)));
         Debug.DrawLine(playerPos, endPos, Color.red);
 
 
