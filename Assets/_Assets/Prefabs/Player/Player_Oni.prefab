@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: f6bc500e687500f45b55c7899b451979, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -147,7 +147,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: f6bc500e687500f45b55c7899b451979, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -212,14 +212,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f7a7f8d890e3ae4384e7e9a78f9deae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyPosition:
-  - {fileID: 7770913013442377709}
-  - {fileID: 8567428764992180287}
-  - {fileID: 6887829376111365366}
-  - {fileID: 4155402955675530951}
-  - {fileID: 7565798429223083392}
-  - {fileID: 4723071520682118634}
   isSwinging: 0
+  raycastHit: 0
+  detect: {fileID: 0}
+  range: 0
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 0
+  posRange: 0
+  negRange: 0
 --- !u!54 &72158663970126793
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -504,7 +505,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: f6bc500e687500f45b55c7899b451979, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -616,6 +617,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8932127671702418012}
+  - component: {fileID: 8064887129041315848}
   m_Layer: 0
   m_Name: Player_Oni
   m_TagString: Player
@@ -640,6 +642,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8064887129041315848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6374847682647192485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d7f59f26b53984791712568aecd13e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCam: {fileID: 0}
+  moveSpeed: 5
+  dashSpeed: 10
+  reduceDashMeter: 1
+  fillDashMeter: 1
+  maxDashMeter: 100
+  refillTimer: 1
+  dashMeter: {fileID: 0}
 --- !u!1 &6887829376111365366
 GameObject:
   m_ObjectHideFlags: 0

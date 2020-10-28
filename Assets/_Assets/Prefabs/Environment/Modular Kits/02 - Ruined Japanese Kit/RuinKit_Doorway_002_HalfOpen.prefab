@@ -71,7 +71,7 @@ GameObject:
   m_Component:
   - component: {fileID: 566370049060431870}
   m_Layer: 0
-  m_Name: RuinKit_Doorway_002
+  m_Name: RuinKit_Doorway_002_HalfOpen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -155,6 +155,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: 68c8d6a2a73a31a42988d1d07bc9cb34,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f6bc500e687500f45b55c7899b451979, type: 2}
     - target: {fileID: -927199367670048503, guid: 68c8d6a2a73a31a42988d1d07bc9cb34,
         type: 3}
       propertyPath: m_Name

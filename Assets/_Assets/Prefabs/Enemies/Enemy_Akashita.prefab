@@ -158,6 +158,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_AkaShita_Mesh
       objectReference: {fileID: 0}
+    - target: {fileID: -282556869709011827, guid: 60b5ddc507fd5454e89631ae9e140850,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f6bc500e687500f45b55c7899b451979, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60b5ddc507fd5454e89631ae9e140850, type: 3}
 --- !u!4 &795648764546582355 stripped
