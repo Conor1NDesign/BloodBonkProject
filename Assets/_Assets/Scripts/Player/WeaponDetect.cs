@@ -6,6 +6,9 @@ public class WeaponDetect : MonoBehaviour
 {
     //public Score score;
 
+    Weapon weapon;
+    EnemyAI enemy;
+
     public Material redMat;
     public Material defaultMat;
 
@@ -14,9 +17,16 @@ public class WeaponDetect : MonoBehaviour
 
     bool colourChangeCollision = false;
 
+    void Start()
+    {
+        enemy = GetComponent<EnemyAI>();
+        weapon = FindObjectOfType<Weapon>();
+    }
+
     public void TakeDamage()
     {
         //score.UpdateScore();
+        enemy.TakeDamage(weapon.damage);
         colourChangeCollision = true;
         currentDelay = Time.time + colourChangeDelay;
     }

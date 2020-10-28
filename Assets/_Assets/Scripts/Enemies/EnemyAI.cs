@@ -52,12 +52,9 @@ public class EnemyAI : MonoBehaviour
 		MovementUpdate();
 	}
 
-	void OnTriggerEnter(Collider other)
+	public void TakeDamage(float damage)
 	{
-		if (other.gameObject.CompareTag("Weapon"))
-		{
-			health -= 10.0f;
-		}
+		health -= damage;
 	}
 
 	protected void MovementUpdate()
