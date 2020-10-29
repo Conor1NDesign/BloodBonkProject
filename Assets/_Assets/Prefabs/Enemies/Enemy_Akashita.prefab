@@ -86,9 +86,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a9707ecf0239d40b0f3d113fd33b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMat: {fileID: 2100000, guid: 14265cd6ae442dd489bccd9073780c54, type: 2}
-  defaultMat: {fileID: 5561349426305759274, guid: a4916db431bfbae4593de2082bcb7927,
-    type: 3}
+  redMat: {fileID: 2100000, guid: fa85f474de2ca91959508c8e451388da, type: 2}
+  defaultMat: {fileID: 2100000, guid: 86f4c811c4b5af64da111d3eba51e226, type: 2}
   colourChangeDelay: 0.1
 --- !u!1 &3279821755507104633
 GameObject:
