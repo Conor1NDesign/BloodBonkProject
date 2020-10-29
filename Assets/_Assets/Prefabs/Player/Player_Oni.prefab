@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 72158663970126793}
   m_Layer: 0
   m_Name: Weapon_REPLACEMELATER
-  m_TagString: Weapon
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -316,8 +316,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   lifesteal: 0.1
-  redMat: {fileID: 0}
-  defaultMat: {fileID: 0}
 --- !u!1 &6887829376111365366
 GameObject:
   m_ObjectHideFlags: 0
