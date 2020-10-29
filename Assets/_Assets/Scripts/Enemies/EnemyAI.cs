@@ -6,6 +6,7 @@ public class EnemyAI : MonoBehaviour
 	public GameObject player;
 	
 	public float range = 1.0f;
+	[SerializeField]GameObject weapon = null;
 	[SerializeField]protected float timeBetweenAttacks = 1.0f;
 	// The movement speed of the enemy
 	[SerializeField]float movementSpeed = 1.0f;
@@ -24,8 +25,8 @@ public class EnemyAI : MonoBehaviour
 	// The rigidbody of the enemy
 	Rigidbody enemyRigidBody;
 	protected float timeToNextAttack = 0.0f;
-	
-	public void Damage(float damage)
+
+	public void TakeDamage(float damage)
 	{
 		health -= damage;
 	}
@@ -47,14 +48,14 @@ public class EnemyAI : MonoBehaviour
 		if (timeToNextAttack > 0.0f)
 		{
 			timeToNextAttack -= 1.0f / 60.0f;
+			if (weapon != null)
+				weapon.transform.rotation.Set(0.0f, weapon.transform.rotation.eulerAngles.y + 2, 0.0f, 0.0f);
 		}
+		else
+			if (weapon != null)
+				weapon.transform.rotation = new Quaternion(0.0f, 0.0f, 0.0f, 0.0f);
 
 		MovementUpdate();
-	}
-
-	public void TakeDamage(float damage)
-	{
-		health -= damage;
 	}
 
 	protected void MovementUpdate()

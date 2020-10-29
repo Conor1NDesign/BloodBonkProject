@@ -65,13 +65,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentDistanceToPlayer: 10
   player: {fileID: 0}
-  range: 6
+  range: 9
   timeBetweenAttacks: 3
   movementSpeed: 3
   rotationSpeed: 2.5
   distanceFromPlayer: 6
   allowedRotationVariation: 0.1
   allowedDistanceVariation: 0.1
+  maxHealth: 100
 --- !u!114 &5782149097165530195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,6 +145,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7711413071089548358, guid: 60b5ddc507fd5454e89631ae9e140850,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99a84ab2cd497b449b0903a79262955e, type: 2}
     - target: {fileID: -4216859302048453862, guid: 60b5ddc507fd5454e89631ae9e140850,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -219,6 +225,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2033436664433645646, guid: 60b5ddc507fd5454e89631ae9e140850,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2cbbfb2f3d446ba4980d78f378403b1b, type: 2}
     - target: {fileID: -927199367670048503, guid: 60b5ddc507fd5454e89631ae9e140850,
         type: 3}
       propertyPath: m_Name
@@ -233,7 +244,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f6bc500e687500f45b55c7899b451979, type: 2}
+      objectReference: {fileID: 2100000, guid: 86f4c811c4b5af64da111d3eba51e226, type: 2}
+    - target: {fileID: 225371863824525636, guid: 60b5ddc507fd5454e89631ae9e140850,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99a84ab2cd497b449b0903a79262955e, type: 2}
     - target: {fileID: 5537498672549660265, guid: 60b5ddc507fd5454e89631ae9e140850,
         type: 3}
       propertyPath: m_Layer

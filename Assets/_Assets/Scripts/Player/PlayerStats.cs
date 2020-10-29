@@ -53,4 +53,10 @@ public class PlayerStats : MonoBehaviour
             }
         }
     }
+
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.gameObject.CompareTag("Weapon"))
+			TakeDamage(10.0f);
+	}
 }
