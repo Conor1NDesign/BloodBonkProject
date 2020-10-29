@@ -20,9 +20,11 @@ public class Weapon : MonoBehaviour
     Vector2 mouseInput;
 
     Animator animator;
+    CameraShake camShake;
 
     private void Awake()
     {
+        camShake = FindObjectOfType<CameraShake>();
         animator = GetComponent<Animator>();
         SetAttackSpeed(attackSpeed);
         DisableWeapon();
@@ -89,6 +91,8 @@ public class Weapon : MonoBehaviour
         // All enemies within range
         Collider[] enemiesInRange = Physics.OverlapSphere(playerPos, range, enemyMask);
 
+        bool enemyHit = false;
+
         // Loop through all enemies
         foreach (Collider e in enemiesInRange)
         {
@@ -100,7 +104,14 @@ public class Weapon : MonoBehaviour
             {
                 WeaponDetect detect = e.gameObject.GetComponentInParent<WeaponDetect>();
                 detect.TakeDamage();
+
+                enemyHit = true;
             }
+        }
+
+        if (enemyHit)
+        {
+            StartCoroutine(camShake.Shake());
         }
     }
 
