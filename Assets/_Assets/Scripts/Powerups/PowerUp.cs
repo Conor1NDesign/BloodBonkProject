@@ -16,6 +16,7 @@ public class PowerUp : MonoBehaviour
     public AvaliablePowerUp currentPowerUp;
     public float multiplier = 0.1f;
 
+    // Classes
     PlayerStats stats;
     PlayerMovement movement;
     Weapon weapon;
@@ -35,6 +36,7 @@ public class PowerUp : MonoBehaviour
         }
     }
 
+    // Apply powerup stat
     void Pickup()
     {
         if (currentPowerUp == AvaliablePowerUp.MaxHealth)

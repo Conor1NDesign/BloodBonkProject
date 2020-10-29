@@ -9,22 +9,19 @@ public class PlayerStats : MonoBehaviour
 
     private float currentHealth;
 
-    public Material redMat;
-    public Material defaultMat;
-
-    float colourChangeDelay = 0.1f;
-    float currentDelay = 0f;
-
-    bool colourChangeCollision = false;
-
     // Classes
     HealthBar health;
     Menu menu;
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Weapon"))
+            TakeDamage(10.0f);
+    }
+
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
-        currentDelay = Time.time + colourChangeDelay;
 
         if (currentHealth <= 0f)
         {
@@ -43,21 +40,5 @@ public class PlayerStats : MonoBehaviour
     {
         health.SetHealth(currentHealth);
         health.SetMaxHealth(maxHealth);
-
-        if (colourChangeCollision)
-        {
-            transform.GetComponentInChildren<MeshRenderer>().material = redMat;
-            if (Time.time > currentDelay)
-            {
-                transform.GetComponentInChildren<MeshRenderer>().material = defaultMat;
-                colourChangeCollision = false;
-            }
-        }
     }
-
-	void OnTriggerEnter(Collider other)
-	{
-		if (other.gameObject.CompareTag("Weapon"))
-			TakeDamage(10.0f);
-	}
 }
