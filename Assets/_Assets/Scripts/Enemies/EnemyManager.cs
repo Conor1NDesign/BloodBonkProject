@@ -3,8 +3,11 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
+	[HideInInspector]float difficulty = 1.0f;
+
 	[SerializeField]List<GameObject> enemies = new List<GameObject>();
     [SerializeField]List<GameObject> spawnPoints = new List<GameObject>();
+	[SerializeField]int baseWaveSize = 1;
 	[SerializeField]int waveSize = 1;
 
 #pragma warning disable 0649
@@ -52,8 +55,13 @@ public class EnemyManager : MonoBehaviour
 		{
 			enemies.Add(SpawnEnemy(Random.Range(0, 2) == 0 ? shutenDojiPrefab : akashitaPrefab));
 			enemies[i].transform.position = spawnPoints[i % spawnPoints.Count].transform.position + new Vector3(Random.Range(-1.0f, 1.0f), 1.0f, Random.Range(-1.0f, 1.0f));
-			enemies[i].GetComponent<EnemyAI>().player = player;
+			EnemyAI enemy = enemies[i].GetComponent<EnemyAI>();
+			enemy.player = player;
+			enemy.maxHealth = enemy.maxHealth * difficulty;
+			enemy.damage = enemy.damage * difficulty;
 		}
+		waveSize = baseWaveSize * (int)difficulty;
+		difficulty += 0.05f;
     }
 
     GameObject SpawnEnemy(GameObject enemyPrefab)
