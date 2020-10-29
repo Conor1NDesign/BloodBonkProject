@@ -129,6 +129,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         dashMeter.SetDashMeter(currentDashMeter);
+        dashMeter.SetMaxDashMeter(maxDashMeter);
     }
 
     private void LookDirection()

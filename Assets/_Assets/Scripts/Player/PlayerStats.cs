@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     public float maxHealth = 100f;
-    public float lifesteal = 1.1f;
+    public float lifesteal = 0.1f;
 
     private float currentHealth;
 
@@ -42,6 +42,7 @@ public class PlayerStats : MonoBehaviour
     void Update()
     {
         health.SetHealth(currentHealth);
+        health.SetMaxHealth(maxHealth);
 
         if (colourChangeCollision)
         {

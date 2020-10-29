@@ -5,7 +5,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     public float damage = 10f;
-    public float speed = 1f;
+    public float attackSpeed = 1f;
 
     [HideInInspector]
     public bool isSwinging;
@@ -24,7 +24,13 @@ public class Weapon : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        SetAttackSpeed(attackSpeed);
         DisableWeapon();
+    }
+
+    public void SetAttackSpeed(float attackSpeed)
+    {
+        animator.speed = attackSpeed;
     }
 
     // Plays attacking animation

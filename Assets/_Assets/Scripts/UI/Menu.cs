@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     bool paused = false;
-    public GameObject gameOver;
+    GameObject gameOver;
 
     public bool toggleMenu()
     {
@@ -35,11 +35,8 @@ public class Menu : MonoBehaviour
         Application.Quit();
     }
 
-    void Update()
+    void Start()
     {
-        //if (Input.GetKeyDown(KeyCode.Escape))
-        //{
-        //    paused = toggleMenu();
-        //}
+        gameOver = GameObject.Find("/Canvas/GameOver");
     }
 }
