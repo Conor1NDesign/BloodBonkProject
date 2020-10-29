@@ -15,27 +15,27 @@ public class PlayerMovement : MonoBehaviour
     public float refillTimer = 1f;
     private float currentDashMeter;
 
+    // Camera vars
     Vector3 camF;
     Vector3 camR;
     Vector2 input;
 
+    Transform mainCam;
+
     bool isDashing;
 
-    float actualSpeed;
-    float maxTime;
+    float actualSpeed; // Sprint or normal movement
+    float maxTime; // Time to start refilling dash
 
     // Classes
     DashMeter dashMeter;
     Weapon weapon;
 
-    Transform mainCam;
-
+    
     void Start()
     {
         mainCam = FindObjectOfType<CameraFollow>().transform;
         dashMeter = FindObjectOfType<DashMeter>();
-
-
         weapon = GetComponentInChildren<Weapon>();
         currentDashMeter = maxDashMeter;
     }
@@ -81,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Movement()
     {
+        // Apply player movement
         transform.position += (camF * input.y + camR * input.x) * actualSpeed * Time.fixedDeltaTime;
     }
 
@@ -128,6 +129,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        // Set Dash UI
         dashMeter.SetDashMeter(currentDashMeter);
         dashMeter.SetMaxDashMeter(maxDashMeter);
     }

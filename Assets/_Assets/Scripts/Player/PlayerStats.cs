@@ -13,6 +13,7 @@ public class PlayerStats : MonoBehaviour
     HealthBar health;
     Menu menu;
 
+    // Enemy attacks player
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Weapon"))
@@ -25,7 +26,8 @@ public class PlayerStats : MonoBehaviour
 
         if (currentHealth <= 0f)
         {
-            menu.toggleMenu();
+            // Enable Game Over Menu
+            menu.GameOver();
         }
     }
 
@@ -38,6 +40,7 @@ public class PlayerStats : MonoBehaviour
 
     void Update()
     {
+        // Update Health UI
         health.SetHealth(currentHealth);
         health.SetMaxHealth(maxHealth);
     }
