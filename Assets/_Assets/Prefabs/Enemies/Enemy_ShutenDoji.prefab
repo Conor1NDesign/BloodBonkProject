@@ -55,7 +55,7 @@ MonoBehaviour:
   timeBetweenAttacks: 2
   movementSpeed: 4
   rotationSpeed: 3
-  distanceFromPlayer: 2.5
+  distanceFromPlayer: 1
   allowedRotationVariation: 0.1
   allowedDistanceVariation: 0.1
   maxHealth: 100
