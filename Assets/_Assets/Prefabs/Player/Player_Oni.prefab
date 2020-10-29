@@ -229,6 +229,7 @@ GameObject:
   - component: {fileID: 8064887129041315848}
   - component: {fileID: 7795153520024199471}
   - component: {fileID: -4676792085162057638}
+  - component: {fileID: -7541160925627071908}
   m_Layer: 0
   m_Name: Player_Oni
   m_TagString: Player
@@ -301,6 +302,22 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &-7541160925627071908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6374847682647192485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d956a0f181482104f8634784bb7e9523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  lifesteal: 0.1
+  redMat: {fileID: 0}
+  defaultMat: {fileID: 0}
 --- !u!1 &6887829376111365366
 GameObject:
   m_ObjectHideFlags: 0
