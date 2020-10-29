@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class ShutenDojiAI : EnemyAI
 {
@@ -11,8 +11,10 @@ public class ShutenDojiAI : EnemyAI
 		if (timeToNextAttack > 0.0f)
 		{
 			timeToNextAttack -= 1.0f / 60.0f;
-			weapon.transform.Rotate(new Vector3(5.0f, 0.0f, 0.0f));
+			weapon.transform.Rotate(new Vector3(0.0f, -2.0f, 0.0f));
 		}
+		else
+			weapon.transform.Rotate(new Vector3(0.0f, 120.0f, 0.0f));
 
 		base.MovementUpdate();
 	}
