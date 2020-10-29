@@ -2,17 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
     // Classes
     public GameObject gameOver;
 
+    Button[] buttons;
+
+    void Start()
+    {
+        buttons = gameOver.GetComponentsInChildren<Button>();
+    }
+
     public void GameOver()
     {
         // GameOver On
         gameOver.SetActive(true);
         Time.timeScale = 0f;
+
+        buttons[0].onClick.AddListener(PlayAgain);
+        buttons[1].onClick.AddListener(QuitGame);
     }
 
     // Reset and Unpause game
@@ -25,10 +36,5 @@ public class Menu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
-    }
-
-    void Start()
-    {
-        gameOver = GameObject.Find("GameOver");
     }
 }
