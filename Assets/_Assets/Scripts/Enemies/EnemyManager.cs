@@ -26,6 +26,8 @@ public class EnemyManager : MonoBehaviour
 
 	void FixedUpdate()
 	{
+		difficulty += 0.001f / 60.0f;
+
 		if (Input.GetKeyDown(KeyCode.Backslash))
 		{
 			foreach(GameObject enemy in enemies)
