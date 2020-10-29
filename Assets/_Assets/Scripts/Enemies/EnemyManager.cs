@@ -28,29 +28,32 @@ public class EnemyManager : MonoBehaviour
 	{
 		difficulty += 0.001f / 60.0f;
 
+		// DEBUG: Damage enemies with backslash
 		if (Input.GetKeyDown(KeyCode.Backslash))
 		{
 			foreach(GameObject enemy in enemies)
 			enemy.GetComponent<EnemyAI>().TakeDamage(10.0f);
 		}
 
+		// Making enemies attack and die
 		for (int i = 0; i < enemies.Count; i++)
 		{
 			GameObject enemy = enemies[i];
 			EnemyAI attacker = enemy.GetComponent<EnemyAI>();
-			if (attacker.currentDistanceToPlayer < attacker.range)
-				attacker.Attack();
 			if (attacker.GetHealth() <= 0.0f)
 			{
 				enemies.Remove(enemy);
 				Destroy(enemy);
 			}
+			if (attacker.currentDistanceToPlayer < attacker.range)
+				attacker.Attack();
 		}
 		
 		if (enemies.Count == 0)
 			SpawnWave();
 	}
 
+	// Spawns a wave of enemies, distributed throughout the spawn points
     void SpawnWave()
     {
 		for (int i = 0; i < waveSize; i++)
