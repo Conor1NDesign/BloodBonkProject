@@ -49592,6 +49592,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5488365429618296578, guid: 6f6f4fae6bb63ce488405269ee7d199d,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5488365429618296578, guid: 6f6f4fae6bb63ce488405269ee7d199d,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5488365429618296578, guid: 6f6f4fae6bb63ce488405269ee7d199d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 936906971179430448, guid: 6f6f4fae6bb63ce488405269ee7d199d,
         type: 3}
       propertyPath: enemyMask.m_Bits
@@ -60817,8 +60832,6 @@ MonoBehaviour:
   lifesteal: 1.1
   redMat: {fileID: 0}
   defaultMat: {fileID: 0}
-  colourChangeDelay: 0.5
-  health: {fileID: 1829318456}
 --- !u!43 &2014360798
 Mesh:
   m_ObjectHideFlags: 0

@@ -265,14 +265,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0d7f59f26b53984791712568aecd13e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCam: {fileID: 0}
   moveSpeed: 5
   dashSpeed: 10
   reduceDashMeter: 1
   fillDashMeter: 5
   maxDashMeter: 250
   refillTimer: 2
-  dashMeter: {fileID: 0}
 --- !u!54 &7795153520024199471
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -299,10 +297,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.31603956
+  m_Height: 1.9783311
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: -0.018620014, y: 1.0009654, z: 0.009537071}
 --- !u!1 &6887829376111365366
 GameObject:
   m_ObjectHideFlags: 0
