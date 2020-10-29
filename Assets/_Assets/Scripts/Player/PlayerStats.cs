@@ -5,30 +5,29 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     public float maxHealth = 100f;
-    public float lifesteal = 1.1f;
+    public float lifesteal = 0.1f;
 
     private float currentHealth;
-
-    public Material redMat;
-    public Material defaultMat;
-
-    float colourChangeDelay = 0.1f;
-    float currentDelay = 0f;
-
-    bool colourChangeCollision = false;
 
     // Classes
     HealthBar health;
     Menu menu;
 
+    // Enemy attacks player
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Weapon"))
+            TakeDamage(10.0f);
+    }
+
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
-        currentDelay = Time.time + colourChangeDelay;
 
         if (currentHealth <= 0f)
         {
-            menu.toggleMenu();
+            // Enable Game Over Menu
+            menu.GameOver();
         }
     }
 
@@ -41,22 +40,8 @@ public class PlayerStats : MonoBehaviour
 
     void Update()
     {
+        // Update Health UI
         health.SetHealth(currentHealth);
-
-        if (colourChangeCollision)
-        {
-            transform.GetComponentInChildren<MeshRenderer>().material = redMat;
-            if (Time.time > currentDelay)
-            {
-                transform.GetComponentInChildren<MeshRenderer>().material = defaultMat;
-                colourChangeCollision = false;
-            }
-        }
+        health.SetMaxHealth(maxHealth);
     }
-
-	void OnTriggerEnter(Collider other)
-	{
-		if (other.gameObject.CompareTag("Weapon"))
-			TakeDamage(10.0f);
-	}
 }

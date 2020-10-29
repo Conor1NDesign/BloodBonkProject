@@ -5,7 +5,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     public float damage = 10f;
-    public float speed = 1f;
+    public float attackSpeed = 1f;
 
     [HideInInspector]
     public bool isSwinging;
@@ -16,7 +16,7 @@ public class Weapon : MonoBehaviour
     // Hit Detection
     public float range = 3f;
     public LayerMask enemyMask;
-    public float hitDetectionRange = 40f;
+    [Tooltip("How wide the angle/cone the attack will be")] public float hitDetectionRange = 70f;
     Vector2 mouseInput;
 
     Animator animator;
@@ -24,7 +24,13 @@ public class Weapon : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        SetAttackSpeed(attackSpeed);
         DisableWeapon();
+    }
+
+    public void SetAttackSpeed(float attackSpeed)
+    {
+        animator.speed = attackSpeed;
     }
 
     // Plays attacking animation
@@ -33,7 +39,7 @@ public class Weapon : MonoBehaviour
         mouseInput = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
 
         isSwinging = true;
-        transform.GetComponent<Renderer>().enabled = true;
+        transform.GetComponent<Renderer>().enabled = true; // Show Weapon
         animator.Play("Attack");
     }
 
@@ -53,7 +59,6 @@ public class Weapon : MonoBehaviour
     public void DisableWeapon()
     {
         transform.GetComponent<Renderer>().enabled = false;
-        transform.GetComponent<BoxCollider>().enabled = false;
         isSwinging = false;
         isAttacking = false;
     }
@@ -90,7 +95,7 @@ public class Weapon : MonoBehaviour
             // DEBUGGING
             //float angle = Vector3.Angle(transform.parent.forward, e.gameObject.transform.position - playerPos);
 
-            // Hit Detection cone facing enemy
+            // Hit Detection cone if facing enemy
             if (Vector3.Angle(transform.parent.forward, e.gameObject.transform.position - playerPos) < hitDetectionRange)
             {
                 WeaponDetect detect = e.gameObject.GetComponentInParent<WeaponDetect>();
@@ -98,7 +103,6 @@ public class Weapon : MonoBehaviour
             }
         }
     }
-
 
     // Update is called once per frame
     void Update()

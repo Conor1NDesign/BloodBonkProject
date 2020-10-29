@@ -5,25 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    bool paused = false;
+    // Classes
     public GameObject gameOver;
 
-    public bool toggleMenu()
+    public void GameOver()
     {
-        if (Time.timeScale == 0f)
-        {
-            gameOver.SetActive(false);
-            Time.timeScale = 1f;
-            return (false);
-        }
-        else
-        {
-            gameOver.SetActive(true);
-            Time.timeScale = 0f;
-            return (true);
-        }
+        // GameOver On
+        gameOver.SetActive(true);
+        Time.timeScale = 0f;
     }
 
+    // Reset and Unpause game
     public void PlayAgain()
     {
         Time.timeScale = 1f;
@@ -35,11 +27,8 @@ public class Menu : MonoBehaviour
         Application.Quit();
     }
 
-    void Update()
+    void Start()
     {
-        //if (Input.GetKeyDown(KeyCode.Escape))
-        //{
-        //    paused = toggleMenu();
-        //}
+        gameOver = GameObject.Find("GameOver");
     }
 }

@@ -6,13 +6,15 @@ public class WeaponDetect : MonoBehaviour
 {
     //public Score score;
 
+    // Classes
     Weapon weapon;
     EnemyAI enemy;
 
+    // Debugging
     public Material redMat;
     public Material defaultMat;
 
-    public float colourChangeDelay = 0.5f;
+    public float colourChangeDelay = 0.1f;
     float currentDelay = 0f;
 
     bool colourChangeCollision = false;
@@ -33,6 +35,7 @@ public class WeaponDetect : MonoBehaviour
 
     void Update()
     {
+        // Debugging
         if (colourChangeCollision)
         {
             transform.GetComponentInChildren<MeshRenderer>().material = redMat;
