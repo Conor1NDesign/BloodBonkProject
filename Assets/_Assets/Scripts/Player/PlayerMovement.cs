@@ -45,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
     {
         PlayerInput();
 
+        // Debugging
         if (Input.GetKeyDown(KeyCode.J))
         {
             power.SpawnPowerUp(transform.position);
