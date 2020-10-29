@@ -50,7 +50,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 80
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &3800055177004642420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,6 +66,7 @@ MonoBehaviour:
   currentDistanceToPlayer: 10
   player: {fileID: 0}
   range: 9
+  weapon: {fileID: 0}
   timeBetweenAttacks: 3
   movementSpeed: 3
   rotationSpeed: 2.5
@@ -99,6 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8657622036321141044}
   - component: {fileID: 2295532560210055391}
+  - component: {fileID: 919766842283524823}
   m_Layer: 9
   m_Name: AkashitaCollider
   m_TagString: Enemy
@@ -132,6 +134,20 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.85
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &919766842283524823
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3279821755507104633}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2.925
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &5652020399129406537
 PrefabInstance:

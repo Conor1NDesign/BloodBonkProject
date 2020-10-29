@@ -55,7 +55,7 @@ MonoBehaviour:
   timeBetweenAttacks: 2
   movementSpeed: 4
   rotationSpeed: 3
-  distanceFromPlayer: 2.5
+  distanceFromPlayer: 1
   allowedRotationVariation: 0.1
   allowedDistanceVariation: 0.1
   maxHealth: 100
@@ -75,7 +75,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 80
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &3813941380192926894
 MonoBehaviour:
   m_ObjectHideFlags: 0

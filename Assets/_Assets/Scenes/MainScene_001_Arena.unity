@@ -3004,6 +3004,7 @@ Transform:
   - {fileID: 732392765}
   - {fileID: 531792247}
   - {fileID: 287530198}
+  - {fileID: 1202051850}
   m_Father: {fileID: 2026019405}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13707,13 +13708,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 436069127}
-  m_LocalRotation: {x: 0.26179737, y: -0.73244596, z: 0.38759214, w: 0.49472976}
-  m_LocalPosition: {x: 8.61, y: 13.79, z: 2.61}
+  m_LocalRotation: {x: 0.19134106, y: -0.8001026, z: 0.33141318, w: 0.46194133}
+  m_LocalPosition: {x: 7.25, y: 9, z: 4.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 55.773003, y: -111.926, z: 0}
+  m_LocalEulerAnglesHint: {x: 45.000004, y: -120.00001, z: 0}
 --- !u!114 &436069129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38828,6 +38829,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!4 &1202051850 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3422372348734742295, guid: bb0385351f92380469436072526e5cb0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1700046941}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1204746273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47946,21 +47953,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseKit_StoneStairs (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 5334102514913099724, guid: bb0385351f92380469436072526e5cb0,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 5498619800278033604, guid: bb0385351f92380469436072526e5cb0,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 6931641018229609826, guid: bb0385351f92380469436072526e5cb0,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb0385351f92380469436072526e5cb0, type: 3}
 --- !u!4 &1538109149 stripped
@@ -52042,6 +52034,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df7476abf6b77a847860781556268d50, type: 3}
+--- !u!1001 &1700046941
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 104940596}
+    m_Modifications:
+    - target: {fileID: 3422372348734742295, guid: bb0385351f92380469436072526e5cb0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3422372348734742295, guid: bb0385351f92380469436072526e5cb0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3422372348734742295, guid: bb0385351f92380469436072526e5cb0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3422372348734742295, guid: bb0385351f92380469436072526e5cb0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3422372348734742295, guid: bb0385351f92380469436072526e5cb0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70710576
+      objectReference: {fileID: 0}
+    - target: {fileID: 3422372348734742295, guid: bb0385351f92380469436072526e5cb0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3422372348734742295, guid: bb0385351f92380469436072526e5cb0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710784
+      objectReference: {fileID: 0}
+    - target: {fileID: 3422372348734742295, guid: bb0385351f92380469436072526e5cb0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3422372348734742295, guid: bb0385351f92380469436072526e5cb0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3422372348734742295, guid: bb0385351f92380469436072526e5cb0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3422372348734742295, guid: bb0385351f92380469436072526e5cb0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5334102514913099724, guid: bb0385351f92380469436072526e5cb0,
+        type: 3}
+      propertyPath: m_Name
+      value: BaseKit_StoneStairs (30)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bb0385351f92380469436072526e5cb0, type: 3}
 --- !u!4 &1702424451 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3522876783581384409, guid: ea7279b1dadb95e46ae2c6775b00a781,
@@ -59467,80 +59528,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1001 &1954585989
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1538109149}
-    m_Modifications:
-    - target: {fileID: -4216859302048453862, guid: 5205ebe268296fb4dbed469f6c9793eb,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 5205ebe268296fb4dbed469f6c9793eb,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 5205ebe268296fb4dbed469f6c9793eb,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 5205ebe268296fb4dbed469f6c9793eb,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 5205ebe268296fb4dbed469f6c9793eb,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 5205ebe268296fb4dbed469f6c9793eb,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 5205ebe268296fb4dbed469f6c9793eb,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 5205ebe268296fb4dbed469f6c9793eb,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 5205ebe268296fb4dbed469f6c9793eb,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 5205ebe268296fb4dbed469f6c9793eb,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -4216859302048453862, guid: 5205ebe268296fb4dbed469f6c9793eb,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 5205ebe268296fb4dbed469f6c9793eb,
-        type: 3}
-      propertyPath: m_Name
-      value: BaseKit_StoneStair_Mesh (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 5205ebe268296fb4dbed469f6c9793eb,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5205ebe268296fb4dbed469f6c9793eb, type: 3}
 --- !u!1001 &1958643878
 PrefabInstance:
   m_ObjectHideFlags: 0
