@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDistanceToPlayer: 10
+  enemyManager: {fileID: 0}
   player: {fileID: 0}
   range: 3
   timeBetweenAttacks: 2
@@ -60,6 +61,7 @@ MonoBehaviour:
   maxHealth: 100
   health: 100
   damage: 10
+  attackLength: 1
   weapon: {fileID: 4355480219597701749}
 --- !u!54 &9134825333093586148
 Rigidbody:
@@ -89,9 +91,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a9707ecf0239d40b0f3d113fd33b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMat: {fileID: 2100000, guid: 14265cd6ae442dd489bccd9073780c54, type: 2}
-  defaultMat: {fileID: 5561349426305759274, guid: edb88b7b903102340a2e83aced7265f7,
-    type: 3}
+  redMat: {fileID: 2100000, guid: fa85f474de2ca91959508c8e451388da, type: 2}
+  defaultMat: {fileID: 2100000, guid: 2cbbfb2f3d446ba4980d78f378403b1b, type: 2}
   colourChangeDelay: 0.1
 --- !u!1 &1730159085621681363
 GameObject:

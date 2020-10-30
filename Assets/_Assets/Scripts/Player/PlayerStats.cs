@@ -18,6 +18,11 @@ public class PlayerStats : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Weapon"))
             TakeDamage(10.0f);
+        if (other.gameObject.CompareTag("Projectile"))
+		{
+			TakeDamage(10.0f);
+			Destroy(other.transform.root.gameObject);
+		}
     }
 
     public void TakeDamage(float damage)
@@ -28,6 +33,16 @@ public class PlayerStats : MonoBehaviour
         {
             // Enable Game Over Menu
             menu.GameOver();
+        }
+    }
+
+    public void Lifesteal()
+    {
+        currentHealth += maxHealth * lifesteal;
+
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
         }
     }
 
