@@ -7,7 +7,6 @@ public class WeaponDetect : MonoBehaviour
     //public Score score;
 
     // Classes
-    Weapon weapon;
     EnemyAI enemy;
 
     // Debugging
@@ -22,13 +21,12 @@ public class WeaponDetect : MonoBehaviour
     void Start()
     {
         enemy = GetComponent<EnemyAI>();
-        weapon = FindObjectOfType<Weapon>();
     }
 
-    public void TakeDamage()
+    public void TakeDamage(float damage)
     {
         //score.UpdateScore();
-        enemy.TakeDamage(weapon.damage);
+        enemy.TakeDamage(damage);
         colourChangeCollision = true;
         currentDelay = Time.time + colourChangeDelay;
     }

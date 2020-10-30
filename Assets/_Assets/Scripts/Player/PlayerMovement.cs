@@ -31,7 +31,8 @@ public class PlayerMovement : MonoBehaviour
     DashMeter dashMeter;
     Weapon weapon;
 
-    
+    public SpawnPower power;
+
     void Start()
     {
         mainCam = FindObjectOfType<CameraFollow>().transform;
@@ -43,6 +44,12 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         PlayerInput();
+
+        // Debugging
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            power.SpawnPowerUp(transform.position);
+        }
     }
 
     void FixedUpdate()

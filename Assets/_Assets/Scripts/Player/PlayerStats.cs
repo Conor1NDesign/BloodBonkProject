@@ -31,6 +31,16 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+    public void Lifesteal()
+    {
+        currentHealth += maxHealth * lifesteal;
+
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+    }
+
     void Start()
     {
         health = FindObjectOfType<HealthBar>();

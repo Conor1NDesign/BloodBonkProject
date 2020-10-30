@@ -103,7 +103,7 @@ public class Weapon : MonoBehaviour
             if (Vector3.Angle(transform.parent.forward, e.gameObject.transform.position - playerPos) < hitDetectionRange)
             {
                 WeaponDetect detect = e.gameObject.GetComponentInParent<WeaponDetect>();
-                detect.TakeDamage();
+                detect.TakeDamage(damage);
 
                 enemyHit = true;
             }
