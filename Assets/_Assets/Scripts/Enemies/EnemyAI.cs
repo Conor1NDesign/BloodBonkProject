@@ -3,10 +3,10 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
 	[HideInInspector]public float currentDistanceToPlayer = 10.0f;
+	[HideInInspector]public EnemyManager enemyManager;
 	public GameObject player;
 	
 	public float range = 1.0f;
-	[SerializeField]GameObject weapon = null;
 	[SerializeField]protected float timeBetweenAttacks = 1.0f;
 	// The movement speed of the enemy
 	[SerializeField]float movementSpeed = 1.0f;
@@ -19,8 +19,9 @@ public class EnemyAI : MonoBehaviour
 	// The amount of variation allowed in the distance from the player
 	[SerializeField]float allowedDistanceVariation = 0.1f;
 	//HEALTH!
-	[SerializeField]float maxHealth = 100.0f;
-	float health = 100.0f;
+	public float maxHealth = 100.0f;
+	[HideInInspector]public float health = 100.0f;
+	public float damage = 10.0f;
 	
 	// The rigidbody of the enemy
 	Rigidbody enemyRigidBody;
@@ -48,12 +49,7 @@ public class EnemyAI : MonoBehaviour
 		if (timeToNextAttack > 0.0f)
 		{
 			timeToNextAttack -= 1.0f / 60.0f;
-			if (weapon != null)
-				weapon.transform.rotation.Set(0.0f, weapon.transform.rotation.eulerAngles.y + 2, 0.0f, 0.0f);
 		}
-		else
-			if (weapon != null)
-				weapon.transform.rotation = new Quaternion(0.0f, 0.0f, 0.0f, 0.0f);
 
 		MovementUpdate();
 	}

@@ -18,6 +18,11 @@ public class PlayerStats : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Weapon"))
             TakeDamage(10.0f);
+        if (other.gameObject.CompareTag("Projectile"))
+		{
+			TakeDamage(10.0f);
+			Destroy(other.transform.root.gameObject);
+		}
     }
 
     public void TakeDamage(float damage)
