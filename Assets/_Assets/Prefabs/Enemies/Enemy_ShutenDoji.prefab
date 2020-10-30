@@ -51,7 +51,6 @@ MonoBehaviour:
   currentDistanceToPlayer: 10
   player: {fileID: 0}
   range: 3
-  weapon: {fileID: 4355480219597701749}
   timeBetweenAttacks: 2
   movementSpeed: 4
   rotationSpeed: 3
@@ -59,7 +58,9 @@ MonoBehaviour:
   allowedRotationVariation: 0.1
   allowedDistanceVariation: 0.1
   maxHealth: 100
-  weapon: {fileID: 2022577734160621719}
+  health: 100
+  damage: 10
+  weapon: {fileID: 4355480219597701749}
 --- !u!54 &9134825333093586148
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -509,12 +510,12 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 8b93434a67d22ff4ab3f1b4fbdf745f4,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8b93434a67d22ff4ab3f1b4fbdf745f4,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.70710576
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8b93434a67d22ff4ab3f1b4fbdf745f4,
         type: 3}
@@ -524,7 +525,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 8b93434a67d22ff4ab3f1b4fbdf745f4,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.70710784
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8b93434a67d22ff4ab3f1b4fbdf745f4,
         type: 3}
@@ -539,7 +540,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 8b93434a67d22ff4ab3f1b4fbdf745f4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90.00001
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8b93434a67d22ff4ab3f1b4fbdf745f4,
         type: 3}
