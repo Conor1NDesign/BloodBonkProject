@@ -49,9 +49,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDistanceToPlayer: 10
+  enemyManager: {fileID: 0}
   player: {fileID: 0}
   range: 3
-  weapon: {fileID: 2022577734160621719}
   timeBetweenAttacks: 2
   movementSpeed: 4
   rotationSpeed: 3
@@ -59,7 +59,10 @@ MonoBehaviour:
   allowedRotationVariation: 0.1
   allowedDistanceVariation: 0.1
   maxHealth: 100
-  weapon: {fileID: 2022577734160621719}
+  health: 100
+  damage: 10
+  attackLength: 1
+  weapon: {fileID: 4355480219597701749}
 --- !u!54 &9134825333093586148
 Rigidbody:
   m_ObjectHideFlags: 0
