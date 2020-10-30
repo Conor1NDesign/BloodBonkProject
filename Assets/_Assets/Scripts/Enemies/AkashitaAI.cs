@@ -16,6 +16,7 @@ public class AkashitaAI : EnemyAI
 
 			AkashitaProjectile projectile = Instantiate(projectilePrefab, transform.position + transform.forward, transform.rotation).GetComponent<AkashitaProjectile>();
 			projectile.velocity = transform.forward * projectileSpeed;
+			enemyManager.akashitaProjectiles.Add(projectile);
 		}
 	}
 }

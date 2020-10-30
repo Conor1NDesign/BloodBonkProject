@@ -3,6 +3,7 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
 	[HideInInspector]public float currentDistanceToPlayer = 10.0f;
+	[HideInInspector]public EnemyManager enemyManager;
 	public GameObject player;
 	
 	public float range = 1.0f;
