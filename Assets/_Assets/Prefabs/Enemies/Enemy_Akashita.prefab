@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8401510408631581184}
   - component: {fileID: 8918605958268128545}
-  - component: {fileID: 3800055177004642420}
+  - component: {fileID: 5749689772656713740}
   - component: {fileID: 5782149097165530195}
   m_Layer: 0
   m_Name: Enemy_Akashita
@@ -51,7 +51,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 1
---- !u!114 &3800055177004642420
+--- !u!114 &5749689772656713740
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -60,13 +60,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1403625688449953851}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 252dea917b6cad67e8903cb270176274, type: 3}
+  m_Script: {fileID: 11500000, guid: 92ff60951e36a791a8f281467849e1a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentDistanceToPlayer: 10
   player: {fileID: 0}
   range: 9
-  weapon: {fileID: 0}
   timeBetweenAttacks: 3
   movementSpeed: 3
   rotationSpeed: 2.5
@@ -74,6 +73,11 @@ MonoBehaviour:
   allowedRotationVariation: 0.1
   allowedDistanceVariation: 0.1
   maxHealth: 100
+  health: 100
+  damage: 10
+  projectilePrefab: {fileID: 2728518914123767262, guid: 756bbc29cc23b6247abff3738baafb3b,
+    type: 3}
+  projectileSpeed: 2
 --- !u!114 &5782149097165530195
 MonoBehaviour:
   m_ObjectHideFlags: 0
