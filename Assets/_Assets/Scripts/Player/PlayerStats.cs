@@ -31,9 +31,9 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    public void Lifesteal()
+    public void Lifesteal(float damage)
     {
-        currentHealth += maxHealth * lifesteal;
+        currentHealth += damage * lifesteal;
 
         if (currentHealth > maxHealth)
         {
