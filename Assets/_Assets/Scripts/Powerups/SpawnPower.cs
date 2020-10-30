@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class SpawnPower : MonoBehaviour
 {
-    public GameObject[] power;
+    public GameObject[] powerUps;
+
+    [Range(0f, 100f)] public float powerUpSpawnChance = 100f;
 
     public void SpawnPowerUp(Vector3 position)
     {
-        int num = Random.Range(0, 4);
+        if (powerUpSpawnChance < Random.Range(0f, 100f))
+        {
+            int num = Random.Range(0, 4);
 
-        position.y += 0.5f;
+            position.y += 0.5f;
 
-        Instantiate(power[num], position, Quaternion.identity);
+            Instantiate(powerUps[num], position, Quaternion.identity);
+        }
     }
 }
