@@ -42097,12 +42097,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba0b81de7f19574887d9ac26e66095c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power:
+  powerUps:
   - {fileID: 8209442530580464014, guid: 21957c236e109b242ac952c95f007489, type: 3}
   - {fileID: 9183333721229108799, guid: 8aaf6444c6be770469c349df85a3eeb3, type: 3}
   - {fileID: 7778000034692061660, guid: 2e1b66a0dfdc5c341ac6bdf8c1a7d0ce, type: 3}
   - {fileID: 7418058267429961060, guid: d45c22efa508e5d4ca69ec03c80e1147, type: 3}
   - {fileID: 1209746143785438024, guid: 0e872faa596235347818502471d22426, type: 3}
+  powerUpSpawnChance: 30.1
 --- !u!4 &1361313140
 Transform:
   m_ObjectHideFlags: 0

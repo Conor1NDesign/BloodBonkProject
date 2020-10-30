@@ -21,10 +21,12 @@ public class Weapon : MonoBehaviour
 
     Animator animator;
     CameraShake camShake;
+    PlayerStats stats;
 
     private void Awake()
     {
         camShake = FindObjectOfType<CameraShake>();
+        stats = FindObjectOfType<PlayerStats>();
         animator = GetComponent<Animator>();
         SetAttackSpeed(attackSpeed);
         DisableWeapon();
@@ -104,6 +106,7 @@ public class Weapon : MonoBehaviour
             {
                 WeaponDetect detect = e.gameObject.GetComponentInParent<WeaponDetect>();
                 detect.TakeDamage(damage);
+                stats.Lifesteal(damage);
 
                 enemyHit = true;
             }
