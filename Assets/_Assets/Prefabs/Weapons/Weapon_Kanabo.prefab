@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  speed: 1
+  attackSpeed: 1
   isSwinging: 0
   range: 0
   enemyMask:
@@ -416,13 +416,23 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: d0b0086612758cb4982713d3a06fa9e6,
         type: 3}
       propertyPath: m_Name
-      value: Weapon_Kanabo_Mesh (1)
+      value: Weapon_Kanabo_Mesh
       objectReference: {fileID: 0}
     - target: {fileID: -357430486526138686, guid: d0b0086612758cb4982713d3a06fa9e6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f6bc500e687500f45b55c7899b451979, type: 2}
+      objectReference: {fileID: 2100000, guid: fc15b6ec64020df46a1ddb57d859f2c4, type: 2}
+    - target: {fileID: 4504645082871215830, guid: d0b0086612758cb4982713d3a06fa9e6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b11f0c67dd4819c488e32eff6eaa1334, type: 2}
+    - target: {fileID: 5051804062640238607, guid: d0b0086612758cb4982713d3a06fa9e6,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 40c390d8e2e6bdf47a114eb6aa21f9b8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0b0086612758cb4982713d3a06fa9e6, type: 3}
 --- !u!4 &3214340090785646870 stripped
