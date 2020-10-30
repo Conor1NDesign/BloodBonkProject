@@ -21,7 +21,7 @@ public class PlayerStats : MonoBehaviour
         if (other.gameObject.CompareTag("Projectile"))
 		{
 			TakeDamage(10.0f);
-			Destroy(other.gameObject);
+			Destroy(other.transform.root.gameObject);
 		}
     }
 

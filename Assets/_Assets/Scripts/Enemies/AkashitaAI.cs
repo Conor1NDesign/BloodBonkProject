@@ -14,8 +14,8 @@ public class AkashitaAI : EnemyAI
 			// Do the attacky thing
 			timeToNextAttack = timeBetweenAttacks;
 
-			GameObject attack = Instantiate(projectilePrefab, transform.position + transform.forward, transform.rotation);
-			attack.GetComponent<Rigidbody>().velocity = transform.forward * projectileSpeed;
+			AkashitaProjectile projectile = Instantiate(projectilePrefab, transform.position + transform.forward, transform.rotation).GetComponent<AkashitaProjectile>();
+			projectile.velocity = transform.forward * projectileSpeed;
 		}
 	}
 }
