@@ -10,11 +10,11 @@ public class SpawnPower : MonoBehaviour
 
     public void SpawnPowerUp(Vector3 position)
     {
-        if (powerUpSpawnChance < Random.Range(0f, 100f))
+        if (powerUpSpawnChance > Random.Range(0f, 100f))
         {
-            int num = Random.Range(0, 4);
+            int num = Random.Range(0, 5);
 
-            position.y += 0.5f;
+            Debug.Log(num);
 
             Instantiate(powerUps[num], position, Quaternion.identity);
         }
