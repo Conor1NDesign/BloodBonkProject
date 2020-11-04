@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa6569428de395b469fea58c918aa28e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentPowerUp: 0
+  currentPowerUp: 3
   multiplier: 0.1
 --- !u!1001 &1991376174250905099
 PrefabInstance:
