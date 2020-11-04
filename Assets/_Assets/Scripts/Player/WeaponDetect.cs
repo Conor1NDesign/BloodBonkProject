@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class WeaponDetect : MonoBehaviour
 {
-    //public Score score;
 
     // Classes
     EnemyAI enemy;
+    Score score;
 
     // Debugging
     public Material redMat;
@@ -21,27 +21,28 @@ public class WeaponDetect : MonoBehaviour
     void Start()
     {
         enemy = GetComponent<EnemyAI>();
+        score = FindObjectOfType<Score>();
     }
 
     public void TakeDamage(float damage)
     {
-        //score.UpdateScore();
+        score.UpdateScore();
         enemy.TakeDamage(damage);
-        colourChangeCollision = true;
-        currentDelay = Time.time + colourChangeDelay;
+        //colourChangeCollision = true;
+        //currentDelay = Time.time + colourChangeDelay;
     }
 
     void Update()
     {
         // Debugging
-        if (colourChangeCollision)
-        {
-            transform.GetComponentInChildren<MeshRenderer>().material = redMat;
-            if (Time.time > currentDelay)
-            {
-                transform.GetComponentInChildren<MeshRenderer>().material = defaultMat;
-                colourChangeCollision = false;
-            }
-        }
+        //if (colourChangeCollision)
+        //{
+        //    transform.GetComponentInChildren<MeshRenderer>().material = redMat;
+        //    if (Time.time > currentDelay)
+        //    {
+        //        transform.GetComponentInChildren<MeshRenderer>().material = defaultMat;
+        //        colourChangeCollision = false;
+        //    }
+        //}
     }
 }
