@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyManager : MonoBehaviour
 {
-	[HideInInspector]public float difficulty = 1.0f;
+	[HideInInspector]public float difficulty = 0.9f;
 	[HideInInspector]public List<AkashitaProjectile> akashitaProjectiles = new List<AkashitaProjectile>();
 
 	[SerializeField]List<GameObject> enemies = new List<GameObject>();
@@ -18,7 +19,7 @@ public class EnemyManager : MonoBehaviour
 #pragma warning restore 0649
 	void FixedUpdate()
 	{
-		difficulty += 0.001f / 60.0f;
+		difficulty += 0.0001f / 60.0f;
 
 		// DEBUG: Damage enemies with backslash
 		if (Input.GetKeyDown(KeyCode.Backslash))
@@ -32,6 +33,7 @@ public class EnemyManager : MonoBehaviour
 		{
 			GameObject enemy = enemies[i];
 			EnemyAI attacker = enemy.GetComponent<EnemyAI>();
+			NavMeshAgent agent = enemy.GetComponent<NavMeshAgent>();
 			if (attacker.GetHealth() <= 0.0f)
 			{
 				enemies.Remove(enemy);
@@ -39,7 +41,12 @@ public class EnemyManager : MonoBehaviour
 				i--;
 			}
 			if (attacker.currentDistanceToPlayer < attacker.range)
+			{
 				attacker.Attack();
+				agent.updateRotation = false;
+			}
+			else
+				agent.updateRotation = true;
 		}
 		
 		for (int i = 0; i < akashitaProjectiles.Count; i++)
@@ -64,6 +71,7 @@ public class EnemyManager : MonoBehaviour
 			EnemyAI enemy = enemies[i].GetComponent<EnemyAI>();
 			enemy.player = player;
 			enemy.maxHealth = enemy.maxHealth * difficulty;
+			enemy.health = enemy.maxHealth;
 			enemy.damage = enemy.damage * difficulty;
 			enemy.enemyManager = this;
 		}

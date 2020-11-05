@@ -878,7 +878,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90c8535b03dcb28449dfab73978dbaaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficulty: 1
   akashitaProjectiles: []
   enemies: []
   spawnPoints:
@@ -2919,13 +2918,13 @@ Transform:
   - {fileID: 62655828}
   - {fileID: 1253348539}
   - {fileID: 732392765}
-  - {fileID: 1202051850}
   - {fileID: 531792247}
+  - {fileID: 1202051850}
   - {fileID: 287530198}
   - {fileID: 2025817538}
   - {fileID: 1597155543}
-  - {fileID: 1593250456}
   - {fileID: 1773024896}
+  - {fileID: 1593250456}
   m_Father: {fileID: 2026019405}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -53483,6 +53482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7830d01309658514d8e6a117829082f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 0}
 --- !u!114 &1829318457
 MonoBehaviour:
   m_ObjectHideFlags: 0
