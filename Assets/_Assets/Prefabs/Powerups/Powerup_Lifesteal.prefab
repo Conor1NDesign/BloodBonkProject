@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 320110117663492501}
   - component: {fileID: 4506562524708804092}
+  - component: {fileID: 5615879998699515665}
   m_Layer: 0
   m_Name: PowerUp_Collider
   m_TagString: Untagged
@@ -39,11 +40,23 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414745622357286960}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &5615879998699515665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414745622357286960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae672f8c03cd3a946993c873f3211b04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7480692937819404180
 GameObject:
   m_ObjectHideFlags: 0
@@ -53,7 +66,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7856535720672692657}
-  - component: {fileID: 6519136552532471787}
+  - component: {fileID: 9094875918289364606}
   m_Layer: 0
   m_Name: Powerup_Lifesteal
   m_TagString: Untagged
@@ -77,7 +90,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6519136552532471787
+--- !u!114 &9094875918289364606
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
