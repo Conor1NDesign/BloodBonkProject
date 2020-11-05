@@ -17,6 +17,15 @@ public class EnemyManager : MonoBehaviour
     [SerializeField]GameObject akashitaPrefab;
     [SerializeField]GameObject shutenDojiPrefab;
 #pragma warning restore 0649
+
+	public SpawnPower powerupManager;
+	Score score;
+
+	void Start()
+    {
+		score = FindObjectOfType<Score>();
+    }
+
 	void FixedUpdate()
 	{
 		difficulty += 0.0001f / 60.0f;
@@ -39,6 +48,12 @@ public class EnemyManager : MonoBehaviour
 				enemies.Remove(enemy);
 				Destroy(enemy);
 				i--;
+
+				// Increase score
+				score.UpdateScore();
+
+				// Chance to spawn rdm powerup
+				powerupManager.SpawnPowerUp(enemy.transform.position);
 			}
 			if (attacker.currentDistanceToPlayer < attacker.range)
 			{

@@ -34,7 +34,7 @@ public class PowerUp : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            //Pickup();
+            Pickup();
         }
     }
 
