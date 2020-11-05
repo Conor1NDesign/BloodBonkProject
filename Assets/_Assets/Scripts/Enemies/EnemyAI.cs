@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -8,28 +9,22 @@ public class EnemyAI : MonoBehaviour
 	
 	public float range = 1.0f;
 	[SerializeField]protected float timeBetweenAttacks = 1.0f;
-	// The movement speed of the enemy
-	[SerializeField]float movementSpeed = 1.0f;
-	// The speed at which the enemy turns to face the player
-	[SerializeField]float rotationSpeed = 1.0f;
 	// The distance from the player that the enemy will approach to
-	[SerializeField]float distanceFromPlayer = 1.0f;
-	// The amount of variation allowed in the rotation towards the player
-	[SerializeField]float allowedRotationVariation = 0.1f;
-	// The amount of variation allowed in the distance from the player
-	[SerializeField]float allowedDistanceVariation = 0.1f;
+	[SerializeField]protected float distanceFromPlayer = 1.0f;
 	//HEALTH!
 	public float maxHealth = 100.0f;
 	[HideInInspector]public float health = 100.0f;
+	public HealthBar healthBar;
 	public float damage = 10.0f;
 	
 	// The rigidbody of the enemy
-	Rigidbody enemyRigidBody;
+	protected NavMeshAgent agent;
 	protected float timeToNextAttack = 0.0f;
 
 	public void TakeDamage(float damage)
 	{
 		health -= damage;
+		healthBar.SetHealth(health);
 	}
 
 	public float GetHealth()
@@ -39,8 +34,11 @@ public class EnemyAI : MonoBehaviour
 	
 	void Awake()
 	{
-		// Cache this GameObject's rigidbody
-		enemyRigidBody = GetComponent<Rigidbody>();
+		// Cache this GameObject's navmesh agent
+		agent = GetComponent<NavMeshAgent>();
+		healthBar = GetComponentInChildren<HealthBar>();
+		healthBar.SetMaxHealth(maxHealth);
+		healthBar.SetHealth(health);
 		health = maxHealth;
 	}
 
@@ -56,25 +54,31 @@ public class EnemyAI : MonoBehaviour
 
 	protected void MovementUpdate()
 	{
-		// Find the direction to the player
 		Vector3 toPlayer = player.transform.position - transform.position;
-		toPlayer.y = 0.0f;
+		agent.destination = player.transform.position - ((toPlayer).normalized * distanceFromPlayer);
 		currentDistanceToPlayer = toPlayer.magnitude;
-		
-		// If the enemy isn't within range of the player, move to range
-		Vector3 toDistanceFromPlayer = toPlayer - toPlayer.normalized * distanceFromPlayer;
-		if (toDistanceFromPlayer.sqrMagnitude > allowedDistanceVariation)
-			enemyRigidBody.velocity = toDistanceFromPlayer.normalized * movementSpeed;
-		else
-			enemyRigidBody.velocity = Vector3.zero;
+		if (currentDistanceToPlayer < range)
+		{
+			// Rotate towards the player
+			float directionToPlayer = Vector3.Dot(Vector3.Cross(transform.forward, toPlayer), transform.up);
+			
+			directionToPlayer = directionToPlayer > 1.0f ? 0.05f :
+				directionToPlayer < -1.0f ? -0.05f : 0.0f;
+			
+			transform.Rotate(new Vector3(0, directionToPlayer * agent.angularSpeed, 0));
 
-		// Rotate towards the player
-		float directionToPlayer = Vector3.Dot(Vector3.Cross(transform.forward, toPlayer), transform.up);
-		
-		directionToPlayer = directionToPlayer > allowedRotationVariation ? 1.0f :
-			directionToPlayer < -allowedRotationVariation ? -1.0f : 0.0f;
-
-		enemyRigidBody.angularVelocity = new Vector3(0, directionToPlayer * rotationSpeed, 0);
+			// I'll leave this idiocy here in comment form.
+			// Why didn't I just use transform.rotate from the start?
+			// No idea!
+			/*float newYRotation = transform.rotation.y + directionToPlayer;
+			if (newYRotation > 1.0f)
+				newYRotation -= 2.0f;
+			if (newYRotation < -1.0f)
+				newYRotation += 2.0f;
+			transform.rotation = new Quaternion(0,
+				transform.rotation.y + directionToPlayer,
+				0, transform.rotation.w);*/
+		}
 	}
 
 	public virtual void Attack()

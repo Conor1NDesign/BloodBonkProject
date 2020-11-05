@@ -21,7 +21,7 @@ public class ShutenDojiAI : EnemyAI
 		}
 		if (timeToNextAttack < timeBetweenAttacks - attackLength)
 			weapon.transform.rotation = new Quaternion(0.0f, 0.0f, 0.0f, 0.0f);
-
+		
 		base.MovementUpdate();
 	}
 
