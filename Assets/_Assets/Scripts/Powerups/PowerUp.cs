@@ -22,6 +22,7 @@ public class PowerUp : MonoBehaviour
     PlayerStats stats;
     PlayerMovement movement;
     Weapon weapon;
+    
 
     void Start()
     {
@@ -30,16 +31,8 @@ public class PowerUp : MonoBehaviour
         weapon = FindObjectOfType<Weapon>();
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            Pickup();
-        }
-    }
-
     // Apply powerup stat
-    void Pickup()
+    public void Pickup()
     {
         if (currentPowerUp == AvaliablePowerUp.MaxHealth)
         {
