@@ -8,11 +8,20 @@ public class Menu : MonoBehaviour
 {
     // Classes
     public GameObject gameOver;
+    Score score;
 
+    // Components
     Button[] buttons;
+    public Text yourScore;
+    public Text bestScore;
+
+    int highscore;
 
     void Start()
     {
+        highscore = PlayerPrefs.GetInt("HighScore", highscore);
+
+        score = FindObjectOfType<Score>();
         buttons = gameOver.GetComponentsInChildren<Button>();
     }
 
@@ -24,6 +33,23 @@ public class Menu : MonoBehaviour
 
         buttons[0].onClick.AddListener(PlayAgain);
         buttons[1].onClick.AddListener(QuitGame);
+
+        PreviewScore();
+    }
+
+    void PreviewScore()
+    {
+        yourScore.text += score.currentScore.ToString();
+
+        if (score.currentScore > highscore)
+        {
+            PlayerPrefs.SetInt("HighScore", score.currentScore);
+            bestScore.text += score.currentScore.ToString() + "  *(New)*";
+        }
+        else
+        {
+            bestScore.text += highscore.ToString();
+        }
     }
 
     // Reset and Unpause game
