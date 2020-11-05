@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyManager : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class EnemyManager : MonoBehaviour
 		{
 			GameObject enemy = enemies[i];
 			EnemyAI attacker = enemy.GetComponent<EnemyAI>();
+			NavMeshAgent agent = enemy.GetComponent<NavMeshAgent>();
 			if (attacker.GetHealth() <= 0.0f)
 			{
 				enemies.Remove(enemy);
@@ -39,7 +41,12 @@ public class EnemyManager : MonoBehaviour
 				i--;
 			}
 			if (attacker.currentDistanceToPlayer < attacker.range)
+			{
 				attacker.Attack();
+				agent.updateRotation = false;
+			}
+			else
+				agent.updateRotation = true;
 		}
 		
 		for (int i = 0; i < akashitaProjectiles.Count; i++)
