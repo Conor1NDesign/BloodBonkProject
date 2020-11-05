@@ -4,6 +4,7 @@ public class AkashitaProjectile : MonoBehaviour
 {
 	[HideInInspector]public Vector3 velocity = Vector3.zero;
 	public float timeLeft = 3.0f;
+	public float damage = 10.0f;
 
 	void Update()
 	{
@@ -13,7 +14,7 @@ public class AkashitaProjectile : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (!(other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Enemy")))
+		if (!(other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Weapon")))
 			Destroy(gameObject);
 	}
 }

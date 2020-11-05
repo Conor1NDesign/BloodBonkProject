@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 72158663970126793}
   m_Layer: 0
   m_Name: Weapon_REPLACEMELATER
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +101,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.1203032, y: 1.4449829, z: 1.1430904}
-  m_Center: {x: 0.08324995, y: 0.1273767, z: -0.066189826}
+  m_Center: {x: 0.08324995, y: 0.1273767, z: 0.2}
 --- !u!95 &5534930294975531902
 Animator:
   serializedVersion: 3
