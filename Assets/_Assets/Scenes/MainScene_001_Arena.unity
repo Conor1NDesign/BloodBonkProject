@@ -886,8 +886,8 @@ MonoBehaviour:
   - {fileID: 66848103}
   - {fileID: 1194768844}
   - {fileID: 2127852672}
-  baseWaveSize: 1
-  waveSize: 8
+  baseWaveSize: 4
+  waveSize: 2
   player: {fileID: 2010967849}
   akashitaPrefab: {fileID: 1403625688449953851, guid: 1a7ebc971c2212d498bde54361690fb9,
     type: 3}
