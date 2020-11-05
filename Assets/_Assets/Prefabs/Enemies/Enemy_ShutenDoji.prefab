@@ -146,9 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a9707ecf0239d40b0f3d113fd33b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMat: {fileID: 2100000, guid: fa85f474de2ca91959508c8e451388da, type: 2}
-  defaultMat: {fileID: 2100000, guid: 2cbbfb2f3d446ba4980d78f378403b1b, type: 2}
-  colourChangeDelay: 0.1
 --- !u!195 &832446257119715641
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -936,7 +933,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e5fbb96d11d3afd438432b39776ba476, type: 2}
+      objectReference: {fileID: 2100000, guid: 3a1df49d7ab39f64a8db11fe3a0f6c44, type: 2}
     - target: {fileID: -5797558894424384615, guid: 8b93434a67d22ff4ab3f1b4fbdf745f4,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1021,7 +1018,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2cbbfb2f3d446ba4980d78f378403b1b, type: 2}
+      objectReference: {fileID: 2100000, guid: 3a1df49d7ab39f64a8db11fe3a0f6c44, type: 2}
     - target: {fileID: 995408865191096508, guid: 8b93434a67d22ff4ab3f1b4fbdf745f4,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
