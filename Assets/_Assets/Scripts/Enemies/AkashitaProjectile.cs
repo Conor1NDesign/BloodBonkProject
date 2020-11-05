@@ -10,4 +10,10 @@ public class AkashitaProjectile : MonoBehaviour
 		timeLeft -= Time.deltaTime;
 		transform.position += velocity * Time.deltaTime;
 	}
+
+	void OnTriggerEnter(Collider other)
+	{
+		if (!(other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Enemy")))
+			Destroy(gameObject);
+	}
 }
