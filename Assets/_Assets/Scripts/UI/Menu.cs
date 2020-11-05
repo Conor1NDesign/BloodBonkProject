@@ -6,8 +6,9 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
-    // Classes
     public GameObject gameOver;
+    
+    // Classes
     Score score;
 
     // Components
