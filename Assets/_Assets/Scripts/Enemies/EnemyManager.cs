@@ -84,7 +84,7 @@ public class EnemyManager : MonoBehaviour
 		for (int i = 0; i < waveSize; i++)
 		{
 			enemies.Add(SpawnEnemy(Random.Range(0, 2) == 0 ? shutenDojiPrefab : akashitaPrefab));
-			enemies[i].transform.position = spawnPoints[i % spawnPoints.Count].transform.position + new Vector3(Random.Range(-1.0f, 1.0f), 1.0f, Random.Range(-1.0f, 1.0f));
+			enemies[i].transform.position = spawnPoints[i % spawnPoints.Count].transform.position + new Vector3(Random.Range(-1.0f, 1.0f), 0.0f, Random.Range(-1.0f, 1.0f));
 			EnemyAI enemy = enemies[i].GetComponent<EnemyAI>();
 			enemy.player = player;
 			enemy.maxHealth = enemy.maxHealth * difficulty;
