@@ -18,11 +18,13 @@ public class EnemyManager : MonoBehaviour
     [SerializeField]GameObject shutenDojiPrefab;
 #pragma warning restore 0649
 
-	public SpawnPower powerupManager;
+	// Classes
+	SpawnPower powerupManager;
 	Score score;
 
 	void Start()
     {
+		powerupManager = FindObjectOfType<SpawnPower>();
 		score = FindObjectOfType<Score>();
     }
 

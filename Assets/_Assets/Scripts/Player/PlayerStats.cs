@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     public float maxHealth = 100f;
-    public float lifesteal = 0.1f;
+    [Tooltip("0.1 = Heal 10% of damage")] public float lifesteal = 0.1f;
 
     private float currentHealth;
 
