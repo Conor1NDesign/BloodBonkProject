@@ -4,7 +4,7 @@ using UnityEngine.AI;
 
 public class EnemyManager : MonoBehaviour
 {
-	[HideInInspector]public float difficulty = 1.0f;
+	[HideInInspector]public float difficulty = 0.9f;
 	[HideInInspector]public List<AkashitaProjectile> akashitaProjectiles = new List<AkashitaProjectile>();
 
 	[SerializeField]List<GameObject> enemies = new List<GameObject>();
@@ -19,7 +19,7 @@ public class EnemyManager : MonoBehaviour
 #pragma warning restore 0649
 	void FixedUpdate()
 	{
-		difficulty += 0.001f / 60.0f;
+		difficulty += 0.0001f / 60.0f;
 
 		// DEBUG: Damage enemies with backslash
 		if (Input.GetKeyDown(KeyCode.Backslash))
@@ -71,6 +71,7 @@ public class EnemyManager : MonoBehaviour
 			EnemyAI enemy = enemies[i].GetComponent<EnemyAI>();
 			enemy.player = player;
 			enemy.maxHealth = enemy.maxHealth * difficulty;
+			enemy.health = enemy.maxHealth;
 			enemy.damage = enemy.damage * difficulty;
 			enemy.enemyManager = this;
 		}

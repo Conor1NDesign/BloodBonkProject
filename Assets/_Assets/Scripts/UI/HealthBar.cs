@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    Slider slider;
+    [SerializeField]Slider slider;
 
     void Start()
     {

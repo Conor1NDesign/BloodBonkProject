@@ -14,6 +14,7 @@ public class EnemyAI : MonoBehaviour
 	//HEALTH!
 	public float maxHealth = 100.0f;
 	[HideInInspector]public float health = 100.0f;
+	public HealthBar healthBar;
 	public float damage = 10.0f;
 	
 	// The rigidbody of the enemy
@@ -23,6 +24,7 @@ public class EnemyAI : MonoBehaviour
 	public void TakeDamage(float damage)
 	{
 		health -= damage;
+		healthBar.SetHealth(health);
 	}
 
 	public float GetHealth()
@@ -34,6 +36,9 @@ public class EnemyAI : MonoBehaviour
 	{
 		// Cache this GameObject's navmesh agent
 		agent = GetComponent<NavMeshAgent>();
+		healthBar = GetComponentInChildren<HealthBar>();
+		healthBar.SetMaxHealth(maxHealth);
+		healthBar.SetHealth(health);
 		health = maxHealth;
 	}
 
