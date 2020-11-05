@@ -73,9 +73,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a9707ecf0239d40b0f3d113fd33b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMat: {fileID: 2100000, guid: fa85f474de2ca91959508c8e451388da, type: 2}
-  defaultMat: {fileID: 2100000, guid: 86f4c811c4b5af64da111d3eba51e226, type: 2}
-  colourChangeDelay: 0.1
 --- !u!195 &-7251848352542788546
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -180,7 +177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8657622036321141044}
-  - component: {fileID: 2295532560210055391}
+  - component: {fileID: 919766842283524823}
   m_Layer: 9
   m_Name: AkashitaCollider
   m_TagString: Enemy
@@ -202,19 +199,6 @@ Transform:
   m_Father: {fileID: 8401510408631581184}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &2295532560210055391
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3279821755507104633}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.85
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &919766842283524823
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -225,8 +209,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2.925
+  m_Radius: 0.7
+  m_Height: 3
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5521216427223344010
