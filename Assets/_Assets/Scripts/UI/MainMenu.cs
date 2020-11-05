@@ -6,7 +6,30 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    public void Play()
+    public GameObject[] weapons;
+
+    public void Kanabo()
+    {
+        
+
+        LoadScene();
+    }
+
+    public void Katana()
+    {
+
+
+        LoadScene();
+    }
+
+    public void Naginata()
+    {
+
+
+        LoadScene();
+    }
+
+    void LoadScene()
     {
         SceneManager.LoadScene("MainScene_001_Arena");
     }
