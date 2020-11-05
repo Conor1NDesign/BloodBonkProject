@@ -4,19 +4,26 @@ using UnityEngine.AI;
 
 public class EnemyManager : MonoBehaviour
 {
-	[HideInInspector]public float difficulty = 0.9f;
-	[HideInInspector]public List<AkashitaProjectile> akashitaProjectiles = new List<AkashitaProjectile>();
+	[Header("Difficulty Settings")]
+	[Tooltip("1.0 = 100%")]public float difficulty = 0.9f;
+	[SerializeField][Tooltip("Per Wave")]float difficultyIncreasePerWave = 0.05f;
+	[SerializeField][Tooltip("Per Second")]float difficultyIncreasePerSecond = 0.0001f;
 
-	[SerializeField]List<GameObject> enemies = new List<GameObject>();
+	[Header("Wave Settings")]
     [SerializeField]List<GameObject> spawnPoints = new List<GameObject>();
 	[SerializeField]int baseWaveSize = 1;
 	[SerializeField]int waveSize = 1;
 
 #pragma warning disable 0649
+	[Header("Prefabs")]
 	[SerializeField]GameObject player;
     [SerializeField]GameObject akashitaPrefab;
     [SerializeField]GameObject shutenDojiPrefab;
 #pragma warning restore 0649
+
+	[Header("Current Enemy List")]
+	[SerializeField]List<GameObject> enemies = new List<GameObject>();
+	[HideInInspector]public List<AkashitaProjectile> akashitaProjectiles = new List<AkashitaProjectile>();
 
 	// Classes
 	SpawnPower powerupManager;
@@ -30,7 +37,7 @@ public class EnemyManager : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		difficulty += 0.0001f / 60.0f;
+		difficulty += difficultyIncreasePerSecond / 60.0f;
 
 		// DEBUG: Damage enemies with backslash
 		if (Input.GetKeyDown(KeyCode.Backslash))
@@ -93,7 +100,7 @@ public class EnemyManager : MonoBehaviour
 			enemy.enemyManager = this;
 		}
 		waveSize = baseWaveSize * (int)difficulty;
-		difficulty += 0.05f;
+		difficulty += difficultyIncreasePerWave;
     }
 
     GameObject SpawnEnemy(GameObject enemyPrefab)
