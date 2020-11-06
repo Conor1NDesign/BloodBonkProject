@@ -126,13 +126,13 @@ MonoBehaviour:
   enemyManager: {fileID: 0}
   player: {fileID: 0}
   range: 3
-  timeBetweenAttacks: 3
+  timeBetweenAttacks: 2
   distanceFromPlayer: 2
   damage: 20
   maxHealth: 150
   health: 100
   healthBar: {fileID: 0}
-  attackLength: 0.5
+  attackLength: 1.5
   weapon: {fileID: 4355480219597701749}
 --- !u!114 &3813941380192926894
 MonoBehaviour:
