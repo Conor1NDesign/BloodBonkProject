@@ -43,7 +43,7 @@ public class Weapon : MonoBehaviour
         mouseInput = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
 
         isSwinging = true;
-        transform.GetComponent<Renderer>().enabled = true; // Show Weapon
+        //transform.GetComponent<Renderer>().enabled = true; // Show Weapon
         animator.Play("Attack");
     }
 
@@ -62,7 +62,7 @@ public class Weapon : MonoBehaviour
     // Disable weapon collider
     public void DisableWeapon()
     {
-        transform.GetComponent<Renderer>().enabled = false;
+        //transform.GetComponent<Renderer>().enabled = false;
         isSwinging = false;
         isAttacking = false;
     }

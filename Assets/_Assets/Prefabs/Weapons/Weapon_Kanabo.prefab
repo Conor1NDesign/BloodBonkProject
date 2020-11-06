@@ -70,7 +70,7 @@ BoxCollider:
   m_GameObject: {fileID: 1520529341824078824}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.25, y: 1.5, z: 0.25}
   m_Center: {x: 0, y: 0, z: 0}
@@ -186,7 +186,7 @@ Animator:
   m_GameObject: {fileID: 4614849707880354626}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a1df09e5af2d9d24691e5e386dcb2c8a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0fabe923891a139468f8ad22a8f1d70f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -207,10 +207,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f7a7f8d890e3ae4384e7e9a78f9deae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 50
   attackSpeed: 1
   isSwinging: 0
-  range: 0
+  range: 3
   enemyMask:
     serializedVersion: 2
     m_Bits: 512

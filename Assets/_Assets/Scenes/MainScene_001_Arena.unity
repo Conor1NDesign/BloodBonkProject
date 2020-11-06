@@ -20747,7 +20747,7 @@ GameObject:
   - component: {fileID: 691310731}
   - component: {fileID: 691310730}
   m_Layer: 0
-  m_Name: MenuManager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20766,6 +20766,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: {fileID: 149317836}
+  weaponHolder: {fileID: 1626418587}
+  weapons:
+  - {fileID: 4614849707880354626, guid: cac6f7f96fb6a2a458cd6d7120c8c13a, type: 3}
+  - {fileID: 5969255935430800911, guid: 18aa7d5a63b299a4c92a9462fae99d29, type: 3}
+  - {fileID: 4011044055795365609, guid: b9c365930f46cde4687299f17f8c9613, type: 3}
+  weaponPrefab: {fileID: 0}
   yourScore: {fileID: 153281731}
   bestScore: {fileID: 1846877326}
 --- !u!4 &691310731
@@ -48111,6 +48117,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7541160925627071908, guid: 6f6f4fae6bb63ce488405269ee7d199d,
+        type: 3}
+      propertyPath: lifesteal
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 936906971179430448, guid: 6f6f4fae6bb63ce488405269ee7d199d,
+        type: 3}
+      propertyPath: enemyMask.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 1011695460124749787, guid: 6f6f4fae6bb63ce488405269ee7d199d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348497295235619328, guid: 6f6f4fae6bb63ce488405269ee7d199d,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1308480196}
+    - target: {fileID: 3481831628184872513, guid: 6f6f4fae6bb63ce488405269ee7d199d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3876095451177778405, guid: 6f6f4fae6bb63ce488405269ee7d199d,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1308480196}
+    - target: {fileID: 6040070985639694768, guid: 6f6f4fae6bb63ce488405269ee7d199d,
+        type: 3}
+      propertyPath: enemyMask.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 6040070985639694768, guid: 6f6f4fae6bb63ce488405269ee7d199d,
+        type: 3}
+      propertyPath: hitDetectionRange
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6040070985639694768, guid: 6f6f4fae6bb63ce488405269ee7d199d,
+        type: 3}
+      propertyPath: range
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6374847682647192485, guid: 6f6f4fae6bb63ce488405269ee7d199d,
         type: 3}
       propertyPath: m_Name
@@ -48121,6 +48172,16 @@ PrefabInstance:
       propertyPath: power
       value: 
       objectReference: {fileID: 1361313139}
+    - target: {fileID: 8064887129041315848, guid: 6f6f4fae6bb63ce488405269ee7d199d,
+        type: 3}
+      propertyPath: weaponHolder
+      value: 
+      objectReference: {fileID: 1626418587}
+    - target: {fileID: 8830991284524265031, guid: 6f6f4fae6bb63ce488405269ee7d199d,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1308480196}
     - target: {fileID: 8932127671702418012, guid: 6f6f4fae6bb63ce488405269ee7d199d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -48178,6 +48239,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f6f4fae6bb63ce488405269ee7d199d, type: 3}
+--- !u!1 &1626418587 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6558944782157029638, guid: 6f6f4fae6bb63ce488405269ee7d199d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1626418586}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1627262824 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4776398127931756031, guid: 7cba50e4c7e17ac4fb5a06beb920ffcc,
