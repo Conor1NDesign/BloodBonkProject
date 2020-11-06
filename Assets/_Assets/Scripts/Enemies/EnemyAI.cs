@@ -26,6 +26,7 @@ public class EnemyAI : MonoBehaviour
 	public void TakeDamage(float damage)
 	{
 		health -= damage;
+		healthBar.SetMaxHealth(maxHealth);
 		healthBar.SetHealth(health);
 	}
 
@@ -39,8 +40,6 @@ public class EnemyAI : MonoBehaviour
 		// Cache this GameObject's navmesh agent
 		agent = GetComponent<NavMeshAgent>();
 		healthBar = GetComponentInChildren<HealthBar>();
-		healthBar.SetMaxHealth(maxHealth);
-		healthBar.SetHealth(health);
 		health = maxHealth;
 	}
 
