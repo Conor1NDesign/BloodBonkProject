@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!95 &4471269654537219619
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8333539142819876147}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3e475876cedfd2b4b92afc5da239eba8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &254398434799959548
 GameObject:
   m_ObjectHideFlags: 0
@@ -58,7 +77,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.95294124, g: 0, b: 0, a: 0.50980395}
+  m_Color: {r: 0.3301887, g: 0, b: 0.0248003, a: 0.74509805}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -127,12 +146,12 @@ MonoBehaviour:
   player: {fileID: 0}
   range: 3
   timeBetweenAttacks: 2
-  distanceFromPlayer: 1
-  maxHealth: 100
+  distanceFromPlayer: 2
+  damage: 20
+  maxHealth: 150
   health: 100
-  healthBar: {fileID: 0}
-  damage: 10
-  attackLength: 1
+  healthBar: {fileID: 6821821719457487847}
+  attackLength: 1.5
   weapon: {fileID: 4355480219597701749}
 --- !u!114 &3813941380192926894
 MonoBehaviour:
@@ -146,9 +165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a9707ecf0239d40b0f3d113fd33b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redMat: {fileID: 2100000, guid: fa85f474de2ca91959508c8e451388da, type: 2}
-  defaultMat: {fileID: 2100000, guid: 2cbbfb2f3d446ba4980d78f378403b1b, type: 2}
-  colourChangeDelay: 0.1
 --- !u!195 &832446257119715641
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -936,7 +952,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e5fbb96d11d3afd438432b39776ba476, type: 2}
+      objectReference: {fileID: 2100000, guid: 3a1df49d7ab39f64a8db11fe3a0f6c44, type: 2}
     - target: {fileID: -5797558894424384615, guid: 8b93434a67d22ff4ab3f1b4fbdf745f4,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1021,7 +1037,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2cbbfb2f3d446ba4980d78f378403b1b, type: 2}
+      objectReference: {fileID: 2100000, guid: 3a1df49d7ab39f64a8db11fe3a0f6c44, type: 2}
     - target: {fileID: 995408865191096508, guid: 8b93434a67d22ff4ab3f1b4fbdf745f4,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -1042,6 +1058,12 @@ PrefabInstance:
 --- !u!4 &5043455895539908384 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 8b93434a67d22ff4ab3f1b4fbdf745f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 38070198860305466}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8333539142819876147 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 8b93434a67d22ff4ab3f1b4fbdf745f4,
     type: 3}
   m_PrefabInstance: {fileID: 38070198860305466}
   m_PrefabAsset: {fileID: 0}

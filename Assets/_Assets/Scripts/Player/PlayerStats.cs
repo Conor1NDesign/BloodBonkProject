@@ -17,10 +17,10 @@ public class PlayerStats : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Weapon"))
-            TakeDamage(10.0f);
+            TakeDamage(other.transform.root.gameObject.GetComponent<EnemyAI>().damage);
         if (other.gameObject.CompareTag("Projectile"))
 		{
-			TakeDamage(10.0f);
+			TakeDamage(other.transform.root.gameObject.GetComponent<AkashitaProjectile>().damage);
 			Destroy(other.transform.root.gameObject);
 		}
     }

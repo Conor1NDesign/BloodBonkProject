@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -878,21 +878,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90c8535b03dcb28449dfab73978dbaaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficulty: 0.9
-  akashitaProjectiles: []
-  enemies: []
+  difficulty: 1
+  difficultyIncreasePerWave: 0.15
+  difficultyIncreasePerSecond: 0.0025
   spawnPoints:
   - {fileID: 1002941920}
   - {fileID: 66848103}
   - {fileID: 1194768844}
   - {fileID: 2127852672}
-  baseWaveSize: 1
-  waveSize: 8
+  baseWaveSize: 4
+  waveSize: 2
   player: {fileID: 2010967849}
   akashitaPrefab: {fileID: 1403625688449953851, guid: 1a7ebc971c2212d498bde54361690fb9,
     type: 3}
   shutenDojiPrefab: {fileID: 501601279726359312, guid: 0f75785eba59e8e40a1d77ae013af32a,
     type: 3}
+  enemies: []
+  akashitaProjectiles: []
 --- !u!4 &38217674
 Transform:
   m_ObjectHideFlags: 0
@@ -20522,7 +20524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.95294124, g: 0, b: 0, a: 0.50980395}
+  m_Color: {r: 0.32941177, g: 0, b: 0.023529412, a: 0.50980395}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -20780,7 +20782,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691310729}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8344908, y: -1.3368889, z: 0.9730237}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -41095,7 +41097,7 @@ MonoBehaviour:
   - {fileID: 7480692937819404180, guid: 63dccc4f2ad74d147a709d1e01b73438, type: 3}
   - {fileID: 1716197415207621749, guid: 6588f27a3d92bb547b54a8ba7ed5a378, type: 3}
   - {fileID: 4622829900085529283, guid: ac24a9d893b6e1447a78a7ba885e8764, type: 3}
-  powerUpSpawnChance: 100
+  powerUpSpawnChance: 25
 --- !u!4 &1361313140
 Transform:
   m_ObjectHideFlags: 0
@@ -41104,7 +41106,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361313138}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8344908, y: -1.3368889, z: 0.9730237}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
