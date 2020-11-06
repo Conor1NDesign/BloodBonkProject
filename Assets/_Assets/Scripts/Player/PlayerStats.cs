@@ -11,7 +11,7 @@ public class PlayerStats : MonoBehaviour
 
     // Classes
     HealthBar health;
-    Menu menu;
+    Game gameManager;
 
     // Enemy attacks player
     void OnTriggerEnter(Collider other)
@@ -32,7 +32,7 @@ public class PlayerStats : MonoBehaviour
         if (currentHealth <= 0f)
         {
             // Enable Game Over Menu
-            menu.GameOver();
+            gameManager.GameOver();
         }
     }
 
@@ -49,7 +49,7 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         health = FindObjectOfType<HealthBar>();
-        menu = FindObjectOfType<Menu>();
+        gameManager = FindObjectOfType<Game>();
         currentHealth = maxHealth;
     }
 
