@@ -57,7 +57,7 @@ MonoBehaviour:
   damage: 10
   maxHealth: 100
   health: 100
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 666470836873900127}
   projectilePrefab: {fileID: 2728518914123767262, guid: 756bbc29cc23b6247abff3738baafb3b,
     type: 3}
   projectileSpeed: 6

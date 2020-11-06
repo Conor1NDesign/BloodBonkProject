@@ -131,7 +131,7 @@ MonoBehaviour:
   damage: 20
   maxHealth: 150
   health: 100
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 6821821719457487847}
   attackLength: 1.5
   weapon: {fileID: 4355480219597701749}
 --- !u!114 &3813941380192926894
