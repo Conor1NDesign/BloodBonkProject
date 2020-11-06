@@ -6,25 +6,28 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject[] weapons;
+    void Start()
+    {
+        PlayerPrefs.DeleteKey("Weapon");
+    }
 
     public void Kanabo()
     {
-        
+        PlayerPrefs.SetString("Weapon", "Kanabo");
 
         LoadScene();
     }
 
     public void Katana()
     {
-
+        PlayerPrefs.SetString("Weapon", "Katana");
 
         LoadScene();
     }
 
     public void Naginata()
     {
-
+        PlayerPrefs.SetString("Weapon", "Naginata");
 
         LoadScene();
     }

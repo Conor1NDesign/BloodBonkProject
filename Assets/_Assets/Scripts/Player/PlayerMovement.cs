@@ -29,27 +29,26 @@ public class PlayerMovement : MonoBehaviour
 
     // Classes
     DashMeter dashMeter;
-    Weapon weapon;
-
+    public Game gameManager;
+    public GameObject weaponHolder;
+    public Weapon weapon;
     public SpawnPower power;
+
+    bool setup = true;
 
     void Start()
     {
+        gameManager = FindObjectOfType<Game>();
+        weapon = FindObjectOfType<Weapon>();
+
         mainCam = FindObjectOfType<CameraFollow>().transform;
         dashMeter = FindObjectOfType<DashMeter>();
-        weapon = GetComponentInChildren<Weapon>();
         currentDashMeter = maxDashMeter;
     }
 
     void Update()
     {
         PlayerInput();
-
-        // Debugging
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            power.SpawnPowerUp(transform.position);
-        }
     }
 
     void FixedUpdate()
