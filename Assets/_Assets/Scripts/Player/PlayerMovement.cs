@@ -25,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
 
     bool isDashing;
 
-    float actualSpeedTemp;
     float actualSpeed; // Sprint or normal movement
     float maxTime; // Time to start refilling dash
 
@@ -107,7 +106,6 @@ public class PlayerMovement : MonoBehaviour
                         actualSpeed = dashSpeed;
 
                         isDashing = true;
-                        actualSpeedTemp = 0f;
                     }
                     else
                     {
