@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement Settings")]
     public float moveSpeed = 5f;
     public float dashSpeed = 10f;
+    public float increaseSpeed = 0.1f;
 
     [Header("Dash Meter Settings")]
     public float reduceDashMeter = 1f;
@@ -29,14 +30,10 @@ public class PlayerMovement : MonoBehaviour
 
     // Classes
     DashMeter dashMeter;
-    public GameObject weaponHolder;
-    public SpawnPower power;
 
     [Header("Debug")]
     public Game gameManager;
     public Weapon weapon;
-
-    bool setup = true;
 
     void Start()
     {
@@ -96,24 +93,36 @@ public class PlayerMovement : MonoBehaviour
     
     private void Dashing()
     {
-        actualSpeed = moveSpeed;
-        isDashing = false;
-
         // Player not swinging weapon
         if (!weapon.isSwinging)
         {
-            if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.Space) && currentDashMeter >= reduceDashMeter ||
+                Input.GetKey(KeyCode.LeftShift) && currentDashMeter >= reduceDashMeter)
             {
                 if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
                 {
-                    // Check if player has enough dash
-                    if (currentDashMeter >= reduceDashMeter)
+                    if (actualSpeed >= dashSpeed)
                     {
                         actualSpeed = dashSpeed;
+
                         isDashing = true;
+                    }
+                    else
+                    {
+                        actualSpeed += increaseSpeed;
                     }
                 }
             }
+            else
+            {
+                actualSpeed = moveSpeed;
+                isDashing = false;
+            }
+        }
+        else
+        {
+            actualSpeed = moveSpeed;
+            isDashing = false;
         }
     }
 

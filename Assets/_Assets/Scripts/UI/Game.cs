@@ -6,11 +6,13 @@ using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
+    [Header("Menu")]
     public GameObject gameOver;
+    public GameObject pause;
+
+    [Header("Weapon")]
     public GameObject weaponHolder;
     public GameObject[] weapons;
-
-    public GameObject weaponPrefab;
 
     // Classes
     Score score;
@@ -21,8 +23,12 @@ public class Game : MonoBehaviour
     public Text yourScore;
     public Text bestScore;
 
+    [Header("Debug (DO NOT TOUCH)")]
+    public GameObject weaponPrefab;
+
     int highscore;
     string weapon;
+    bool isPaused = false;
 
     void Awake()
     {
@@ -37,6 +43,29 @@ public class Game : MonoBehaviour
 
         score = FindObjectOfType<Score>();
         buttons = gameOver.GetComponentsInChildren<Button>();
+    }
+
+    void Update()
+    {
+        Pause();
+    }
+
+    void Pause()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
+        {
+            isPaused = true;
+
+            Time.timeScale = 0f;
+            pause.SetActive(true);
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && isPaused)
+        {
+            isPaused = false;
+
+            Time.timeScale = 1f;
+            pause.SetActive(false);
+        }
     }
 
     void SelectWeapon()
@@ -86,6 +115,12 @@ public class Game : MonoBehaviour
         {
             bestScore.text += highscore.ToString();
         }
+    }
+
+    public void MainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenuScene");
     }
 
     // Reset and Unpause game

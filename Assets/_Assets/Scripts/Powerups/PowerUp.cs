@@ -15,7 +15,7 @@ public class PowerUp : MonoBehaviour
 {
     public AvaliablePowerUp currentPowerUp;
 
-    [Range(0.1f, 1f)] [Tooltip("0.1 = Increase value by 10%")] 
+    [Range(0.01f, 1f)] [Tooltip("0.1 = Increase value by 10%")] 
     public float multiplier = 0.1f;
 
     // Classes
