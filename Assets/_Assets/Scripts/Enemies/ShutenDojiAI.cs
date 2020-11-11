@@ -16,11 +16,26 @@ public class ShutenDojiAI : EnemyAI
 			weapon.transform.Rotate(new Vector3(0.0f, -4.0f / attackLength, 0.0f));
 		if (timeToNextAttack < timeBetweenAttacks - attackLength)
 		{
+			if (!agent.enabled)
+			{
+				animator.Play("Base Layer.WalkCycle");
+			}
 			weapon.transform.rotation = new Quaternion(0.0f, 0.0f, 0.0f, 0.0f);
 			agent.enabled = true;
 		}
 		
 		if (agent.enabled)
 			base.MovementUpdate();
+	}
+
+	public override void Attack()
+	{
+		if (timeToNextAttack <= 0.0f)
+		{
+			// Do the attacky thing
+			timeToNextAttack = timeBetweenAttacks;
+			agent.enabled = false;
+			animator.Play("Base Layer.Attack");
+		}
 	}
 }

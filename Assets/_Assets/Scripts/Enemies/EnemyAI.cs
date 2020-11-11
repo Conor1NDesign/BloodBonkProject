@@ -20,7 +20,8 @@ public class EnemyAI : MonoBehaviour
 	[HideInInspector]public float health = 100.0f;
 	public HealthBar healthBar;
 	
-	// The rigidbody of the enemy
+	// Cached components of the enemy
+	protected Animator animator;
 	protected NavMeshAgent agent;
 	protected float timeToNextAttack = 0.0f;
 
@@ -41,6 +42,7 @@ public class EnemyAI : MonoBehaviour
 		// Cache this GameObject's navmesh agent
 		agent = GetComponent<NavMeshAgent>();
 		healthBar = GetComponentInChildren<HealthBar>();
+		animator = GetComponentInChildren<Animator>();
 		health = maxHealth;
 	}
 
