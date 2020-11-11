@@ -22,11 +22,23 @@ public class AkashitaAI : EnemyAI
 				AkashitaProjectile projectile = Instantiate(projectilePrefab, transform.position + transform.forward, transform.rotation).GetComponent<AkashitaProjectile>();
 				projectile.velocity = transform.forward * projectileSpeed;
 				enemyManager.akashitaProjectiles.Add(projectile);
+				animator.Play("Base Layer.Akashita_Movement");
 			}
 			agent.enabled = true;
 		}
 
 		if (agent.enabled)
 			base.MovementUpdate();
+	}
+
+	public override void Attack()
+	{
+		if (timeToNextAttack <= 0.0f)
+		{
+			// Do the attacky thing
+			timeToNextAttack = timeBetweenAttacks;
+			agent.enabled = false;
+			animator.Play("Base Layer.Akashita_Attack");
+		}
 	}
 }
