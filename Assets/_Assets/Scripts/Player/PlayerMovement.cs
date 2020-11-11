@@ -63,16 +63,25 @@ public class PlayerMovement : MonoBehaviour
 
     private void PlayerInput()
     {
-        // Get Player Input
-        input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        if (!weapon.isSwinging)
+        {
+            // Get Player Input
+            input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
-        {
-            animator.Play("Player_RunCycle");
+            // Player Idle/Run Animation
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+            {
+                animator.Play("Player_RunCycle");
+            }
+            else
+            {
+                animator.Play("Player_Idle");
+            }
         }
-        else
+        else if (weapon.isSwinging)
         {
-            animator.Play("Player_Idle");
+            input = new Vector2();
+            animator.Play("Player_KanaboAttack");
         }
 
         //if (!isDashing)
