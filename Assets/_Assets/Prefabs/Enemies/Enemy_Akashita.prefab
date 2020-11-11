@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5749689772656713740}
   - component: {fileID: 5782149097165530195}
   - component: {fileID: -7251848352542788546}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy_Akashita
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 8724682106921848595}
   - component: {fileID: 7929644287521492354}
   - component: {fileID: 3693666125051574441}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 7319826453139438906}
   - component: {fileID: 6590023565105578953}
   - component: {fileID: 1670863928842710485}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 5548569567036035430}
   - component: {fileID: 9087660037292659056}
   - component: {fileID: 346177009431813433}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 2644504018688588642}
   - component: {fileID: 6342132582005746499}
   - component: {fileID: 666470836873900127}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -533,7 +533,7 @@ GameObject:
   - component: {fileID: 6967969792315196513}
   - component: {fileID: 3532036271826549544}
   - component: {fileID: 7877620212702430879}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -605,13 +605,23 @@ PrefabInstance:
     - target: {fileID: -8818253410396371148, guid: 60b5ddc507fd5454e89631ae9e140850,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -7711413071089548358, guid: 60b5ddc507fd5454e89631ae9e140850,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 99a84ab2cd497b449b0903a79262955e, type: 2}
+    - target: {fileID: -7455685359145607950, guid: 60b5ddc507fd5454e89631ae9e140850,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -6236743471014415788, guid: 60b5ddc507fd5454e89631ae9e140850,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 60b5ddc507fd5454e89631ae9e140850,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -685,7 +695,7 @@ PrefabInstance:
     - target: {fileID: -3007788161290943432, guid: 60b5ddc507fd5454e89631ae9e140850,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -2033436664433645646, guid: 60b5ddc507fd5454e89631ae9e140850,
         type: 3}
@@ -700,7 +710,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 60b5ddc507fd5454e89631ae9e140850,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -282556869709011827, guid: 60b5ddc507fd5454e89631ae9e140850,
         type: 3}
@@ -720,7 +730,7 @@ PrefabInstance:
     - target: {fileID: 5537498672549660265, guid: 60b5ddc507fd5454e89631ae9e140850,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6306971017694268109, guid: 60b5ddc507fd5454e89631ae9e140850,
         type: 3}
@@ -730,7 +740,7 @@ PrefabInstance:
     - target: {fileID: 7658304314627705819, guid: 60b5ddc507fd5454e89631ae9e140850,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60b5ddc507fd5454e89631ae9e140850, type: 3}
