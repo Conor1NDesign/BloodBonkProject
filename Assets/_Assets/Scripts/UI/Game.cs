@@ -117,6 +117,12 @@ public class Game : MonoBehaviour
         }
     }
 
+    public void MainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenuScene");
+    }
+
     // Reset and Unpause game
     public void PlayAgain()
     {
