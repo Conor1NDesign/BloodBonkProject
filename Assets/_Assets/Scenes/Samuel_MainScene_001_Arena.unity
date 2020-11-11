@@ -4959,7 +4959,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &172490821
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20997,6 +20997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: {fileID: 149317836}
+  pause: {fileID: 172490820}
   weaponHolder: {fileID: 1605519623}
   weapons:
   - {fileID: 4614849707880354626, guid: cac6f7f96fb6a2a458cd6d7120c8c13a, type: 3}

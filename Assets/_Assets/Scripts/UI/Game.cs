@@ -8,6 +8,7 @@ public class Game : MonoBehaviour
 {
     [Header("Menu")]
     public GameObject gameOver;
+    public GameObject pause;
 
     [Header("Weapon")]
     public GameObject weaponHolder;
@@ -27,6 +28,7 @@ public class Game : MonoBehaviour
 
     int highscore;
     string weapon;
+    bool isPaused = false;
 
     void Awake()
     {
@@ -41,6 +43,29 @@ public class Game : MonoBehaviour
 
         score = FindObjectOfType<Score>();
         buttons = gameOver.GetComponentsInChildren<Button>();
+    }
+
+    void Update()
+    {
+        Pause();
+    }
+
+    void Pause()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
+        {
+            isPaused = true;
+
+            Time.timeScale = 0f;
+            pause.SetActive(true);
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && isPaused)
+        {
+            isPaused = false;
+
+            Time.timeScale = 1f;
+            pause.SetActive(false);
+        }
     }
 
     void SelectWeapon()
