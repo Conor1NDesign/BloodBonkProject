@@ -6,11 +6,11 @@ public class SpawnPower : MonoBehaviour
 {
     public GameObject[] powerUps;
 
-    [Range(0f, 100f)] public float powerUpSpawnChance = 100f;
+    [Range(0f, 100f)] public float spawnChance = 100f;
 
     public void SpawnPowerUp(Vector3 position)
     {
-        if (powerUpSpawnChance > Random.Range(0f, 100f))
+        if (spawnChance > Random.Range(0f, 100f))
         {
             int num = Random.Range(0, 5);
 

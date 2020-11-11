@@ -29,14 +29,10 @@ public class PlayerMovement : MonoBehaviour
 
     // Classes
     DashMeter dashMeter;
-    public GameObject weaponHolder;
-    public SpawnPower power;
 
     [Header("Debug")]
     public Game gameManager;
     public Weapon weapon;
-
-    bool setup = true;
 
     void Start()
     {

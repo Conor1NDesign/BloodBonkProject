@@ -6,11 +6,12 @@ using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
+    [Header("Menu")]
     public GameObject gameOver;
+
+    [Header("Weapon")]
     public GameObject weaponHolder;
     public GameObject[] weapons;
-
-    public GameObject weaponPrefab;
 
     // Classes
     Score score;
@@ -20,6 +21,9 @@ public class Game : MonoBehaviour
     [Header("Highscore")]
     public Text yourScore;
     public Text bestScore;
+
+    [Header("Debug (DO NOT TOUCH)")]
+    public GameObject weaponPrefab;
 
     int highscore;
     string weapon;
