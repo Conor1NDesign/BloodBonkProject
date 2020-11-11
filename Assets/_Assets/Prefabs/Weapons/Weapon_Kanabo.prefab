@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6275211565982847467}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hardpoint_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 516478762736250026}
   - component: {fileID: 2744902785850768710}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: KanaboCollider
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7011425788396131525}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WeaponSwingHardpoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5999541088928321547}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hardpoint_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8736441410652497798}
   - component: {fileID: 9032604424032700211}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Weapon_Kanabo
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3497488645708816899}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hardpoint_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,7 +230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5699555594292300698}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mainhand_Hardpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2055762505845704941}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hardpoint_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,7 +290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2452003031271329927}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hardpoint_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,11 +378,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Weapon_Kanabo_Mesh
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d0b0086612758cb4982713d3a06fa9e6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -357430486526138686, guid: d0b0086612758cb4982713d3a06fa9e6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fc15b6ec64020df46a1ddb57d859f2c4, type: 2}
+    - target: {fileID: 3400677161372250454, guid: d0b0086612758cb4982713d3a06fa9e6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4504645082871215830, guid: d0b0086612758cb4982713d3a06fa9e6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -393,6 +403,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 40c390d8e2e6bdf47a114eb6aa21f9b8, type: 2}
+    - target: {fileID: 8121086926311348868, guid: d0b0086612758cb4982713d3a06fa9e6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203240186098200852, guid: d0b0086612758cb4982713d3a06fa9e6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0b0086612758cb4982713d3a06fa9e6, type: 3}
 --- !u!4 &3214340090785646870 stripped

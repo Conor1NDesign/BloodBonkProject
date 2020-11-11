@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4060660350208070653}
   - component: {fileID: 6531415371335002063}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Weapon_Naginata
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -48,12 +48,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 50
   attackSpeed: 1
-  isSwinging: 0
   range: 3
-  enemyMask:
-    serializedVersion: 2
-    m_Bits: 512
   hitDetectionRange: 70
+  isSwinging: 0
 --- !u!1 &6510763585527712392
 GameObject:
   m_ObjectHideFlags: 0
@@ -64,7 +61,7 @@ GameObject:
   m_Component:
   - component: {fileID: 263489407344705889}
   - component: {fileID: 4831330263232560741}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NaginataCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2264757533932857916}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OffHand_HardPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,11 +132,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4060660350208070653}
     m_Modifications:
+    - target: {fileID: -8052994932809076077, guid: 710c6723699ac494194d63c2dc6f6ab6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -5102530947620581811, guid: 710c6723699ac494194d63c2dc6f6ab6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -4861924686910468554, guid: 710c6723699ac494194d63c2dc6f6ab6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 40c390d8e2e6bdf47a114eb6aa21f9b8, type: 2}
+    - target: {fileID: -4473984409997532297, guid: 710c6723699ac494194d63c2dc6f6ab6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 710c6723699ac494194d63c2dc6f6ab6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -204,6 +216,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Weapon_Naginata_Mesh
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 710c6723699ac494194d63c2dc6f6ab6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 856365191234717131, guid: 710c6723699ac494194d63c2dc6f6ab6,
         type: 3}

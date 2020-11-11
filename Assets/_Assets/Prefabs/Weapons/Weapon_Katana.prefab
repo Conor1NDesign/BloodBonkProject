@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2695049490781759343}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hardpoint_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5743361877300436831}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hardpoint_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8787308702770419067}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hardpoint_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6339079212149289637}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mainhand_Hardpoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3301624031304539868}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hardpoint_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1491491600430532589}
   - component: {fileID: -8166680114042754873}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Weapon_Katana
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -199,12 +199,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 50
   attackSpeed: 1
-  isSwinging: 0
   range: 3
-  enemyMask:
-    serializedVersion: 2
-    m_Bits: 512
   hitDetectionRange: 70
+  isSwinging: 0
 --- !u!1 &6673040273763843701
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,7 +211,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4105387657092727313}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hardpoint_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4490338484106818854}
   - component: {fileID: 6066752837236414161}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: KatanaCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +285,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5732195759057008435}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WeaponSwingHardpoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -395,6 +392,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Weapon_Katana_Mesh
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 736556dfbebe68e428585f25362eabc8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 736556dfbebe68e428585f25362eabc8, type: 3}
