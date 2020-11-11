@@ -547,6 +547,7 @@ MonoBehaviour:
   fillDashMeter: 4
   maxDashMeter: 125
   refillTimer: 4
+  animator: {fileID: 0}
   gameManager: {fileID: 0}
   weapon: {fileID: 0}
 --- !u!54 &7795153520024199471
