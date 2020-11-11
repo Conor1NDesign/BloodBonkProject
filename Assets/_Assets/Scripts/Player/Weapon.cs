@@ -69,7 +69,7 @@ public class Weapon : MonoBehaviour
 
     public void HitDetection()
     {
-        Vector3 playerPos = transform.parent.position;
+        Vector3 playerPos = transform.root.position;
 
         // DEBUGGING
         // =====================================================================================================
