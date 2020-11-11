@@ -119,6 +119,11 @@ public class PlayerMovement : MonoBehaviour
                 isDashing = false;
             }
         }
+        else
+        {
+            actualSpeed = moveSpeed;
+            isDashing = false;
+        }
     }
 
     private void DashMeter()
