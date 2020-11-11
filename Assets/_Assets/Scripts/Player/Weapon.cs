@@ -44,6 +44,8 @@ public class Weapon : MonoBehaviour
 
     public void HitDetection()
     {
+        isAttacking = true;
+
         Vector3 playerPos = transform.root.position;
 
         // DEBUGGING
@@ -76,11 +78,13 @@ public class Weapon : MonoBehaviour
         foreach (Collider e in enemiesInRange)
         {
             // DEBUGGING
-            //float angle = Vector3.Angle(transform.parent.forward, e.gameObject.transform.position - playerPos);
+            //float angle = Vector3.Angle(transform.root.forward, e.gameObject.transform.position - playerPos);
 
             // Hit Detection cone if facing enemy
-            if (Vector3.Angle(transform.parent.forward, e.gameObject.transform.position - playerPos) < hitDetectionRange)
+            if (Vector3.Angle(transform.root.forward, e.gameObject.transform.position - playerPos) < hitDetectionRange)
             {
+                
+
                 WeaponDetect detect = e.gameObject.GetComponentInParent<WeaponDetect>();
                 detect.TakeDamage(damage);
                 stats.Lifesteal(damage);
