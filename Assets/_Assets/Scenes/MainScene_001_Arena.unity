@@ -50158,6 +50158,11 @@ PrefabInstance:
       propertyPath: weaponHolder
       value: 
       objectReference: {fileID: 1605519623}
+    - target: {fileID: 8064887129041315848, guid: 6f6f4fae6bb63ce488405269ee7d199d,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 691310730}
     - target: {fileID: 8830991284524265031, guid: 6f6f4fae6bb63ce488405269ee7d199d,
         type: 3}
       propertyPath: m_Mesh
