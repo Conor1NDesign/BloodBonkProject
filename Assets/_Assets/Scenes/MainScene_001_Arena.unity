@@ -48136,7 +48136,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1308480196}
+      objectReference: {fileID: 0}
     - target: {fileID: 3481831628184872513, guid: 6f6f4fae6bb63ce488405269ee7d199d,
         type: 3}
       propertyPath: m_IsActive
@@ -48146,7 +48146,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1308480196}
+      objectReference: {fileID: 0}
     - target: {fileID: 6040070985639694768, guid: 6f6f4fae6bb63ce488405269ee7d199d,
         type: 3}
       propertyPath: enemyMask.m_Bits
@@ -48181,7 +48181,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1308480196}
+      objectReference: {fileID: 0}
     - target: {fileID: 8932127671702418012, guid: 6f6f4fae6bb63ce488405269ee7d199d,
         type: 3}
       propertyPath: m_LocalPosition.x
