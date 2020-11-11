@@ -31,6 +31,9 @@ public class PlayerMovement : MonoBehaviour
     // Classes
     DashMeter dashMeter;
 
+    // Component
+    Animator animator;
+
     [Header("Debug")]
     public Game gameManager;
     public Weapon weapon;
@@ -42,6 +45,8 @@ public class PlayerMovement : MonoBehaviour
 
         mainCam = FindObjectOfType<CameraFollow>().transform;
         dashMeter = FindObjectOfType<DashMeter>();
+        animator = GetComponentInChildren<Animator>();
+
         currentDashMeter = maxDashMeter;
     }
 
@@ -58,8 +63,26 @@ public class PlayerMovement : MonoBehaviour
 
     private void PlayerInput()
     {
-        // Get Player Input
-        input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        if (!weapon.isSwinging)
+        {
+            // Get Player Input
+            input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+            // Player Idle/Run Animation
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+            {
+                animator.Play("Player_RunCycle");
+            }
+            else
+            {
+                animator.Play("Player_Idle");
+            }
+        }
+        else if (weapon.isSwinging)
+        {
+            input = new Vector2();
+            animator.Play("Player_KanaboAttack");
+        }
 
         //if (!isDashing)
         //{
