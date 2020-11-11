@@ -189,12 +189,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 50
   attackSpeed: 1
-  isSwinging: 0
   range: 3
-  enemyMask:
-    serializedVersion: 2
-    m_Bits: 512
   hitDetectionRange: 40
+  isSwinging: 0
 --- !u!54 &4281899709662346120
 Rigidbody:
   m_ObjectHideFlags: 0

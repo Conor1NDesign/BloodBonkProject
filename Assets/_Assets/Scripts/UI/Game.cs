@@ -23,7 +23,7 @@ public class Game : MonoBehaviour
     public Text yourScore;
     public Text bestScore;
 
-    [Header("Debug (DO NOT TOUCH)")]
+    [Header("Debug (NO TOUCH)")]
     public GameObject weaponPrefab;
 
     int highscore;
