@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: ddf0fda120e1bd243b613a875c77571b
+guid: d393fd0ddf16d4b44a98ad55c3a5e63d
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable:
   - first:
-      74: 1827226128182048838
-    second: Shuten_Attack
+      74: -9095217426942773702
+    second: Player_Idle
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Shuten_Attack
-      takeName: Take 001
+      name: Player_Idle
+      takeName: _Idle_v001
       internalID: 0
-      firstFrame: 0
-      lastFrame: 32
+      firstFrame: 1
+      lastFrame: 45
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
