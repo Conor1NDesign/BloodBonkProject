@@ -19,7 +19,6 @@ public class Weapon : MonoBehaviour
     [Tooltip("How wide the angle/cone the attack will be")] public float hitDetectionRange = 70f;
     Vector2 mouseInput;
 
-    Animator animator;
     CameraShake camShake;
     PlayerStats stats;
 
@@ -27,14 +26,13 @@ public class Weapon : MonoBehaviour
     {
         camShake = FindObjectOfType<CameraShake>();
         stats = FindObjectOfType<PlayerStats>();
-        animator = GetComponent<Animator>();
         SetAttackSpeed(attackSpeed);
         DisableWeapon();
     }
 
     public void SetAttackSpeed(float attackSpeed)
     {
-        animator.speed = attackSpeed;
+        //animator.speed = attackSpeed;
     }
 
     // Plays attacking animation
@@ -44,7 +42,6 @@ public class Weapon : MonoBehaviour
 
         isSwinging = true;
         //transform.GetComponent<Renderer>().enabled = true; // Show Weapon
-        animator.Play("Attack");
     }
 
     // Enable weapon collider
