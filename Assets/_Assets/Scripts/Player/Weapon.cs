@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    [Header("Weapon")]
     public float damage = 10f;
     public float attackSpeed = 1f;
+
+    [Header("Hit Detection")]
+    public float range = 3f;
+    LayerMask enemyMask;
+    [Tooltip("How wide the angle/cone the attack will be")] public float hitDetectionRange = 70f;
 
     [HideInInspector]
     public bool isSwinging;
 
-    // Debug
-    public bool isAttacking;
-
-    // Hit Detection
-    public float range = 3f;
-    public LayerMask enemyMask;
-    [Tooltip("How wide the angle/cone the attack will be")] public float hitDetectionRange = 70f;
     Vector2 mouseInput;
-
+    
+    // Classes
     CameraShake camShake;
     PlayerStats stats;
 
@@ -26,12 +26,7 @@ public class Weapon : MonoBehaviour
     {
         camShake = FindObjectOfType<CameraShake>();
         stats = FindObjectOfType<PlayerStats>();
-        SetAttackSpeed(attackSpeed);
-    }
-
-    public void SetAttackSpeed(float attackSpeed)
-    {
-        //animator.speed = attackSpeed;
+        enemyMask = LayerMask.GetMask("Enemy");
     }
 
     // Plays attacking animation
@@ -44,8 +39,6 @@ public class Weapon : MonoBehaviour
 
     public void HitDetection()
     {
-        isAttacking = true;
-
         Vector3 playerPos = transform.root.position;
 
         // DEBUGGING
@@ -69,8 +62,6 @@ public class Weapon : MonoBehaviour
 
         // All enemies within range
         Collider[] enemiesInRange = Physics.OverlapSphere(playerPos, range, enemyMask);
-
-        Debug.Log(enemiesInRange.Length);
 
         bool enemyHit = false;
 
@@ -105,12 +96,6 @@ public class Weapon : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0) && !isSwinging)
         {
             Attack();
-        }
-
-        // Debugging
-        if (isAttacking)
-        {
-           HitDetection();
         }
     }
 }

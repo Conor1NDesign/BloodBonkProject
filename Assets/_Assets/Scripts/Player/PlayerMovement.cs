@@ -32,9 +32,9 @@ public class PlayerMovement : MonoBehaviour
     DashMeter dashMeter;
 
     // Component
-    public Animator animator;
+    [HideInInspector] public Animator animator;
 
-    [Header("Debug")]
+    [Header("Debug (NO TOUCH)")]
     public Game gameManager;
     public Weapon weapon;
 
@@ -86,6 +86,7 @@ public class PlayerMovement : MonoBehaviour
         else if (weapon.isSwinging)
         {
             input = new Vector2();
+            animator.speed = weapon.attackSpeed;
             animator.Play("Player_KanaboAttack");
         }
 
