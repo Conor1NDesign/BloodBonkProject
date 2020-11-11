@@ -10,6 +10,7 @@ public class EnemyAI : MonoBehaviour
 	[Header("AI Settings")]
 	public float range = 1.0f;
 	[SerializeField]protected float timeBetweenAttacks = 1.0f;
+	[SerializeField]protected float attackLength = 1.0f;
 	// The distance from the player that the enemy will approach to
 	[SerializeField]protected float distanceFromPlayer = 1.0f;
 	public float damage = 10.0f;
@@ -19,7 +20,8 @@ public class EnemyAI : MonoBehaviour
 	[HideInInspector]public float health = 100.0f;
 	public HealthBar healthBar;
 	
-	// The rigidbody of the enemy
+	// Cached components of the enemy
+	protected Animator animator;
 	protected NavMeshAgent agent;
 	protected float timeToNextAttack = 0.0f;
 
@@ -40,17 +42,19 @@ public class EnemyAI : MonoBehaviour
 		// Cache this GameObject's navmesh agent
 		agent = GetComponent<NavMeshAgent>();
 		healthBar = GetComponentInChildren<HealthBar>();
+		animator = GetComponentInChildren<Animator>();
 		health = maxHealth;
 	}
 
 	void FixedUpdate()
 	{
 		if (timeToNextAttack > 0.0f)
-		{
 			timeToNextAttack -= 1.0f / 60.0f;
-		}
+		if (timeToNextAttack < timeBetweenAttacks - attackLength)
+			agent.enabled = true;
 
-		MovementUpdate();
+		if (agent.enabled)
+			MovementUpdate();
 	}
 
 	protected void MovementUpdate()
@@ -87,8 +91,8 @@ public class EnemyAI : MonoBehaviour
 		if (timeToNextAttack <= 0.0f)
 		{
 			// Do the attacky thing
-			//Debug.Log("Akashita Attack!");
 			timeToNextAttack = timeBetweenAttacks;
+			agent.enabled = false;
 		}
 	}
 }
