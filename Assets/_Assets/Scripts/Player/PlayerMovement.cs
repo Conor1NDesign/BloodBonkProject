@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     DashMeter dashMeter;
 
     // Component
-    Animator animator;
+    public Animator animator;
 
     [Header("Debug")]
     public Game gameManager;
@@ -59,6 +59,11 @@ public class PlayerMovement : MonoBehaviour
     {
         Movement();
         LookDirection();
+    }
+
+    public void HitDetection()
+    {
+        weapon.HitDetection();
     }
 
     private void PlayerInput()

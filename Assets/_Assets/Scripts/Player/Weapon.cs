@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour
     public bool isSwinging;
 
     // Debug
-    private bool isAttacking;
+    public bool isAttacking;
 
     // Hit Detection
     public float range = 3f;
@@ -27,7 +27,6 @@ public class Weapon : MonoBehaviour
         camShake = FindObjectOfType<CameraShake>();
         stats = FindObjectOfType<PlayerStats>();
         SetAttackSpeed(attackSpeed);
-        DisableWeapon();
     }
 
     public void SetAttackSpeed(float attackSpeed)
@@ -40,28 +39,7 @@ public class Weapon : MonoBehaviour
     {
         mouseInput = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
 
-        isSwinging = true;
-        //transform.GetComponent<Renderer>().enabled = true; // Show Weapon
-    }
-
-    // Enable weapon collider
-    public void EnableWeapon()
-    {
-        HitDetection();
-
-        // COLLIDER
-        //transform.GetComponent<BoxCollider>().enabled = true;
-
-        // DEBUG LINES
-        //isAttacking = true;
-    }
-
-    // Disable weapon collider
-    public void DisableWeapon()
-    {
-        //transform.GetComponent<Renderer>().enabled = false;
-        isSwinging = false;
-        isAttacking = false;
+        isSwinging = true; // Enables animation in PlayerMovement script
     }
 
     public void HitDetection()
@@ -69,7 +47,7 @@ public class Weapon : MonoBehaviour
         Vector3 playerPos = transform.root.position;
 
         // DEBUGGING
-        // =====================================================================================================
+        #region
         //float playerAngle = transform.parent.eulerAngles.y * Mathf.Deg2Rad;
 
         //// Player Angle
@@ -85,7 +63,7 @@ public class Weapon : MonoBehaviour
         //float negAngle = playerAngle - negRange;
         //endPos = new Vector3(playerPos.x + (range * Mathf.Sin(negAngle)), playerPos.y, playerPos.z + (range * Mathf.Cos(negAngle)));
         //Debug.DrawLine(playerPos, endPos, Color.red);
-        // =====================================================================================================
+        #endregion //Debugging
 
         // All enemies within range
         Collider[] enemiesInRange = Physics.OverlapSphere(playerPos, range, enemyMask);
