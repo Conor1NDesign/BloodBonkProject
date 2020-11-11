@@ -14,8 +14,6 @@ public class SpawnPower : MonoBehaviour
         {
             int num = Random.Range(0, 5);
 
-            Debug.Log(num);
-
             Instantiate(powerUps[num], position, Quaternion.identity);
         }
     }
