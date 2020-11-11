@@ -462,7 +462,7 @@ Transform:
   m_Father: {fileID: 5959879744512983662}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -10.761001, y: 98.254005, z: 92.826004}
---- !u!95 &1788583561095641655
+--- !u!95 &6893494173204125002
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -481,6 +481,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &486992508620504363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6372868277104848688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7012177e9908d494d971ad730382862e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6374847682647192485
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,12 +542,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 7
   dashSpeed: 15
+  increaseSpeed: 0.1
   reduceDashMeter: 1
   fillDashMeter: 4
   maxDashMeter: 125
   refillTimer: 4
-  weaponHolder: {fileID: 0}
-  power: {fileID: 0}
   gameManager: {fileID: 0}
   weapon: {fileID: 0}
 --- !u!54 &7795153520024199471
