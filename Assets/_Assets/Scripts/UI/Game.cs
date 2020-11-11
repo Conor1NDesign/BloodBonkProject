@@ -50,6 +50,7 @@ public class Game : MonoBehaviour
         Pause();
     }
 
+    // Pause Menu
     void Pause()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
@@ -75,23 +76,30 @@ public class Game : MonoBehaviour
         if (weapon == "")
         {
             weaponPrefab = Instantiate(weapons[0]);
-            weaponPrefab.transform.parent = weaponHolder.transform;
+            WeaponSetting(weaponPrefab);
         }
         else if (weapon == "Kanabo")
         {
             weaponPrefab = Instantiate(weapons[0]);
-            weaponPrefab.transform.parent = weaponHolder.transform;
+            WeaponSetting(weaponPrefab);
         }
         else if (weapon == "Katana")
         {
             weaponPrefab = Instantiate(weapons[1]);
-            weaponPrefab.transform.parent = weaponHolder.transform;
+            WeaponSetting(weaponPrefab);
         }
         else if (weapon == "Naginata")
         {
             weaponPrefab = Instantiate(weapons[2]);
-            weaponPrefab.transform.parent = weaponHolder.transform;
+            WeaponSetting(weaponPrefab);
         }
+    }
+
+    void WeaponSetting(GameObject obj)
+    {
+        obj.transform.parent = weaponHolder.transform;
+        obj.transform.localPosition = weaponHolder.transform.localPosition;
+        obj.transform.localRotation = weaponHolder.transform.localRotation;
     }
 
     public void GameOver()
@@ -117,6 +125,8 @@ public class Game : MonoBehaviour
         }
     }
 
+    // Buttons
+    #region
     public void MainMenu()
     {
         Time.timeScale = 1f;
@@ -134,4 +144,5 @@ public class Game : MonoBehaviour
     {
         Application.Quit();
     }
+    #endregion
 }
