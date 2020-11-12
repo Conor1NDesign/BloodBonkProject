@@ -2,26 +2,30 @@ using UnityEngine;
 
 public class ShutenDojiAI : EnemyAI
 {
-#pragma warning disable 0649
-	// temp
-	[SerializeField]GameObject weapon;
-#pragma warning restore 0649
+	bool dealtDamage = true;
 	
 	void FixedUpdate()
 	{
 		timeToNextAttack -= 1.0f / 60.0f;
-		if (timeToNextAttack > timeBetweenAttacks - 0.4f)
-			weapon.transform.Rotate(new Vector3(0.0f, 1f / attackLength, 0.0f));
-		if (timeToNextAttack > timeBetweenAttacks - attackLength && timeToNextAttack < timeBetweenAttacks - 0.4f)
-			weapon.transform.Rotate(new Vector3(0.0f, -4.0f / attackLength, 0.0f));
+		// I don't even know anymore. WHY SEOUIFHUDSJOSDCOIJSEDOJISVEOJIOIJKSEF
+		if (timeToNextAttack < timeBetweenAttacks - (7 * attackLength / 10) &&
+			timeToNextAttack > timeBetweenAttacks - attackLength &&
+			!dealtDamage)
+		{
+			Collider[] playersInRange = Physics.OverlapSphere(transform.root.position, (3 * range / 5), LayerMask.GetMask("Player"));
+			for (int i = 0; i < playersInRange.Length; i++)
+			{
+				playersInRange[i].gameObject.GetComponentInParent<PlayerStats>().TakeDamage(damage);
+				dealtDamage = true;
+			}
+		}
 		if (timeToNextAttack < timeBetweenAttacks - attackLength)
 		{
 			if (!agent.enabled)
 			{
-				weapon.transform.rotation = new Quaternion(0.0f, 0.0f, 0.0f, 0.0f);
-				animator.Play("Base Layer.Shuten_WalkCycle");
+				dealtDamage = true;
+				agent.enabled = true;
 			}
-			agent.enabled = true;
 		}
 		
 		if (agent.enabled)
@@ -35,7 +39,8 @@ public class ShutenDojiAI : EnemyAI
 			// Do the attacky thing
 			timeToNextAttack = timeBetweenAttacks;
 			agent.enabled = false;
-			animator.Play("Base Layer.Shuten_Attack");
+			dealtDamage = false;
+			animator.SetTrigger("Shuten_Attacking");
 		}
 	}
 }
