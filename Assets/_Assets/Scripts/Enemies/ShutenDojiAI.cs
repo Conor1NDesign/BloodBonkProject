@@ -8,8 +8,8 @@ public class ShutenDojiAI : EnemyAI
 	{
 		timeToNextAttack -= 1.0f / 60.0f;
 		// I don't even know anymore. WHY SEOUIFHUDSJOSDCOIJSEDOJISVEOJIOIJKSEF
-		if (timeToNextAttack < timeBetweenAttacks - (attackLength / 2) &&
-			timeToNextAttack > timeBetweenAttacks - (3 * attackLength / 5) &&
+		if (timeToNextAttack < timeBetweenAttacks - (7 * attackLength / 10) &&
+			timeToNextAttack > timeBetweenAttacks - attackLength &&
 			!dealtDamage)
 		{
 			Collider[] playersInRange = Physics.OverlapSphere(transform.root.position, (3 * range / 5), LayerMask.GetMask("Player"));
@@ -24,9 +24,8 @@ public class ShutenDojiAI : EnemyAI
 			if (!agent.enabled)
 			{
 				dealtDamage = true;
-				animator.Play("Base Layer.Shuten_WalkCycle");
+				agent.enabled = true;
 			}
-			agent.enabled = true;
 		}
 		
 		if (agent.enabled)
@@ -41,7 +40,7 @@ public class ShutenDojiAI : EnemyAI
 			timeToNextAttack = timeBetweenAttacks;
 			agent.enabled = false;
 			dealtDamage = false;
-			animator.Play("Base Layer.Shuten_Attack");
+			animator.SetTrigger("Shuten_Attacking");
 		}
 	}
 }
