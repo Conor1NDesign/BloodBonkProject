@@ -23052,8 +23052,8 @@ MonoBehaviour:
   - {fileID: 4614849707880354626, guid: cac6f7f96fb6a2a458cd6d7120c8c13a, type: 3}
   - {fileID: 5969255935430800911, guid: 18aa7d5a63b299a4c92a9462fae99d29, type: 3}
   - {fileID: 4011044055795365609, guid: b9c365930f46cde4687299f17f8c9613, type: 3}
-  yourScore: {fileID: 0}
-  bestScore: {fileID: 0}
+  yourScore: {fileID: 1884578240}
+  bestScore: {fileID: 2018044748}
   weaponPrefab: {fileID: 0}
 --- !u!4 &691310731
 Transform:
@@ -67712,7 +67712,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 691310730}
         m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
