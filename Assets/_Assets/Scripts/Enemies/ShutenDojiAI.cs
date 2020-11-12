@@ -18,9 +18,9 @@ public class ShutenDojiAI : EnemyAI
 		{
 			if (!agent.enabled)
 			{
-				animator.Play("Base Layer.WalkCycle");
+				weapon.transform.rotation = new Quaternion(0.0f, 0.0f, 0.0f, 0.0f);
+				animator.Play("Base Layer.Shuten_WalkCycle");
 			}
-			weapon.transform.rotation = new Quaternion(0.0f, 0.0f, 0.0f, 0.0f);
 			agent.enabled = true;
 		}
 		
@@ -35,7 +35,7 @@ public class ShutenDojiAI : EnemyAI
 			// Do the attacky thing
 			timeToNextAttack = timeBetweenAttacks;
 			agent.enabled = false;
-			animator.Play("Base Layer.Attack");
+			animator.Play("Base Layer.Shuten_Attack");
 		}
 	}
 }

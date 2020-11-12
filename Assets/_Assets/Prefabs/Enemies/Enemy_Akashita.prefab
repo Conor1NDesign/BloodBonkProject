@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5749689772656713740}
   - component: {fileID: 5782149097165530195}
   - component: {fileID: -7251848352542788546}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy_Akashita
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -53,6 +53,7 @@ MonoBehaviour:
   player: {fileID: 0}
   range: 7
   timeBetweenAttacks: 5
+  attackLength: 1
   distanceFromPlayer: 6
   damage: 10
   maxHealth: 100
@@ -106,7 +107,7 @@ GameObject:
   - component: {fileID: 8724682106921848595}
   - component: {fileID: 7929644287521492354}
   - component: {fileID: 3693666125051574441}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -213,6 +214,25 @@ CapsuleCollider:
   m_Height: 2.5
   m_Direction: 1
   m_Center: {x: 0, y: 1.25, z: -0.2}
+--- !u!95 &8197522917058166020
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4418576098687841600}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7cca2a9463011c840be2f55d5e13d010, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5521216427223344010
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,7 +246,7 @@ GameObject:
   - component: {fileID: 7319826453139438906}
   - component: {fileID: 6590023565105578953}
   - component: {fileID: 1670863928842710485}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -337,7 +357,7 @@ GameObject:
   - component: {fileID: 5548569567036035430}
   - component: {fileID: 9087660037292659056}
   - component: {fileID: 346177009431813433}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -410,7 +430,7 @@ GameObject:
   - component: {fileID: 2644504018688588642}
   - component: {fileID: 6342132582005746499}
   - component: {fileID: 666470836873900127}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,7 +533,7 @@ GameObject:
   - component: {fileID: 6967969792315196513}
   - component: {fileID: 3532036271826549544}
   - component: {fileID: 7877620212702430879}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -585,13 +605,23 @@ PrefabInstance:
     - target: {fileID: -8818253410396371148, guid: 60b5ddc507fd5454e89631ae9e140850,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -7711413071089548358, guid: 60b5ddc507fd5454e89631ae9e140850,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 99a84ab2cd497b449b0903a79262955e, type: 2}
+    - target: {fileID: -7455685359145607950, guid: 60b5ddc507fd5454e89631ae9e140850,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -6236743471014415788, guid: 60b5ddc507fd5454e89631ae9e140850,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 60b5ddc507fd5454e89631ae9e140850,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -665,7 +695,7 @@ PrefabInstance:
     - target: {fileID: -3007788161290943432, guid: 60b5ddc507fd5454e89631ae9e140850,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -2033436664433645646, guid: 60b5ddc507fd5454e89631ae9e140850,
         type: 3}
@@ -680,7 +710,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 60b5ddc507fd5454e89631ae9e140850,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -282556869709011827, guid: 60b5ddc507fd5454e89631ae9e140850,
         type: 3}
@@ -700,7 +730,7 @@ PrefabInstance:
     - target: {fileID: 5537498672549660265, guid: 60b5ddc507fd5454e89631ae9e140850,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6306971017694268109, guid: 60b5ddc507fd5454e89631ae9e140850,
         type: 3}
@@ -710,13 +740,19 @@ PrefabInstance:
     - target: {fileID: 7658304314627705819, guid: 60b5ddc507fd5454e89631ae9e140850,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60b5ddc507fd5454e89631ae9e140850, type: 3}
 --- !u!4 &795648764546582355 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 60b5ddc507fd5454e89631ae9e140850,
+    type: 3}
+  m_PrefabInstance: {fileID: 5652020399129406537}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4418576098687841600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 60b5ddc507fd5454e89631ae9e140850,
     type: 3}
   m_PrefabInstance: {fileID: 5652020399129406537}
   m_PrefabAsset: {fileID: 0}
