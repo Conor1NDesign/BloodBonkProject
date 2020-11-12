@@ -13483,7 +13483,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh54052
+  m_Name: pb_Mesh176502
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -52624,6 +52624,10 @@ PrefabInstance:
       propertyPath: lifesteal
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 812507990, guid: 6f6f4fae6bb63ce488405269ee7d199d, type: 3}
+      propertyPath: m_CapsuleColliders.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 110394063355164140, guid: 6f6f4fae6bb63ce488405269ee7d199d,
         type: 3}
       propertyPath: m_Layer
@@ -52738,6 +52742,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957854527761488197, guid: 6f6f4fae6bb63ce488405269ee7d199d,
+        type: 3}
+      propertyPath: m_Quality
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2957854527761488197, guid: 6f6f4fae6bb63ce488405269ee7d199d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3262134990503801224, guid: 6f6f4fae6bb63ce488405269ee7d199d,
         type: 3}
@@ -52943,7 +52957,7 @@ PrefabInstance:
         type: 3}
       propertyPath: gameManager
       value: 
-      objectReference: {fileID: 691310730}
+      objectReference: {fileID: 0}
     - target: {fileID: 8289608435703907256, guid: 6f6f4fae6bb63ce488405269ee7d199d,
         type: 3}
       propertyPath: m_Layer
@@ -65193,7 +65207,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh54298
+  m_Name: pb_Mesh176758
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
