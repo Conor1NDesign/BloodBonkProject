@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
 
     bool isDashing;
 
+    [HideInInspector] public bool isAttacking;
+
     float actualSpeed; // Sprint or normal movement
     float maxTime; // Time to start refilling dash
 
@@ -72,22 +74,24 @@ public class PlayerMovement : MonoBehaviour
         {
             // Get Player Input
             input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-
-            // Player Idle/Run Animation
-            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
-            {
-                animator.Play("Player_RunCycle");
-            }
-            else
-            {
-                animator.Play("Player_Idle");
-            }
         }
-        else if (weapon.isSwinging)
+        else if (weapon.isSwinging && !isAttacking)
         {
             input = new Vector2();
             animator.speed = weapon.attackSpeed;
-            animator.Play("Player_KanaboAttack");
+            animator.SetTrigger("Attacking");
+
+            isAttacking = true;
+        }
+
+        // Player Idle/Run Animation
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        {
+            animator.SetBool("Running", true); // Running Animation
+        }
+        else
+        {
+            animator.SetBool("Running", false); // Idle Animation
         }
 
         //if (!isDashing)
