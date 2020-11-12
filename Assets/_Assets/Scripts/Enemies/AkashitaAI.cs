@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class AkashitaAI : EnemyAI
 {
+	[Header("Projectile Settings")]
 #pragma warning disable 0649
 	[SerializeField]GameObject projectilePrefab;
 #pragma warning restore 0649

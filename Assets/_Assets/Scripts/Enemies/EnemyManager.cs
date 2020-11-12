@@ -21,9 +21,11 @@ public class EnemyManager : MonoBehaviour
     [SerializeField]GameObject shutenDojiPrefab;
 #pragma warning restore 0649
 
-	[Header("Current Enemy List")]
+	[Header("Current Enemy Lists")]
 	[SerializeField]List<GameObject> enemies = new List<GameObject>();
-	[HideInInspector]public List<AkashitaProjectile> akashitaProjectiles = new List<AkashitaProjectile>();
+	[SerializeField]List<GameObject> inactiveShutenDoji = new List<GameObject>();
+	[SerializeField]List<GameObject> inactiveAkashita = new List<GameObject>();
+	public List<AkashitaProjectile> akashitaProjectiles = new List<AkashitaProjectile>();
 
 	// Classes
 	SpawnPower powerupManager;
@@ -55,7 +57,11 @@ public class EnemyManager : MonoBehaviour
 			if (attacker.GetHealth() <= 0.0f)
 			{
 				enemies.Remove(enemy);
-				Destroy(enemy);
+				enemy.SetActive(false);
+				if (attacker is ShutenDojiAI)
+					inactiveShutenDoji.Add(enemy);
+				else
+					inactiveAkashita.Add(enemy);
 				i--;
 
 				// Increase score
@@ -94,17 +100,41 @@ public class EnemyManager : MonoBehaviour
 			enemies[i].transform.position = spawnPoints[i % spawnPoints.Count].transform.position + new Vector3(Random.Range(-1.0f, 1.0f), 0.0f, Random.Range(-1.0f, 1.0f));
 			EnemyAI enemy = enemies[i].GetComponent<EnemyAI>();
 			enemy.player = player;
-			enemy.maxHealth = enemy.maxHealth * difficulty;
-			enemy.health = enemy.maxHealth;
-			enemy.damage = enemy.damage * difficulty;
+			enemy.currentMaxHealth = enemy.baseMaxHealth * difficulty;
+			enemy.health = enemy.currentMaxHealth;
+			enemy.damage = enemy.baseDamage * difficulty;
 			enemy.enemyManager = this;
 		}
-		waveSize = baseWaveSize * (int)difficulty;
+		waveSize = (int)(baseWaveSize * difficulty);
 		difficulty += difficultyIncreasePerWave;
     }
 
     GameObject SpawnEnemy(GameObject enemyPrefab)
     {
-        return Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+		EnemyAI aiType = enemyPrefab.GetComponent<EnemyAI>();
+		if (inactiveAkashita.Count == 0 && aiType is AkashitaAI ||
+			inactiveShutenDoji.Count == 0 && aiType is ShutenDojiAI)
+        	return Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+		else
+		{
+			GameObject enemyToReturn;
+			// Grab an enemy
+			if (aiType is ShutenDojiAI)
+			{
+				enemyToReturn = inactiveShutenDoji[inactiveShutenDoji.Count - 1];
+				inactiveShutenDoji.RemoveAt(inactiveShutenDoji.Count - 1);
+			}
+			else
+			{
+				enemyToReturn = inactiveAkashita[inactiveAkashita.Count - 1];
+				inactiveAkashita.RemoveAt(inactiveAkashita.Count - 1);
+			}
+			// Reset the enemy
+			enemyToReturn.SetActive(true);
+			EnemyAI ai = enemyToReturn.GetComponent<EnemyAI>();
+			ai.health = ai.currentMaxHealth;
+			ai.TakeDamage(0);
+			return enemyToReturn;
+		}
     }
 }
