@@ -197,10 +197,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f7a7f8d890e3ae4384e7e9a78f9deae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
-  attackSpeed: 1
+  damage: 40
+  attackSpeed: 1.75
   range: 3
-  hitDetectionRange: 70
+  hitDetectionRange: 30
   isSwinging: 0
 --- !u!1 &6673040273763843701
 GameObject:
@@ -388,6 +388,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: 736556dfbebe68e428585f25362eabc8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5013e0d461ebf654198d175e8ade23f7, type: 2}
     - target: {fileID: -927199367670048503, guid: 736556dfbebe68e428585f25362eabc8,
         type: 3}
       propertyPath: m_Name

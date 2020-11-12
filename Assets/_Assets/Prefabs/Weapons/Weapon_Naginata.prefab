@@ -46,10 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f7a7f8d890e3ae4384e7e9a78f9deae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
-  attackSpeed: 1
-  range: 3
-  hitDetectionRange: 70
+  damage: 60
+  attackSpeed: 1.1
+  range: 8
+  hitDetectionRange: 80
   isSwinging: 0
 --- !u!1 &6510763585527712392
 GameObject:

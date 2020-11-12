@@ -186,10 +186,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f7a7f8d890e3ae4384e7e9a78f9deae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
-  attackSpeed: 1
-  range: 3
-  hitDetectionRange: 40
+  damage: 80
+  attackSpeed: 0.75
+  range: 6
+  hitDetectionRange: 60
   isSwinging: 0
 --- !u!1 &5861746774561711582
 GameObject:
@@ -387,7 +387,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fc15b6ec64020df46a1ddb57d859f2c4, type: 2}
+      objectReference: {fileID: 2100000, guid: 0bf5e699f3a41bf41ac739cfc6471cd7, type: 2}
     - target: {fileID: 3400677161372250454, guid: d0b0086612758cb4982713d3a06fa9e6,
         type: 3}
       propertyPath: m_Layer
@@ -397,12 +397,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b11f0c67dd4819c488e32eff6eaa1334, type: 2}
+      objectReference: {fileID: 2100000, guid: 0bf5e699f3a41bf41ac739cfc6471cd7, type: 2}
     - target: {fileID: 5051804062640238607, guid: d0b0086612758cb4982713d3a06fa9e6,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 40c390d8e2e6bdf47a114eb6aa21f9b8, type: 2}
+      objectReference: {fileID: 2100000, guid: 0bf5e699f3a41bf41ac739cfc6471cd7, type: 2}
     - target: {fileID: 8121086926311348868, guid: d0b0086612758cb4982713d3a06fa9e6,
         type: 3}
       propertyPath: m_Layer
