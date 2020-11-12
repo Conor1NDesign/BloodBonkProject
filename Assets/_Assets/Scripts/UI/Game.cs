@@ -109,7 +109,7 @@ public class Game : MonoBehaviour
         Time.timeScale = 0f;
 
         buttons[0].onClick.AddListener(PlayAgain);
-        buttons[1].onClick.AddListener(QuitGame);
+        buttons[1].onClick.AddListener(MainMenu);
 
         // Preview Score
         yourScore.text += score.currentScore.ToString();
@@ -138,11 +138,6 @@ public class Game : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainScene_001_Arena");
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
     }
     #endregion
 }
