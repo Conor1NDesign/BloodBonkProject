@@ -13,10 +13,14 @@ public class EnemyAI : MonoBehaviour
 	[SerializeField]protected float attackLength = 1.0f;
 	// The distance from the player that the enemy will approach to
 	[SerializeField]protected float distanceFromPlayer = 1.0f;
+	public float baseDamage = 10.0f;
 	public float damage = 10.0f;
+	[Tooltip("How long this enemy staggers when hit")]public float staggerTime = 1.0f;
+	[SerializeField]protected float currentStaggerTime = 0.0f;
 	//HEALTH!
 	[Header("Health Settings")]
-	public float maxHealth = 100.0f;
+	public float baseMaxHealth = 100.0f;
+	public float currentMaxHealth = 0.0f;
 	[HideInInspector]public float health = 100.0f;
 	public HealthBar healthBar;
 	
@@ -28,8 +32,10 @@ public class EnemyAI : MonoBehaviour
 	public void TakeDamage(float damage)
 	{
 		health -= damage;
-		healthBar.SetMaxHealth(maxHealth);
+		healthBar.SetMaxHealth(currentMaxHealth);
 		healthBar.SetHealth(health);
+		currentStaggerTime = staggerTime;
+		agent.enabled = false;
 	}
 
 	public float GetHealth()
@@ -43,14 +49,16 @@ public class EnemyAI : MonoBehaviour
 		agent = GetComponent<NavMeshAgent>();
 		healthBar = GetComponentInChildren<HealthBar>();
 		animator = GetComponentInChildren<Animator>();
-		health = maxHealth;
+		health = currentMaxHealth;
 	}
 
 	void FixedUpdate()
 	{
 		if (timeToNextAttack > 0.0f)
 			timeToNextAttack -= 1.0f / 60.0f;
-		if (timeToNextAttack < timeBetweenAttacks - attackLength)
+		if (currentStaggerTime > 0.0f)
+			currentStaggerTime -= 1.0f / 60.0f;
+		if (timeToNextAttack < timeBetweenAttacks - attackLength && currentStaggerTime <= 0.0f)
 			agent.enabled = true;
 
 		if (agent.enabled)
