@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     [HideInInspector] public Vector2 posOnScreen; // Apply on attack
     [HideInInspector] public Vector2 mouseInput;
+    [HideInInspector] public bool hasLunged;
 
     Vector3 input;
 
@@ -187,6 +188,12 @@ public class PlayerMovement : MonoBehaviour
             float targetAngle = Mathf.Atan2(mouseInput.x - posOnScreen.x, mouseInput.y - posOnScreen.y) * Mathf.Rad2Deg + mainCam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTimeAttack);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+            if (!hasLunged)
+            {
+                Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+                transform.position += moveDir * weapon.lungeDistance * Time.fixedDeltaTime;
+            }
         }
     }
 }

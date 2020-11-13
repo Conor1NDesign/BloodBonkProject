@@ -7,15 +7,16 @@ public class Weapon : MonoBehaviour
     [Header("Weapon")]
     public float damage = 10f;
     public float attackSpeed = 1f;
+    public float lungeDistance = 1f;
 
     [Header("Hit Detection")]
     public float range = 3f;
     LayerMask enemyMask;
     [Tooltip("How wide the angle/cone the attack will be")] public float hitDetectionRange = 70f;
 
-    [HideInInspector]
-    public bool isSwinging;
-    
+    [HideInInspector] public bool isSwinging;
+
+
     // Classes
     CameraShake camShake;
     PlayerStats stats;
@@ -32,6 +33,7 @@ public class Weapon : MonoBehaviour
     // Plays attacking animation
     void Attack()
     {
+        player.hasLunged = false;
         isSwinging = true; // Enables animation in PlayerMovement script
 
         player.mouseInput = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
@@ -40,6 +42,8 @@ public class Weapon : MonoBehaviour
 
     public void HitDetection()
     {
+        player.hasLunged = true;
+
         Vector3 playerPos = transform.root.position;
 
         // DEBUGGING
