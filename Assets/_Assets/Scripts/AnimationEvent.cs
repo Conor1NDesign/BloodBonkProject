@@ -23,7 +23,6 @@ public class AnimationEvent : MonoBehaviour
     public void EndAttackAnimation()
     {
         player.animator.speed = 1f;
-        player.animator.Play("Player_Idle");
         weapon.isSwinging = false;
         player.isAttacking = false;
     }
