@@ -2,22 +2,25 @@ using UnityEngine;
 
 public class ShutenDojiAI : EnemyAI
 {
+	[Header("Attack Settings")]
+#pragma warning disable 0649
+	[SerializeField]GameObject bottle;
+#pragma warning restore 0649
+	Vector3 bottlePosInitial;
 	bool dealtDamage = true;
 	
 	void FixedUpdate()
 	{
 		timeToNextAttack -= 1.0f / 60.0f;
-		// I don't even know anymore. WHY SEOUIFHUDSJOSDCOIJSEDOJISVEOJIOIJKSEF
-		if (timeToNextAttack < timeBetweenAttacks - (7 * attackLength / 10) &&
-			timeToNextAttack > timeBetweenAttacks - attackLength &&
-			!dealtDamage)
+		if (timeToNextAttack > timeBetweenAttacks - attackLength && !dealtDamage)
 		{
-			Collider[] playersInRange = Physics.OverlapSphere(transform.root.position, (3 * range / 5), LayerMask.GetMask("Player"));
-			for (int i = 0; i < playersInRange.Length; i++)
+			if (Physics.Linecast(bottlePosInitial, bottle.transform.position, LayerMask.GetMask("Player")))
 			{
-				playersInRange[i].gameObject.GetComponentInParent<PlayerStats>().TakeDamage(damage);
+				player.GetComponent<PlayerStats>().TakeDamage(damage);
 				dealtDamage = true;
 			}
+			else
+				bottlePosInitial = bottle.transform.position;
 		}
 		if (timeToNextAttack < timeBetweenAttacks - attackLength)
 		{
@@ -41,6 +44,7 @@ public class ShutenDojiAI : EnemyAI
 			agent.enabled = false;
 			dealtDamage = false;
 			animator.SetTrigger("Shuten_Attacking");
+			bottlePosInitial = bottle.transform.position;
 		}
 	}
 }
