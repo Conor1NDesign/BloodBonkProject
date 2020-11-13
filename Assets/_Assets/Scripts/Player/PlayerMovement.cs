@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         Movement();
-        LookDirection();
+        //LookDirection();
     }
 
     public void HitDetection()
@@ -115,6 +115,9 @@ public class PlayerMovement : MonoBehaviour
         // Apply player movement
         if (input.magnitude >= 0.1f)
         {
+            float targetAngle = Mathf.Atan2(input.x, input.z) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0f, targetAngle + WrapAngle(mainCam.eulerAngles.y), 0f);
+
             transform.position += (camF * input.z + camR * input.x) * actualSpeed * Time.fixedDeltaTime;
         }
     }
