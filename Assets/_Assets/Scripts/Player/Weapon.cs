@@ -7,23 +7,24 @@ public class Weapon : MonoBehaviour
     [Header("Weapon")]
     public float damage = 10f;
     public float attackSpeed = 1f;
+    public float lungeDistance = 1f;
 
     [Header("Hit Detection")]
     public float range = 3f;
     LayerMask enemyMask;
     [Tooltip("How wide the angle/cone the attack will be")] public float hitDetectionRange = 70f;
 
-    [HideInInspector]
-    public bool isSwinging;
+    [HideInInspector] public bool isSwinging;
 
-    Vector2 mouseInput;
-    
+
     // Classes
     CameraShake camShake;
     PlayerStats stats;
+    PlayerMovement player;
 
     private void Awake()
     {
+        player = FindObjectOfType<PlayerMovement>();
         camShake = FindObjectOfType<CameraShake>();
         stats = FindObjectOfType<PlayerStats>();
         enemyMask = LayerMask.GetMask("Enemy");
@@ -32,13 +33,17 @@ public class Weapon : MonoBehaviour
     // Plays attacking animation
     void Attack()
     {
-        mouseInput = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-
+        player.hasLunged = false;
         isSwinging = true; // Enables animation in PlayerMovement script
+
+        player.mouseInput = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        player.posOnScreen = Camera.main.WorldToScreenPoint(player.transform.position);
     }
 
     public void HitDetection()
     {
+        player.hasLunged = true;
+
         Vector3 playerPos = transform.root.position;
 
         // DEBUGGING

@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public float dashSpeed = 10f;
     public float increaseSpeed = 0.1f;
+    public float turnSmoothTime = 0.1f;
+    public float turnSmoothTimeAttack = 0.1f;
+    float turnSmoothVelocity;
 
     [Header("Dash Meter Settings")]
     public float reduceDashMeter = 1f;
@@ -16,10 +19,11 @@ public class PlayerMovement : MonoBehaviour
     public float refillTimer = 1f;
     private float currentDashMeter;
 
-    // Camera vars
-    Vector3 camF;
-    Vector3 camR;
-    Vector2 input;
+    [HideInInspector] public Vector2 posOnScreen; // Apply on attack
+    [HideInInspector] public Vector2 mouseInput;
+    [HideInInspector] public bool hasLunged;
+
+    Vector3 input;
 
     Transform mainCam;
 
@@ -55,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         PlayerInput();
+        
     }
 
     void FixedUpdate()
@@ -73,11 +78,11 @@ public class PlayerMovement : MonoBehaviour
         if (!weapon.isSwinging)
         {
             // Get Player Input
-            input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+            input = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
         }
         else if (weapon.isSwinging && !isAttacking)
         {
-            input = new Vector2();
+            input = new Vector3();
             animator.speed = weapon.attackSpeed;
             animator.SetTrigger("Attacking");
 
@@ -94,62 +99,52 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("Running", false); // Idle Animation
         }
 
-        //if (!isDashing)
-        //{
-        //    input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        //}
-
-        // Player moves in camera view direction
-        input = Vector2.ClampMagnitude(input, 1);
-
-        camF = mainCam.forward;
-        camR = mainCam.right;
-
-        camF.y = 0;
-        camR.y = 0;
-        camF = camF.normalized;
-        camR = camR.normalized;
-
         Dashing();
         DashMeter();
-
-        //actualSpeed = Mathf.Lerp(0, actualSpeed, 0.9f * Time.deltaTime);
     }
 
 
     private void Movement()
     {
         // Apply player movement
-        transform.position += (camF * input.y + camR * input.x) * actualSpeed * Time.fixedDeltaTime;
+        if (input.magnitude >= 0.1f)
+        {
+            float targetAngle = Mathf.Atan2(input.x, input.z) * Mathf.Rad2Deg + mainCam.eulerAngles.y;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+            transform.position += moveDir * actualSpeed * Time.fixedDeltaTime;
+        }
     }
 
+    bool PlayerHasDash()
+    {
+        if (currentDashMeter >= reduceDashMeter)
+        {
+            return true;
+        }
+        return false;
+    }
     
+    // Detect if player presses dash
     private void Dashing()
     {
-        // Player not swinging weapon
-        if (!weapon.isSwinging)
+        if (Input.GetKey(KeyCode.Space) && PlayerHasDash() && !weapon.isSwinging ||
+            Input.GetKey(KeyCode.LeftShift) && PlayerHasDash() && !weapon.isSwinging)
         {
-            if (Input.GetKey(KeyCode.Space) && currentDashMeter >= reduceDashMeter ||
-                Input.GetKey(KeyCode.LeftShift) && currentDashMeter >= reduceDashMeter)
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
             {
-                if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+                if (actualSpeed >= dashSpeed)
                 {
-                    if (actualSpeed >= dashSpeed)
-                    {
-                        actualSpeed = dashSpeed;
+                    actualSpeed = dashSpeed;
 
-                        isDashing = true;
-                    }
-                    else
-                    {
-                        actualSpeed += increaseSpeed;
-                    }
+                    isDashing = true;
                 }
-            }
-            else
-            {
-                actualSpeed = moveSpeed;
-                isDashing = false;
+                else
+                {
+                    actualSpeed += increaseSpeed;
+                }
             }
         }
         else
@@ -184,35 +179,21 @@ public class PlayerMovement : MonoBehaviour
         dashMeter.SetMaxDashMeter(maxDashMeter);
     }
 
+    // If player attacked
     private void LookDirection()
     {
-        if (!weapon.isSwinging)
+        if (weapon.isSwinging)
         {
-            // Player Postion to Screen
-            Vector2 posOnScreen = Camera.main.WorldToScreenPoint(transform.position);
             // Get Angle
-            float angle = Mathf.Atan2(Input.mousePosition.x - posOnScreen.x, Input.mousePosition.y - posOnScreen.y) * Mathf.Rad2Deg;
-            // Apply rotation
-            transform.rotation = Quaternion.AngleAxis(angle + WrapAngle(mainCam.eulerAngles.y), Vector3.up);
+            float targetAngle = Mathf.Atan2(mouseInput.x - posOnScreen.x, mouseInput.y - posOnScreen.y) * Mathf.Rad2Deg + mainCam.eulerAngles.y;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTimeAttack);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+            if (!hasLunged)
+            {
+                Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+                transform.position += moveDir * weapon.lungeDistance * Time.fixedDeltaTime;
+            }
         }
-    }
-
-    private static float WrapAngle(float angle)
-    {
-        angle %= 360;
-        if (angle > 180)
-            return angle - 360;
-
-        return angle;
-    }
-
-    private static float UnwrapAngle(float angle)
-    {
-        if (angle >= 0)
-            return angle;
-
-        angle = -angle % 360;
-
-        return 360 - angle;
     }
 }
