@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public float dashSpeed = 10f;
     public float increaseSpeed = 0.1f;
+    public float turnSmoothTime = 0.1f;
+    public float turnSmoothTimeAttack = 0.1f;
+    float turnSmoothVelocity;
 
     [Header("Dash Meter Settings")]
     public float reduceDashMeter = 1f;
@@ -16,9 +19,9 @@ public class PlayerMovement : MonoBehaviour
     public float refillTimer = 1f;
     private float currentDashMeter;
 
-    // Camera vars
-    Vector3 camF;
-    Vector3 camR;
+    [HideInInspector] public Vector2 posOnScreen; // Apply on attack
+    [HideInInspector] public Vector2 mouseInput;
+
     Vector3 input;
 
     Transform mainCam;
@@ -55,12 +58,13 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         PlayerInput();
+        
     }
 
     void FixedUpdate()
     {
         Movement();
-        //LookDirection();
+        LookDirection();
     }
 
     public void HitDetection()
@@ -94,17 +98,6 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("Running", false); // Idle Animation
         }
 
-        // Player moves in camera view direction
-        input = Vector3.ClampMagnitude(input, 1);
-
-        camF = mainCam.forward;
-        camR = mainCam.right;
-
-        camF.y = 0;
-        camR.y = 0;
-        camF = camF.normalized;
-        camR = camR.normalized;
-
         Dashing();
         DashMeter();
     }
@@ -115,10 +108,12 @@ public class PlayerMovement : MonoBehaviour
         // Apply player movement
         if (input.magnitude >= 0.1f)
         {
-            float targetAngle = Mathf.Atan2(input.x, input.z) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0f, targetAngle + WrapAngle(mainCam.eulerAngles.y), 0f);
+            float targetAngle = Mathf.Atan2(input.x, input.z) * Mathf.Rad2Deg + mainCam.eulerAngles.y;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
-            transform.position += (camF * input.z + camR * input.x) * actualSpeed * Time.fixedDeltaTime;
+            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+            transform.position += moveDir * actualSpeed * Time.fixedDeltaTime;
         }
     }
 
@@ -183,35 +178,15 @@ public class PlayerMovement : MonoBehaviour
         dashMeter.SetMaxDashMeter(maxDashMeter);
     }
 
+    // If player attacked
     private void LookDirection()
     {
-        if (!weapon.isSwinging)
+        if (weapon.isSwinging)
         {
-            // Player Postion to Screen
-            Vector2 posOnScreen = Camera.main.WorldToScreenPoint(transform.position);
             // Get Angle
-            float angle = Mathf.Atan2(Input.mousePosition.x - posOnScreen.x, Input.mousePosition.y - posOnScreen.y) * Mathf.Rad2Deg;
-            // Apply rotation
-            transform.rotation = Quaternion.AngleAxis(angle + WrapAngle(mainCam.eulerAngles.y), Vector3.up);
+            float targetAngle = Mathf.Atan2(mouseInput.x - posOnScreen.x, mouseInput.y - posOnScreen.y) * Mathf.Rad2Deg + mainCam.eulerAngles.y;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTimeAttack);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
         }
-    }
-
-    private static float WrapAngle(float angle)
-    {
-        angle %= 360;
-        if (angle > 180)
-            return angle - 360;
-
-        return angle;
-    }
-
-    private static float UnwrapAngle(float angle)
-    {
-        if (angle >= 0)
-            return angle;
-
-        angle = -angle % 360;
-
-        return 360 - angle;
     }
 }

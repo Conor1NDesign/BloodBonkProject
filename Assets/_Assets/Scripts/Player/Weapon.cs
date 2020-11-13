@@ -15,15 +15,15 @@ public class Weapon : MonoBehaviour
 
     [HideInInspector]
     public bool isSwinging;
-
-    Vector2 mouseInput;
     
     // Classes
     CameraShake camShake;
     PlayerStats stats;
+    PlayerMovement player;
 
     private void Awake()
     {
+        player = FindObjectOfType<PlayerMovement>();
         camShake = FindObjectOfType<CameraShake>();
         stats = FindObjectOfType<PlayerStats>();
         enemyMask = LayerMask.GetMask("Enemy");
@@ -32,9 +32,10 @@ public class Weapon : MonoBehaviour
     // Plays attacking animation
     void Attack()
     {
-        mouseInput = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-
         isSwinging = true; // Enables animation in PlayerMovement script
+
+        player.mouseInput = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        player.posOnScreen = Camera.main.WorldToScreenPoint(player.transform.position);
     }
 
     public void HitDetection()
