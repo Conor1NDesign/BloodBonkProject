@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     // Camera vars
     Vector3 camF;
     Vector3 camR;
-    Vector2 input;
+    Vector3 input;
 
     Transform mainCam;
 
@@ -73,11 +73,11 @@ public class PlayerMovement : MonoBehaviour
         if (!weapon.isSwinging)
         {
             // Get Player Input
-            input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+            input = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
         }
         else if (weapon.isSwinging && !isAttacking)
         {
-            input = new Vector2();
+            input = new Vector3();
             animator.speed = weapon.attackSpeed;
             animator.SetTrigger("Attacking");
 
@@ -94,13 +94,8 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("Running", false); // Idle Animation
         }
 
-        //if (!isDashing)
-        //{
-        //    input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        //}
-
         // Player moves in camera view direction
-        input = Vector2.ClampMagnitude(input, 1);
+        input = Vector3.ClampMagnitude(input, 1);
 
         camF = mainCam.forward;
         camR = mainCam.right;
@@ -112,44 +107,45 @@ public class PlayerMovement : MonoBehaviour
 
         Dashing();
         DashMeter();
-
-        //actualSpeed = Mathf.Lerp(0, actualSpeed, 0.9f * Time.deltaTime);
     }
 
 
     private void Movement()
     {
         // Apply player movement
-        transform.position += (camF * input.y + camR * input.x) * actualSpeed * Time.fixedDeltaTime;
+        if (input.magnitude >= 0.1f)
+        {
+            transform.position += (camF * input.z + camR * input.x) * actualSpeed * Time.fixedDeltaTime;
+        }
     }
 
+    bool PlayerHasDash()
+    {
+        if (currentDashMeter >= reduceDashMeter)
+        {
+            return true;
+        }
+        return false;
+    }
     
+    // Detect if player presses dash
     private void Dashing()
     {
-        // Player not swinging weapon
-        if (!weapon.isSwinging)
+        if (Input.GetKey(KeyCode.Space) && PlayerHasDash() && !weapon.isSwinging ||
+            Input.GetKey(KeyCode.LeftShift) && PlayerHasDash() && !weapon.isSwinging)
         {
-            if (Input.GetKey(KeyCode.Space) && currentDashMeter >= reduceDashMeter ||
-                Input.GetKey(KeyCode.LeftShift) && currentDashMeter >= reduceDashMeter)
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
             {
-                if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+                if (actualSpeed >= dashSpeed)
                 {
-                    if (actualSpeed >= dashSpeed)
-                    {
-                        actualSpeed = dashSpeed;
+                    actualSpeed = dashSpeed;
 
-                        isDashing = true;
-                    }
-                    else
-                    {
-                        actualSpeed += increaseSpeed;
-                    }
+                    isDashing = true;
                 }
-            }
-            else
-            {
-                actualSpeed = moveSpeed;
-                isDashing = false;
+                else
+                {
+                    actualSpeed += increaseSpeed;
+                }
             }
         }
         else
