@@ -13,9 +13,11 @@ public class AkashitaAI : EnemyAI
 	{
 		if (timeToNextAttack > 0.0f)
 			timeToNextAttack -= 1.0f / 60.0f;
+		if (currentStaggerTime > 0.0f)
+			currentStaggerTime -= 1.0f / 60.0f;
 		//if (timeToNextAttack > timeBetweenAttacks - attackLength)
 			// TODO: Some particles or something, an indication of an attack
-		if (timeToNextAttack < timeBetweenAttacks - attackLength)
+		if (timeToNextAttack < timeBetweenAttacks - attackLength && currentStaggerTime <= 0.0f)
 		{
 			if (!agent.enabled)
 			{

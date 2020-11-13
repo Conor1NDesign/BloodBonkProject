@@ -11,7 +11,10 @@ public class ShutenDojiAI : EnemyAI
 	
 	void FixedUpdate()
 	{
-		timeToNextAttack -= 1.0f / 60.0f;
+		if (timeToNextAttack > 0.0f)
+			timeToNextAttack -= 1.0f / 60.0f;
+		if (currentStaggerTime > 0.0f)
+			currentStaggerTime -= 1.0f / 60.0f;
 		if (timeToNextAttack > timeBetweenAttacks - attackLength && !dealtDamage)
 		{
 			if (Physics.Linecast(bottlePosInitial, bottle.transform.position, LayerMask.GetMask("Player")))
@@ -22,7 +25,7 @@ public class ShutenDojiAI : EnemyAI
 			else
 				bottlePosInitial = bottle.transform.position;
 		}
-		if (timeToNextAttack < timeBetweenAttacks - attackLength)
+		if (timeToNextAttack < timeBetweenAttacks - attackLength && currentStaggerTime <= 0.0f)
 		{
 			if (!agent.enabled)
 			{

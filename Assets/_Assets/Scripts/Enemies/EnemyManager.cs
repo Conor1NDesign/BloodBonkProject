@@ -133,7 +133,8 @@ public class EnemyManager : MonoBehaviour
 			enemyToReturn.SetActive(true);
 			EnemyAI ai = enemyToReturn.GetComponent<EnemyAI>();
 			ai.health = ai.currentMaxHealth;
-			ai.TakeDamage(0);
+			ai.healthBar.SetMaxHealth(100);
+			ai.healthBar.SetHealth(100);
 			return enemyToReturn;
 		}
     }
