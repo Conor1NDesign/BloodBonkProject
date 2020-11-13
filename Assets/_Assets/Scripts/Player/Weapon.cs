@@ -12,6 +12,7 @@ public class Weapon : MonoBehaviour
     public float range = 3f;
     LayerMask enemyMask;
     [Tooltip("How wide the angle/cone the attack will be")] public float hitDetectionRange = 70f;
+	public GameObject bloodEffectPrefab;
 
     [HideInInspector]
     public bool isSwinging;
@@ -77,6 +78,8 @@ public class Weapon : MonoBehaviour
                 
 
                 WeaponDetect detect = e.gameObject.GetComponentInParent<WeaponDetect>();
+				if (bloodEffectPrefab != null)
+					Instantiate(bloodEffectPrefab, detect.transform);
                 detect.TakeDamage(damage);
                 stats.Lifesteal(damage);
 

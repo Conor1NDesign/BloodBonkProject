@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,6 +13,7 @@ public class Game : MonoBehaviour
     [Header("Weapon")]
     public GameObject weaponHolder;
     public GameObject[] weapons;
+	public GameObject bloodEffectPrefab;
 
     // Classes
     Score score;
@@ -100,6 +101,7 @@ public class Game : MonoBehaviour
         obj.transform.parent = weaponHolder.transform;
         obj.transform.localPosition = weaponHolder.transform.localPosition;
         obj.transform.localRotation = weaponHolder.transform.localRotation;
+		obj.GetComponent<Weapon>().bloodEffectPrefab = bloodEffectPrefab;
     }
 
     public void GameOver()
