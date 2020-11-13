@@ -249,10 +249,15 @@ MonoBehaviour:
   moveSpeed: 7
   dashSpeed: 15
   increaseSpeed: 0.1
+  turnSmoothTime: 0.1
+  turnSmoothTimeAttack: 0.1
   reduceDashMeter: 1
   fillDashMeter: 4
   maxDashMeter: 125
   refillTimer: 4
+  posOnScreen: {x: 0, y: 0}
+  mouseInput: {x: 0, y: 0}
+  hasLunged: 0
   isAttacking: 0
   animator: {fileID: 0}
   gameManager: {fileID: 0}
@@ -1321,6 +1326,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 5084756943983356672, guid: 30c5d6804f5bd4d45976b0cad6c1b23c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5c3c73db9a2ece6499baaf56b1627c36, type: 2}
     - target: {fileID: 5147418785813909402, guid: 30c5d6804f5bd4d45976b0cad6c1b23c,
         type: 3}
       propertyPath: m_Layer
