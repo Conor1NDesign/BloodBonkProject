@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +7,7 @@ public class Weapon : MonoBehaviour
     [Header("Weapon")]
     public float damage = 10f;
     public float attackSpeed = 1f;
+    public float attackSpeedCap = 2f;
     public float lungeDistance = 1f;
 
     [Header("Hit Detection")]
