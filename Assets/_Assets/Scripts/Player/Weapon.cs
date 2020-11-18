@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,6 +18,8 @@ public class Weapon : MonoBehaviour
 
     [HideInInspector] public bool isSwinging;
 
+    List<Vector3> currentHardPointPos;
+    List<Vector3> debugCurrentHardPointPos;
 
     // Classes
     CameraShake camShake;
@@ -30,6 +32,9 @@ public class Weapon : MonoBehaviour
         camShake = FindObjectOfType<CameraShake>();
         stats = FindObjectOfType<PlayerStats>();
         enemyMask = LayerMask.GetMask("Enemy");
+
+        currentHardPointPos = new List<Vector3>();
+        debugCurrentHardPointPos = new List<Vector3>();
     }
 
     // Plays attacking animation
@@ -42,61 +47,113 @@ public class Weapon : MonoBehaviour
         player.posOnScreen = Camera.main.WorldToScreenPoint(player.transform.position);
     }
 
-    public void HitDetection()
+    void OnDrawGizmos()
     {
-        player.hasLunged = true;
-
-        Vector3 playerPos = transform.root.position;
-
-        // DEBUGGING
-        #region
-        //float playerAngle = transform.parent.eulerAngles.y * Mathf.Deg2Rad;
-
-        //// Player Angle
-        //Vector3 endPos = new Vector3(playerPos.x + (range * Mathf.Sin(playerAngle)), playerPos.y, playerPos.z + (range * Mathf.Cos(playerAngle)));
-        //Debug.DrawLine(playerPos, endPos, Color.yellow);
-
-        //// Positive
-        //float posAngle = playerAngle + posRange;
-        //endPos = new Vector3(playerPos.x + (range * Mathf.Sin(posAngle)), playerPos.y, playerPos.z + (range * Mathf.Cos(posAngle)));
-        //Debug.DrawLine(playerPos, endPos, Color.green);
-
-        //// Negative
-        //float negAngle = playerAngle - negRange;
-        //endPos = new Vector3(playerPos.x + (range * Mathf.Sin(negAngle)), playerPos.y, playerPos.z + (range * Mathf.Cos(negAngle)));
-        //Debug.DrawLine(playerPos, endPos, Color.red);
-        #endregion //Debugging
-
-        // All enemies within range
-        Collider[] enemiesInRange = Physics.OverlapSphere(playerPos, range, enemyMask);
-
-        bool enemyHit = false;
-
-        // Loop through all enemies
-        foreach (Collider e in enemiesInRange)
+        for (int i = 0; i < currentHardPointPos.Count - 5; i++)
         {
-            // DEBUGGING
-            //float angle = Vector3.Angle(transform.root.forward, e.gameObject.transform.position - playerPos);
+            Gizmos.DrawLine(currentHardPointPos[i], currentHardPointPos[i + 5]);
+        }
 
-            // Hit Detection cone if facing enemy
-            if (Vector3.Angle(transform.root.forward, e.gameObject.transform.position - playerPos) < hitDetectionRange)
+        //for (int i = 0; i < debugCurrentHardPointPos.Count - 5; i++)
+        //{
+        //    Gizmos.DrawLine(debugCurrentHardPointPos[i], debugCurrentHardPointPos[i + 5]);
+        //}
+
+        //for (int i = 0; i < debugCurrentHardPointPos.Count; i++)
+        //{
+        //    Gizmos.DrawWireSphere(currentHardPointPos[i], 0.3f);
+        //}
+    }
+
+    void Raycast()
+    {
+        // Gets HardPoints
+        Transform hardPoints = transform.GetChild(2);
+
+        // Remove Start HardPoints
+        if (currentHardPointPos.Count > hardPoints.childCount * 3)
+        {
+            for (int i = 0; i < hardPoints.childCount; i++)
             {
-                
-
-                WeaponDetect detect = e.gameObject.GetComponentInParent<WeaponDetect>();
-				if (bloodEffectPrefab != null)
-					Instantiate(bloodEffectPrefab, detect.transform);
-                detect.TakeDamage(damage);
-                stats.Lifesteal(damage);
-
-                enemyHit = true;
+                currentHardPointPos.RemoveAt(0);
             }
         }
 
-        if (enemyHit)
+        foreach (Transform child in hardPoints)
         {
-            StartCoroutine(camShake.Shake());
+            currentHardPointPos.Add(child.position);
+
+            // Debug
+            debugCurrentHardPointPos.Add(child.position);
         }
+
+        for (int i = 0; i < currentHardPointPos.Count - hardPoints.childCount; i++)
+        {
+            RaycastHit hit;
+
+            if (Physics.Raycast(currentHardPointPos[i], currentHardPointPos[i + hardPoints.childCount], out hit, 1f, LayerMask.GetMask("Enemy")))
+            {
+                hit.collider.gameObject.GetComponentInParent<WeaponDetect>().TakeDamage(damage);
+                stats.Lifesteal(damage);
+
+                StartCoroutine(camShake.Shake());
+            }
+        }
+    }
+
+    public void HitDetection()
+    {
+        //player.hasLunged = true;
+
+        //Vector3 playerPos = transform.root.position;
+
+        //// DEBUGGING
+        //#region
+        ////float playerAngle = transform.parent.eulerAngles.y * Mathf.Deg2Rad;
+
+        ////// Player Angle
+        ////Vector3 endPos = new Vector3(playerPos.x + (range * Mathf.Sin(playerAngle)), playerPos.y, playerPos.z + (range * Mathf.Cos(playerAngle)));
+        ////Debug.DrawLine(playerPos, endPos, Color.yellow);
+
+        ////// Positive
+        ////float posAngle = playerAngle + posRange;
+        ////endPos = new Vector3(playerPos.x + (range * Mathf.Sin(posAngle)), playerPos.y, playerPos.z + (range * Mathf.Cos(posAngle)));
+        ////Debug.DrawLine(playerPos, endPos, Color.green);
+
+        ////// Negative
+        ////float negAngle = playerAngle - negRange;
+        ////endPos = new Vector3(playerPos.x + (range * Mathf.Sin(negAngle)), playerPos.y, playerPos.z + (range * Mathf.Cos(negAngle)));
+        ////Debug.DrawLine(playerPos, endPos, Color.red);
+        //#endregion //Debugging
+
+        //// All enemies within range
+        //Collider[] enemiesInRange = Physics.OverlapSphere(playerPos, range, enemyMask);
+
+        //bool enemyHit = false;
+
+        //// Loop through all enemies
+        //foreach (Collider e in enemiesInRange)
+        //{
+        //    // DEBUGGING
+        //    //float angle = Vector3.Angle(transform.root.forward, e.gameObject.transform.position - playerPos);
+
+        //    // Hit Detection cone if facing enemy
+        //    if (Vector3.Angle(transform.root.forward, e.gameObject.transform.position - playerPos) < hitDetectionRange)
+        //    {
+        //        WeaponDetect detect = e.gameObject.GetComponentInParent<WeaponDetect>();
+        //        if (bloodEffectPrefab != null)
+        //            Instantiate(bloodEffectPrefab, detect.transform);
+        //        detect.TakeDamage(damage);
+        //        stats.Lifesteal(damage);
+
+        //        enemyHit = true;
+        //    }
+        //}
+
+        //if (enemyHit)
+        //{
+        //    StartCoroutine(camShake.Shake());
+        //}
     }
 
     // Update is called once per frame
@@ -105,6 +162,18 @@ public class Weapon : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0) && !isSwinging)
         {
             Attack();
+        }
+    }
+
+    void FixedUpdate()
+    {
+        if (isSwinging)
+        {
+            Raycast();
+        }
+        else
+        {
+            currentHardPointPos.Clear();
         }
     }
 }
