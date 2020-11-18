@@ -4,7 +4,6 @@ using UnityEngine.AI;
 public class ShutenDojiAI : EnemyAI
 {
 	Rigidbody[] ragdollRbs;
-	Collider[] ragdollColliders;
 
 	[Header("Attack Settings")]
 #pragma warning disable 0649
@@ -22,11 +21,9 @@ public class ShutenDojiAI : EnemyAI
 		health = currentMaxHealth;
 		canvasObject = GetComponentInChildren<FollowCamera>().gameObject;
 		ragdollRbs = GetComponentsInChildren<Rigidbody>();
-		ragdollColliders = GetComponentsInChildren<Collider>();
 		for (int i = 0; i < ragdollRbs.Length; i++)
 		{
 			ragdollRbs[i].isKinematic = true;
-			ragdollColliders[i].enabled = false;
 		}
 		
 	}
@@ -39,7 +36,9 @@ public class ShutenDojiAI : EnemyAI
 			timeToNextAttack -= 1.0f / 60.0f;
 		if (currentStaggerTime > 0.0f)
 			currentStaggerTime -= 1.0f / 60.0f;
-		if (timeToNextAttack > timeBetweenAttacks - attackLength && !dealtDamage)
+		if (timeToNextAttack > timeBetweenAttacks - attackLength &&
+			!dealtDamage &&
+			!ragdolling)
 		{
 			if (Physics.Linecast(bottlePosInitial, bottle.transform.position, LayerMask.GetMask("Player")))
 			{
@@ -49,7 +48,9 @@ public class ShutenDojiAI : EnemyAI
 			else
 				bottlePosInitial = bottle.transform.position;
 		}
-		if (timeToNextAttack < timeBetweenAttacks - attackLength && currentStaggerTime <= 0.0f)
+		if (timeToNextAttack < timeBetweenAttacks - attackLength &&
+			currentStaggerTime <= 0.0f &&
+			!ragdolling)
 		{
 			if (!agent.enabled)
 			{
@@ -80,11 +81,9 @@ public class ShutenDojiAI : EnemyAI
 		canvasObject.SetActive(false);
 		animator.enabled = false;
 		agent.enabled = false;
-		ragdollColliders[ragdollColliders.Length - 1].enabled = false;
 		for (int i = 0; i < ragdollRbs.Length; i++)
 		{
 			ragdollRbs[i].isKinematic = false;
-			ragdollColliders[i].enabled = true;
 		}
 		ragdolling = true;
 	}
@@ -97,9 +96,7 @@ public class ShutenDojiAI : EnemyAI
 		for (int i = 0; i < ragdollRbs.Length; i++)
 		{
 			ragdollRbs[i].isKinematic = true;
-			ragdollColliders[i].enabled = false;
 		}
-		ragdollColliders[ragdollColliders.Length - 1].enabled = true;
 		ragdolling = false;
 		currentRagdollTime = ragdollTime;
 	}
