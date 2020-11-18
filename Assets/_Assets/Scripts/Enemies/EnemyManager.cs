@@ -23,6 +23,7 @@ public class EnemyManager : MonoBehaviour
 
 	[Header("Current Enemy Lists")]
 	[SerializeField]List<GameObject> enemies = new List<GameObject>();
+	[SerializeField]List<GameObject> ragdollingEnemies = new List<GameObject>();
 	[SerializeField]List<GameObject> inactiveShutenDoji = new List<GameObject>();
 	[SerializeField]List<GameObject> inactiveAkashita = new List<GameObject>();
 	public List<AkashitaProjectile> akashitaProjectiles = new List<AkashitaProjectile>();
@@ -57,11 +58,8 @@ public class EnemyManager : MonoBehaviour
 			if (attacker.GetHealth() <= 0.0f)
 			{
 				enemies.Remove(enemy);
-				enemy.SetActive(false);
-				if (attacker is ShutenDojiAI)
-					inactiveShutenDoji.Add(enemy);
-				else
-					inactiveAkashita.Add(enemy);
+				ragdollingEnemies.Add(enemy);
+				attacker.Ragdoll();
 				i--;
 
 				// Increase score
@@ -77,6 +75,22 @@ public class EnemyManager : MonoBehaviour
 			}
 			else
 				agent.updateRotation = true;
+		}
+
+		for (int i = 0; i < ragdollingEnemies.Count; i++)
+		{
+			GameObject enemy = ragdollingEnemies[i];
+			EnemyAI attacker = enemy.GetComponent<EnemyAI>();
+			if (attacker.ragdollTime < 0.0f)
+			{
+				ragdollingEnemies.Remove(enemy);
+				attacker.Unragdoll();
+				enemy.SetActive(false);
+				if (attacker is ShutenDojiAI)
+					inactiveShutenDoji.Add(enemy);
+				else
+					inactiveAkashita.Add(enemy);
+			}
 		}
 		
 		for (int i = 0; i < akashitaProjectiles.Count; i++)

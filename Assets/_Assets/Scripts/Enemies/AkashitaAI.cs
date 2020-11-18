@@ -8,9 +8,10 @@ public class AkashitaAI : EnemyAI
 #pragma warning restore 0649
 	[SerializeField]float projectileSpeed = 1.0f;
 
-
 	void FixedUpdate()
 	{
+		if (ragdolling)
+			ragdollTime -= 1.0f / 60.0f;
 		if (timeToNextAttack > 0.0f)
 			timeToNextAttack -= 1.0f / 60.0f;
 		if (currentStaggerTime > 0.0f)
@@ -42,5 +43,21 @@ public class AkashitaAI : EnemyAI
 			agent.enabled = false;
 			animator.SetTrigger("Akashita_Attacking");
 		}
+	}
+
+	public override void Ragdoll()
+	{
+		canvasObject.SetActive(false);
+		animator.enabled = false;
+		agent.enabled = false;
+		ragdolling = true;
+	}
+
+	public override void Unragdoll()
+	{
+		canvasObject.SetActive(true);
+		animator.enabled = true;
+		agent.enabled = true;
+		ragdolling = false;
 	}
 }
