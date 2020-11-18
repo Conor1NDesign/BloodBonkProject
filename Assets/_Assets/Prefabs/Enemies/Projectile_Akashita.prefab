@@ -4818,8 +4818,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 0}
-  timeLeft: 3
-  damage: 10
+  timeLeft: 15
+  damage: 30
 --- !u!1 &3078106666212657688
 GameObject:
   m_ObjectHideFlags: 0

@@ -250,13 +250,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDistanceToPlayer: 10
+  enemyManager: {fileID: 0}
   player: {fileID: 0}
   range: 1.4
-  timeBetweenAttacks: 0.5
-  movementSpeed: 1
-  rotationSpeed: 1
+  timeBetweenAttacks: 0.25
+  attackLength: 1
   distanceFromPlayer: 1
-  allowedRotationVariation: 0.1
-  allowedDistanceVariation: 0.1
-  maxHealth: 100
-  weapon: {fileID: 5397706228586769496}
+  baseDamage: 10
+  damage: 10
+  staggerTime: 1
+  currentStaggerTime: 0
+  baseMaxHealth: 100
+  currentMaxHealth: 0
+  health: 100
+  healthBar: {fileID: 0}
+  bottle: {fileID: 0}
