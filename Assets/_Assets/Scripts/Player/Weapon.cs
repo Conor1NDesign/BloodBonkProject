@@ -79,6 +79,7 @@ public class Weapon : MonoBehaviour
             }
         }
 
+        // Add Hardpoint position to list
         foreach (Transform child in hardPoints)
         {
             currentHardPointPos.Add(child.position);
@@ -91,11 +92,13 @@ public class Weapon : MonoBehaviour
         {
             RaycastHit hit;
 
+            // Raycast check if it hits enemy
             if (Physics.Raycast(currentHardPointPos[i], currentHardPointPos[i + hardPoints.childCount], out hit, 1f, LayerMask.GetMask("Enemy")))
             {
                 hit.collider.gameObject.GetComponentInParent<WeaponDetect>().TakeDamage(damage);
                 stats.Lifesteal(damage);
 
+                // Shake Camera
                 StartCoroutine(camShake.Shake());
             }
         }

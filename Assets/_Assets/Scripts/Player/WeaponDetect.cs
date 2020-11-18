@@ -8,36 +8,19 @@ public class WeaponDetect : MonoBehaviour
     EnemyAI enemy;
 
     float currentDelay;
-    bool canBeAttacked;
 
     void Start()
     {
         enemy = GetComponent<EnemyAI>();
-    }
-
-    void Update()
-    {
-        if (currentDelay < Time.time)
-        {
-            canBeAttacked = true;
-        }
-        else
-        {
-            canBeAttacked = false;
-        }
-    }
-        
+    }      
 
     public void TakeDamage(float damage)
     {
         if (currentDelay < Time.time)
         {
-            currentDelay = Time.time + 0.5f;
+            currentDelay = Time.time + 0.5f; // Enemy invincible for 0.5secs
 
             enemy.TakeDamage(damage);
-            
-
-            Debug.Log("hit");
         }
     }
         
