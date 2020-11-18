@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPowerUp: 3
-  multiplier: 0.1
+  multiplier: 0.025
 --- !u!1001 &1991376174250905099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -170,7 +170,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7627b7e0acf58704ebe1cd46a6e5c3e0, type: 2}
+      objectReference: {fileID: 2100000, guid: 2f6a26b0f170ce9448325e37acef85e6, type: 2}
     - target: {fileID: -927199367670048503, guid: df02956e4fd1fcc449b304b041fd6a61,
         type: 3}
       propertyPath: m_Name

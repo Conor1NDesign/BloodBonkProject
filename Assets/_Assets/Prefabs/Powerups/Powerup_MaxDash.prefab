@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPowerUp: 1
-  multiplier: 0.1
+  multiplier: 0.05
 --- !u!1 &7469088070623670199
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,7 +170,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7756af07bd89c5440ba6fba1da382534, type: 2}
+      objectReference: {fileID: 2100000, guid: 59978977cc74e684baf8c5b57008a2ae, type: 2}
     - target: {fileID: -927199367670048503, guid: 9d7b11570a5e0ea488061789747ef3d1,
         type: 3}
       propertyPath: m_Name
