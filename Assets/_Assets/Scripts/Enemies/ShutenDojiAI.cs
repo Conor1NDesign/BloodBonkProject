@@ -4,6 +4,7 @@ using UnityEngine.AI;
 public class ShutenDojiAI : EnemyAI
 {
 	Rigidbody[] ragdollRbs;
+	Vector3[] ragdollPositions;
 
 	[Header("Attack Settings")]
 #pragma warning disable 0649
@@ -21,9 +22,11 @@ public class ShutenDojiAI : EnemyAI
 		health = currentMaxHealth;
 		canvasObject = GetComponentInChildren<FollowCamera>().gameObject;
 		ragdollRbs = GetComponentsInChildren<Rigidbody>();
+		ragdollPositions = new Vector3[ragdollRbs.Length];
 		for (int i = 0; i < ragdollRbs.Length; i++)
 		{
 			ragdollRbs[i].isKinematic = true;
+			ragdollPositions[i] = ragdollRbs[i].transform.position;
 		}
 		
 	}
@@ -96,6 +99,7 @@ public class ShutenDojiAI : EnemyAI
 		for (int i = 0; i < ragdollRbs.Length; i++)
 		{
 			ragdollRbs[i].isKinematic = true;
+			ragdollRbs[i].position = ragdollPositions[i];
 		}
 		ragdolling = false;
 		currentRagdollTime = ragdollTime;
