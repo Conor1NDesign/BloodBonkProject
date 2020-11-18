@@ -34,7 +34,7 @@ public class ShutenDojiAI : EnemyAI
 	void FixedUpdate()
 	{
 		if (ragdolling)
-			ragdollTime -= 1.0f / 60.0f;
+			currentRagdollTime -= 1.0f / 60.0f;
 		if (timeToNextAttack > 0.0f)
 			timeToNextAttack -= 1.0f / 60.0f;
 		if (currentStaggerTime > 0.0f)
@@ -101,5 +101,6 @@ public class ShutenDojiAI : EnemyAI
 		}
 		ragdollColliders[ragdollColliders.Length - 1].enabled = true;
 		ragdolling = false;
+		currentRagdollTime = ragdollTime;
 	}
 }

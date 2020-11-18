@@ -81,7 +81,7 @@ public class EnemyManager : MonoBehaviour
 		{
 			GameObject enemy = ragdollingEnemies[i];
 			EnemyAI attacker = enemy.GetComponent<EnemyAI>();
-			if (attacker.ragdollTime < 0.0f)
+			if (attacker.currentRagdollTime < 0.0f)
 			{
 				ragdollingEnemies.Remove(enemy);
 				attacker.Unragdoll();

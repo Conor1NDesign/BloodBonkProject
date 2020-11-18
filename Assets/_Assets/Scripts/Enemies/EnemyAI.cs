@@ -26,6 +26,7 @@ public abstract class EnemyAI : MonoBehaviour
 
 	[Header("Ragdoll Settings")]
 	public float ragdollTime = 1.0f;
+	[HideInInspector]public float currentRagdollTime = 1.0f;
 	protected bool ragdolling = false;
 #pragma warning disable 0649
 	protected GameObject canvasObject;
@@ -63,7 +64,7 @@ public abstract class EnemyAI : MonoBehaviour
 	void FixedUpdate()
 	{
 		if (ragdolling)
-			ragdollTime -= 1.0f / 60.0f;
+			currentRagdollTime -= 1.0f / 60.0f;
 		if (timeToNextAttack > 0.0f)
 			timeToNextAttack -= 1.0f / 60.0f;
 		if (currentStaggerTime > 0.0f)
