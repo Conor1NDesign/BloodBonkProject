@@ -126,7 +126,7 @@ MonoBehaviour:
   enemyManager: {fileID: 0}
   player: {fileID: 0}
   range: 1.6
-  timeBetweenAttacks: 0.5
+  timeBetweenAttacks: 1.5
   attackLength: 1.2
   distanceFromPlayer: 1.5
   baseDamage: 40

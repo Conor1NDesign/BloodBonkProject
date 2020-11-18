@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2910547630625919778}
   - component: {fileID: 4350431723794503847}
+  - component: {fileID: 2084054975621771982}
   m_Layer: 0
   m_Name: Powerup_MaxDash
   m_TagString: Untagged
@@ -47,6 +48,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPowerUp: 1
   multiplier: 0.05
+--- !u!95 &2084054975621771982
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716197415207621749}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2ff48225ac95d8440911705c6a75b941, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7469088070623670199
 GameObject:
   m_ObjectHideFlags: 0

@@ -67,6 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7856535720672692657}
   - component: {fileID: 9094875918289364606}
+  - component: {fileID: 2356679097442684893}
   m_Layer: 0
   m_Name: Powerup_Lifesteal
   m_TagString: Untagged
@@ -104,6 +105,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPowerUp: 3
   multiplier: 0.025
+--- !u!95 &2356679097442684893
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480692937819404180}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 453091ce666a20e46bdbe84ad991968a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1991376174250905099
 PrefabInstance:
   m_ObjectHideFlags: 0

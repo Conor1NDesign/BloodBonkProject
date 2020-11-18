@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2486649833336137781}
   - component: {fileID: 2203397951790558853}
+  - component: {fileID: 8116645268312681866}
   m_Layer: 0
   m_Name: Powerup_Damage
   m_TagString: Untagged
@@ -47,6 +48,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPowerUp: 4
   multiplier: 0.05
+--- !u!95 &8116645268312681866
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774626385219162618}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69ada0644fb85ce41a04dc6328d40cff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7653128775646884002
 GameObject:
   m_ObjectHideFlags: 0
