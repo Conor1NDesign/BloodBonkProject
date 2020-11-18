@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1046,6 +1046,7 @@ MonoBehaviour:
   difficulty: 1
   difficultyIncreasePerWave: 0.25
   difficultyIncreasePerSecond: 0.02
+  distributeEnemiesEvenly: 1
   spawnPoints:
   - {fileID: 1002941920}
   - {fileID: 66848103}
@@ -1073,6 +1074,7 @@ MonoBehaviour:
   shutenDojiPrefab: {fileID: 501601279726359312, guid: 0f75785eba59e8e40a1d77ae013af32a,
     type: 3}
   enemies: []
+  ragdollingEnemies: []
   inactiveShutenDoji: []
   inactiveAkashita: []
   akashitaProjectiles: []
@@ -45796,7 +45798,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Quit Game
+  m_Text: Main Menu
 --- !u!222 &1374325190
 CanvasRenderer:
   m_ObjectHideFlags: 0
