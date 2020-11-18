@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1362514604305282531
 Transform:
@@ -47,7 +47,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3589051046985947422
 Transform:
@@ -147,6 +147,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BaseKit_StoneFloor_003_Mesh
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: b3f7d24be34dc2a43a684262997d4e35,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3f7d24be34dc2a43a684262997d4e35, type: 3}
