@@ -48,8 +48,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 60
   attackSpeed: 1.1
+  lungeDistance: 1
   range: 8
   hitDetectionRange: 80
+  bloodEffectPrefab: {fileID: 0}
   isSwinging: 0
 --- !u!1 &6510763585527712392
 GameObject:
@@ -146,7 +148,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 40c390d8e2e6bdf47a114eb6aa21f9b8, type: 2}
+      objectReference: {fileID: 2100000, guid: 64879b6c493441f479e6d700861fbaae, type: 2}
     - target: {fileID: -4473984409997532297, guid: 710c6723699ac494194d63c2dc6f6ab6,
         type: 3}
       propertyPath: m_Layer
@@ -211,7 +213,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e5fbb96d11d3afd438432b39776ba476, type: 2}
+      objectReference: {fileID: 2100000, guid: 64879b6c493441f479e6d700861fbaae, type: 2}
     - target: {fileID: -927199367670048503, guid: 710c6723699ac494194d63c2dc6f6ab6,
         type: 3}
       propertyPath: m_Name
@@ -226,7 +228,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fc15b6ec64020df46a1ddb57d859f2c4, type: 2}
+      objectReference: {fileID: 2100000, guid: 64879b6c493441f479e6d700861fbaae, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 710c6723699ac494194d63c2dc6f6ab6, type: 3}
 --- !u!4 &2605665370328222965 stripped
