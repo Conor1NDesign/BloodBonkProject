@@ -95,7 +95,8 @@ public class Weapon : MonoBehaviour
             // Raycast check if it hits enemy
             if (Physics.Raycast(currentHardPointPos[i], currentHardPointPos[i + hardPoints.childCount], out hit, 1f, LayerMask.GetMask("Enemy")))
             {
-                hit.collider.gameObject.GetComponentInParent<WeaponDetect>().TakeDamage(stats.godMode ? damage : damage * 1000000.0f);
+                WeaponDetect detect = hit.collider.gameObject.GetComponentInParent<WeaponDetect>();
+                detect.TakeDamage(stats.godMode ? damage : damage * 1000000.0f);
                 if (bloodEffectPrefab != null)
 					Instantiate(bloodEffectPrefab, detect.transform);
                 stats.Lifesteal(damage);
