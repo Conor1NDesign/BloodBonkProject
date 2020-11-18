@@ -44,7 +44,15 @@ public class PowerUp : MonoBehaviour
         }
         else if (currentPowerUp == AvaliablePowerUp.AttackSpeed)
         {
-            weapon.attackSpeed += weapon.attackSpeed * multiplier;
+            if (weapon.attackSpeed < weapon.attackSpeedCap)
+            {
+                weapon.attackSpeed += weapon.attackSpeed * multiplier;
+
+                if (weapon.attackSpeed > weapon.attackSpeedCap)
+                {
+                    weapon.attackSpeed = weapon.attackSpeedCap;
+                }
+            }
         }
         else if (currentPowerUp == AvaliablePowerUp.Lifesteal)
         {
