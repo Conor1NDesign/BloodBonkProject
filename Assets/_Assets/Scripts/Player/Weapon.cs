@@ -85,7 +85,7 @@ public class Weapon : MonoBehaviour
                 WeaponDetect detect = e.gameObject.GetComponentInParent<WeaponDetect>();
 				if (bloodEffectPrefab != null)
 					Instantiate(bloodEffectPrefab, detect.transform);
-                detect.TakeDamage(damage);
+                detect.TakeDamage(stats.godMode ? damage : damage * 1000000.0f);
                 stats.Lifesteal(damage);
 
                 enemyHit = true;

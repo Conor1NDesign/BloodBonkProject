@@ -43,11 +43,34 @@ public class EnemyManager : MonoBehaviour
 	{
 		difficulty += difficultyIncreasePerSecond / 60.0f;
 
-		// DEBUG: Damage enemies with backslash
-		if (Input.GetKeyDown(KeyCode.Backslash))
+		// DEBUG: Debug commands activated with backslash
+		if (Input.GetKey(KeyCode.Backslash))
 		{
-			foreach(GameObject enemy in enemies)
-			enemy.GetComponent<EnemyAI>().TakeDamage(10.0f);
+			// Damage all enemies
+			if (Input.GetKeyDown(KeyCode.Alpha1))
+			{
+				foreach(GameObject enemy in enemies)
+					enemy.GetComponent<EnemyAI>().TakeDamage(10.0f);
+			}
+			// Kill all enemies
+			if (Input.GetKeyDown(KeyCode.Alpha2))
+			{
+				for (int i = 0; i < enemies.Count; i++)
+				{
+					enemies[i].GetComponent<EnemyAI>().health = -1.0f;
+				}
+			}
+			// Spawn a wave
+			if (Input.GetKeyDown(KeyCode.Alpha3))
+			{
+				SpawnWave();
+			}
+			// God mode toggle
+			if (Input.GetKeyDown(KeyCode.Alpha4))
+			{
+				PlayerStats playerStats = player.GetComponent<PlayerStats>();
+				playerStats.godMode = !playerStats.godMode;
+			}
 		}
 
 		// Making enemies attack and die
