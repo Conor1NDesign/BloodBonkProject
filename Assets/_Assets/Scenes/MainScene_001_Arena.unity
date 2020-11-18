@@ -45402,7 +45402,7 @@ MonoBehaviour:
   - {fileID: 7480692937819404180, guid: 63dccc4f2ad74d147a709d1e01b73438, type: 3}
   - {fileID: 1716197415207621749, guid: 6588f27a3d92bb547b54a8ba7ed5a378, type: 3}
   - {fileID: 4622829900085529283, guid: ac24a9d893b6e1447a78a7ba885e8764, type: 3}
-  spawnChance: 10
+  spawnChance: 25
 --- !u!4 &1361313140
 Transform:
   m_ObjectHideFlags: 0
