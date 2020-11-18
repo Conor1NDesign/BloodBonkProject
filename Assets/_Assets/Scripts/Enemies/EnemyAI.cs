@@ -1,13 +1,13 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyAI : MonoBehaviour
+public abstract class EnemyAI : MonoBehaviour
 {
 	[HideInInspector]public float currentDistanceToPlayer = 10.0f;
 	[HideInInspector]public EnemyManager enemyManager;
-	[HideInInspector]public GameObject player;
 	
 	[Header("AI Settings")]
+	public GameObject player;
 	public float range = 1.0f;
 	[SerializeField]protected float timeBetweenAttacks = 1.0f;
 	[SerializeField]protected float attackLength = 1.0f;
@@ -23,6 +23,14 @@ public class EnemyAI : MonoBehaviour
 	public float currentMaxHealth = 0.0f;
 	[HideInInspector]public float health = 100.0f;
 	public HealthBar healthBar;
+
+	[Header("Ragdoll Settings")]
+	public float ragdollTime = 1.0f;
+	[HideInInspector]public float currentRagdollTime = 1.0f;
+	protected bool ragdolling = false;
+#pragma warning disable 0649
+	protected GameObject canvasObject;
+#pragma warning restore 0649
 	
 	// Cached components of the enemy
 	protected Animator animator;
@@ -50,10 +58,13 @@ public class EnemyAI : MonoBehaviour
 		healthBar = GetComponentInChildren<HealthBar>();
 		animator = GetComponentInChildren<Animator>();
 		health = currentMaxHealth;
+		canvasObject = GetComponentInChildren<FollowCamera>().gameObject;
 	}
 
 	void FixedUpdate()
 	{
+		if (ragdolling)
+			currentRagdollTime -= 1.0f / 60.0f;
 		if (timeToNextAttack > 0.0f)
 			timeToNextAttack -= 1.0f / 60.0f;
 		if (currentStaggerTime > 0.0f)
@@ -103,4 +114,7 @@ public class EnemyAI : MonoBehaviour
 			agent.enabled = false;
 		}
 	}
+
+	public abstract void Ragdoll();
+	public abstract void Unragdoll();
 }
