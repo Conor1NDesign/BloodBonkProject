@@ -15,11 +15,6 @@ public class AnimationEvent : MonoBehaviour
         weapon = FindObjectOfType<Weapon>();
     }
 
-    public void HitDetection()
-    {
-        weapon.HitDetection();
-    }
-
     public void EndAttackAnimation()
     {
         player.animator.speed = 1f;

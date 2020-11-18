@@ -22,15 +22,14 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public Vector2 posOnScreen; // Apply on attack
     [HideInInspector] public Vector2 mouseInput;
     [HideInInspector] public bool hasLunged;
+    [HideInInspector] public bool isAttacking;
 
-    Vector3 input;
+    Vector3 input; // Player Movement
 
     Transform mainCam;
 
     bool isDashing;
-
-    [HideInInspector] public bool isAttacking;
-
+    
     float actualSpeed; // Sprint or normal movement
     float maxTime; // Time to start refilling dash
 
@@ -66,11 +65,6 @@ public class PlayerMovement : MonoBehaviour
     {
         Movement();
         LookDirection();
-    }
-
-    public void HitDetection()
-    {
-        weapon.HitDetection();
     }
 
     private void PlayerInput()
