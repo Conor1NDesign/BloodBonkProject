@@ -15,6 +15,11 @@ public class AnimationEvent : MonoBehaviour
         weapon = FindObjectOfType<Weapon>();
     }
 
+    void Lunged()
+    {
+        player.hasLunged = true;
+    }
+
     public void EndAttackAnimation()
     {
         player.animator.speed = 1f;
