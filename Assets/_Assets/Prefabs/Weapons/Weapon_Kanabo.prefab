@@ -186,10 +186,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f7a7f8d890e3ae4384e7e9a78f9deae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 80
-  attackSpeed: 0.75
+  damage: 150
+  attackSpeed: 0.8
+  lungeDistance: 5
   range: 6
   hitDetectionRange: 60
+  bloodEffectPrefab: {fileID: 0}
   isSwinging: 0
 --- !u!1 &5861746774561711582
 GameObject:

@@ -9,6 +9,7 @@ public class PlayerStats : MonoBehaviour
 
     private float currentHealth;
 
+	[HideInInspector]public bool godMode = false;
     // Classes
     HealthBar health;
     Game gameManager;
@@ -16,8 +17,6 @@ public class PlayerStats : MonoBehaviour
     // Enemy attacks player
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Weapon"))
-            TakeDamage(other.transform.root.gameObject.GetComponent<EnemyAI>().damage);
         if (other.gameObject.CompareTag("Projectile"))
 		{
 			TakeDamage(other.transform.root.gameObject.GetComponent<AkashitaProjectile>().damage);
@@ -27,6 +26,9 @@ public class PlayerStats : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+		if (godMode)
+			return;
+		
         currentHealth -= damage;
 
         if (currentHealth <= 0f)

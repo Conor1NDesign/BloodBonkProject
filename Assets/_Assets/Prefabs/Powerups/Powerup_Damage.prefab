@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2486649833336137781}
   - component: {fileID: 2203397951790558853}
+  - component: {fileID: 8116645268312681866}
   m_Layer: 0
   m_Name: Powerup_Damage
   m_TagString: Untagged
@@ -46,7 +47,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPowerUp: 4
-  multiplier: 0.1
+  multiplier: 0.05
+--- !u!95 &8116645268312681866
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774626385219162618}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 69ada0644fb85ce41a04dc6328d40cff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7653128775646884002
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,7 +190,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0eadbd20638522d4589a4c05879b290d, type: 2}
+      objectReference: {fileID: 2100000, guid: 11d7cecd4298cb246950b187127d871c, type: 2}
     - target: {fileID: -927199367670048503, guid: f53fd98cb85afbe42acf88d44fe22721,
         type: 3}
       propertyPath: m_Name

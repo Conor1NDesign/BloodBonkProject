@@ -46,9 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f7a7f8d890e3ae4384e7e9a78f9deae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 60
-  attackSpeed: 1.1
-  lungeDistance: 1
+  damage: 90
+  attackSpeed: 1.2
+  lungeDistance: 6
   range: 8
   hitDetectionRange: 80
   bloodEffectPrefab: {fileID: 0}

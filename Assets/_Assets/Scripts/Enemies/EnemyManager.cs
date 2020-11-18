@@ -10,6 +10,7 @@ public class EnemyManager : MonoBehaviour
 	[SerializeField][Tooltip("Per Second")]float difficultyIncreasePerSecond = 0.0001f;
 
 	[Header("Wave Settings")]
+	[SerializeField][Tooltip("If enemies should be distributed evenly between all spawn points (true), or if they should spawn at random points (false)")]bool distributeEnemiesEvenly = true;
     [SerializeField]List<GameObject> spawnPoints = new List<GameObject>();
 	[SerializeField]int baseWaveSize = 1;
 	[SerializeField]int waveSize = 1;
@@ -23,6 +24,7 @@ public class EnemyManager : MonoBehaviour
 
 	[Header("Current Enemy Lists")]
 	[SerializeField]List<GameObject> enemies = new List<GameObject>();
+	[SerializeField]List<GameObject> ragdollingEnemies = new List<GameObject>();
 	[SerializeField]List<GameObject> inactiveShutenDoji = new List<GameObject>();
 	[SerializeField]List<GameObject> inactiveAkashita = new List<GameObject>();
 	public List<AkashitaProjectile> akashitaProjectiles = new List<AkashitaProjectile>();
@@ -41,11 +43,34 @@ public class EnemyManager : MonoBehaviour
 	{
 		difficulty += difficultyIncreasePerSecond / 60.0f;
 
-		// DEBUG: Damage enemies with backslash
-		if (Input.GetKeyDown(KeyCode.Backslash))
+		// DEBUG: Debug commands activated with backslash
+		if (Input.GetKey(KeyCode.Backslash))
 		{
-			foreach(GameObject enemy in enemies)
-			enemy.GetComponent<EnemyAI>().TakeDamage(10.0f);
+			// Damage all enemies
+			if (Input.GetKeyDown(KeyCode.Alpha1))
+			{
+				foreach(GameObject enemy in enemies)
+					enemy.GetComponent<EnemyAI>().TakeDamage(10.0f);
+			}
+			// Kill all enemies
+			if (Input.GetKeyDown(KeyCode.Alpha2))
+			{
+				for (int i = 0; i < enemies.Count; i++)
+				{
+					enemies[i].GetComponent<EnemyAI>().health = -1.0f;
+				}
+			}
+			// Spawn a wave
+			if (Input.GetKeyDown(KeyCode.Alpha3))
+			{
+				SpawnWave();
+			}
+			// God mode toggle
+			if (Input.GetKeyDown(KeyCode.Alpha4))
+			{
+				PlayerStats playerStats = player.GetComponent<PlayerStats>();
+				playerStats.godMode = !playerStats.godMode;
+			}
 		}
 
 		// Making enemies attack and die
@@ -57,11 +82,8 @@ public class EnemyManager : MonoBehaviour
 			if (attacker.GetHealth() <= 0.0f)
 			{
 				enemies.Remove(enemy);
-				enemy.SetActive(false);
-				if (attacker is ShutenDojiAI)
-					inactiveShutenDoji.Add(enemy);
-				else
-					inactiveAkashita.Add(enemy);
+				ragdollingEnemies.Add(enemy);
+				attacker.Ragdoll();
 				i--;
 
 				// Increase score
@@ -77,6 +99,22 @@ public class EnemyManager : MonoBehaviour
 			}
 			else
 				agent.updateRotation = true;
+		}
+
+		for (int i = 0; i < ragdollingEnemies.Count; i++)
+		{
+			GameObject enemy = ragdollingEnemies[i];
+			EnemyAI attacker = enemy.GetComponent<EnemyAI>();
+			if (attacker.currentRagdollTime < 0.0f)
+			{
+				ragdollingEnemies.Remove(enemy);
+				attacker.Unragdoll();
+				enemy.SetActive(false);
+				if (attacker is ShutenDojiAI)
+					inactiveShutenDoji.Add(enemy);
+				else
+					inactiveAkashita.Add(enemy);
+			}
 		}
 		
 		for (int i = 0; i < akashitaProjectiles.Count; i++)
@@ -96,9 +134,14 @@ public class EnemyManager : MonoBehaviour
     {
 		for (int i = 0; i < waveSize; i++)
 		{
-			enemies.Add(SpawnEnemy(Random.Range(0, 2) == 0 ? shutenDojiPrefab : akashitaPrefab));
-			enemies[i].transform.position = spawnPoints[i % spawnPoints.Count].transform.position + new Vector3(Random.Range(-1.0f, 1.0f), 0.0f, Random.Range(-1.0f, 1.0f));
-			EnemyAI enemy = enemies[i].GetComponent<EnemyAI>();
+			GameObject newEnemy = SpawnEnemy(Random.Range(0, 2) == 0 ? shutenDojiPrefab : akashitaPrefab);
+			enemies.Add(newEnemy);
+			newEnemy.transform.position =
+				spawnPoints[distributeEnemiesEvenly ?
+					i % spawnPoints.Count :
+					Random.Range(0, spawnPoints.Count)].transform.position +
+				new Vector3(Random.Range(-1.0f, 1.0f), 0.0f, Random.Range(-1.0f, 1.0f));
+			EnemyAI enemy = newEnemy.GetComponent<EnemyAI>();
 			enemy.player = player;
 			enemy.currentMaxHealth = enemy.baseMaxHealth * difficulty;
 			enemy.health = enemy.currentMaxHealth;
