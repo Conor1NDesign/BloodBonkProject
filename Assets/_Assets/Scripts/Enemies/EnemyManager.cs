@@ -10,6 +10,7 @@ public class EnemyManager : MonoBehaviour
 	[SerializeField][Tooltip("Per Second")]float difficultyIncreasePerSecond = 0.0001f;
 
 	[Header("Wave Settings")]
+	[SerializeField][Tooltip("If enemies should be distributed evenly between all spawn points (true), or if they should spawn at random points (false)")]bool distributeEnemiesEvenly = true;
     [SerializeField]List<GameObject> spawnPoints = new List<GameObject>();
 	[SerializeField]int baseWaveSize = 1;
 	[SerializeField]int waveSize = 1;
@@ -111,7 +112,11 @@ public class EnemyManager : MonoBehaviour
 		for (int i = 0; i < waveSize; i++)
 		{
 			enemies.Add(SpawnEnemy(Random.Range(0, 2) == 0 ? shutenDojiPrefab : akashitaPrefab));
-			enemies[i].transform.position = spawnPoints[i % spawnPoints.Count].transform.position + new Vector3(Random.Range(-1.0f, 1.0f), 0.0f, Random.Range(-1.0f, 1.0f));
+			enemies[i].transform.position =
+				spawnPoints[distributeEnemiesEvenly ?
+					i % spawnPoints.Count :
+					Random.Range(0, spawnPoints.Count)].transform.position +
+				new Vector3(Random.Range(-1.0f, 1.0f), 0.0f, Random.Range(-1.0f, 1.0f));
 			EnemyAI enemy = enemies[i].GetComponent<EnemyAI>();
 			enemy.player = player;
 			enemy.currentMaxHealth = enemy.baseMaxHealth * difficulty;
