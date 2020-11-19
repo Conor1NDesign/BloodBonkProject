@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum AvaliablePowerUp
 {
@@ -13,6 +14,9 @@ public enum AvaliablePowerUp
 
 public class PowerUp : MonoBehaviour
 {
+    public GameObject notificationImage;
+    public Color tempColor;
+
     public AvaliablePowerUp currentPowerUp;
 
     [Range(0.01f, 1f)] [Tooltip("0.1 = Increase value by 10%")] 
@@ -29,11 +33,26 @@ public class PowerUp : MonoBehaviour
         stats = FindObjectOfType<PlayerStats>();
         movement = FindObjectOfType<PlayerMovement>();
         weapon = FindObjectOfType<Weapon>();
+
+        if (currentPowerUp.ToString() == "MaxHealth")
+            notificationImage = GameObject.Find("MaxHPUp");
+        else if (currentPowerUp.ToString() == "AttackSpeed")
+            notificationImage = GameObject.Find("AtkSpeedUp");
+        else if (currentPowerUp.ToString() == "Lifesteal")
+            notificationImage = GameObject.Find("LifestealUp");
+        else if (currentPowerUp.ToString() == "MaxDash")
+            notificationImage = GameObject.Find("MaxDashUp");
+        else if (currentPowerUp.ToString() == "Damage")
+            notificationImage = GameObject.Find("DamageUp");
+
+        tempColor.a = 1f;
     }
 
     // Apply powerup stat
     public void Pickup()
     {
+        notificationImage.GetComponent<Image>().color = tempColor;
+
         if (currentPowerUp == AvaliablePowerUp.MaxHealth)
         {
             stats.maxHealth += stats.maxHealth * multiplier;

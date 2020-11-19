@@ -103,6 +103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa6569428de395b469fea58c918aa28e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  notificationImage: {fileID: 0}
+  tempColor: {r: 1, g: 1, b: 1, a: 1}
   currentPowerUp: 3
   multiplier: 0.025
 --- !u!95 &2356679097442684893
