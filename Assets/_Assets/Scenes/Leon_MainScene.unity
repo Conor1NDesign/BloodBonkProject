@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.018500218, g: 0.036889452, b: 0.07227186, a: 1}
+  m_AmbientSkyColor: {r: 0.004901961, g: 0.00882353, b: 0.01764706, a: 1}
   m_AmbientEquatorColor: {r: 0.007843138, g: 0.01764706, b: 0.03137255, a: 1}
   m_AmbientGroundColor: {r: 0.004901961, g: 0.00882353, b: 0.016666668, a: 1}
   m_AmbientIntensity: 0.59
@@ -1294,6 +1294,7 @@ MonoBehaviour:
   difficulty: 1
   difficultyIncreasePerWave: 0.15
   difficultyIncreasePerSecond: 0.0025
+  distributeEnemiesEvenly: 1
   spawnPoints:
   - {fileID: 1002941920}
   - {fileID: 66848103}
@@ -1307,6 +1308,7 @@ MonoBehaviour:
   shutenDojiPrefab: {fileID: 501601279726359312, guid: 0f75785eba59e8e40a1d77ae013af32a,
     type: 3}
   enemies: []
+  ragdollingEnemies: []
   inactiveShutenDoji: []
   inactiveAkashita: []
   akashitaProjectiles: []
