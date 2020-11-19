@@ -5,14 +5,42 @@ using UnityEngine;
 public class WeaponDetect : MonoBehaviour
 {
     // Classes
-    EnemyAI enemy;
+    public EnemyAI enemy;
+    PlayerMovement player;
+
+    public float mass = 3f; // define the character mass
+    public float force = 10f;
+
+    Vector3 impact = Vector3.zero;
 
     float currentDelay;
+
+    CharacterController character;
 
     void Start()
     {
         enemy = GetComponent<EnemyAI>();
-    }      
+        player = FindObjectOfType<PlayerMovement>();
+    }
+
+    void FixedUpdate()
+    {
+        // apply the impact effect:
+        if (impact.magnitude > 0.2f)
+        {
+            // Movement here
+            enemy.transform.position += impact * Time.fixedDeltaTime;
+        }
+        // impact energy goes by over time:
+        impact = Vector3.Lerp(impact, Vector3.zero, 5 * Time.deltaTime);
+    }
+
+    public void AddImpact(Vector3 dir)
+    {
+        dir = dir.normalized * force;
+
+        impact += dir / mass;
+    }
 
     public void TakeDamage(float damage)
     {
@@ -23,5 +51,6 @@ public class WeaponDetect : MonoBehaviour
             enemy.TakeDamage(damage);
         }
     }
-        
+
+    
 }

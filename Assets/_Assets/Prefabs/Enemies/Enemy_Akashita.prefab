@@ -80,6 +80,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a9707ecf0239d40b0f3d113fd33b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
+  mass: 3
+  force: 5
 --- !u!195 &-7251848352542788546
 NavMeshAgent:
   m_ObjectHideFlags: 0

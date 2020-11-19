@@ -116,6 +116,11 @@ public class Weapon : MonoBehaviour
 					Instantiate(bloodEffectPrefab, detect.transform);
                 stats.Lifesteal(damage);
 
+                Vector3 dir = detect.enemy.transform.position - player.transform.position;
+                dir.y = 0;
+
+                detect.AddImpact(dir);
+
                 // Shake Camera
                 StartCoroutine(camShake.Shake());
             }
