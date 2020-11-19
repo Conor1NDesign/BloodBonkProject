@@ -15,9 +15,9 @@ public class AnimationEvent : MonoBehaviour
         weapon = FindObjectOfType<Weapon>();
     }
 
-    public void HitDetection()
+    void Lunged()
     {
-        weapon.HitDetection();
+        player.hasLunged = true;
     }
 
     public void EndAttackAnimation()
