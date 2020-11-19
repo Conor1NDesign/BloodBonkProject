@@ -35,8 +35,8 @@ public class PlayerStats : MonoBehaviour
 
         if (currentHealth <= 0f)
         {
-            // Enable Game Over Menu
-            gameManager.GameOver();
+            // Plays Death animation
+            gameManager.DeathAnimation();
         }
     }
 

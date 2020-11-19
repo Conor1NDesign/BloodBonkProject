@@ -39,9 +39,7 @@ public class PlayerMovement : MonoBehaviour
     // Component
     [HideInInspector] public Animator animator;
 
-    [Header("Debug (NO TOUCH)")]
-    public Game gameManager;
-    public Weapon weapon;
+    Weapon weapon;
 
     void Awake()
     {
@@ -50,7 +48,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        gameManager = FindObjectOfType<Game>();
         weapon = FindObjectOfType<Weapon>();
 
         mainCam = FindObjectOfType<CameraFollow>().transform;

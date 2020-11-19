@@ -40,6 +40,7 @@ public class Game : MonoBehaviour
     int highscore;
     string weapon;
     bool isPaused = false;
+    bool isDead = false;
 
     void Awake()
     {
@@ -116,6 +117,16 @@ public class Game : MonoBehaviour
         obj.transform.localPosition = weaponHolder.transform.localPosition;
         obj.transform.localRotation = weaponHolder.transform.localRotation;
 		obj.GetComponent<Weapon>().bloodEffectPrefab = bloodEffectPrefab;
+    }
+
+    public void DeathAnimation()
+    {
+        if (!isDead)
+        {
+            isDead = true;
+
+            player.animator.SetTrigger("Death");
+        }
     }
 
     public void GameOver()
