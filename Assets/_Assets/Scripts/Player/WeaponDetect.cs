@@ -5,8 +5,8 @@ using UnityEngine;
 public class WeaponDetect : MonoBehaviour
 {
     // Classes
-    public EnemyAI enemy;
-    PlayerMovement player;
+    [HideInInspector] public EnemyAI enemy;
+    Game gameManager;
 
     public float mass = 3f; // define the character mass
     public float force = 10f;
@@ -15,12 +15,10 @@ public class WeaponDetect : MonoBehaviour
 
     float currentDelay;
 
-    CharacterController character;
-
     void Start()
     {
         enemy = GetComponent<EnemyAI>();
-        player = FindObjectOfType<PlayerMovement>();
+        gameManager = FindObjectOfType<Game>();
     }
 
     void FixedUpdate()
@@ -49,8 +47,7 @@ public class WeaponDetect : MonoBehaviour
             currentDelay = Time.time + 0.5f; // Enemy invincible for 0.5secs
 
             enemy.TakeDamage(damage);
+            gameManager.dmgDealt += damage;
         }
     }
-
-    
 }

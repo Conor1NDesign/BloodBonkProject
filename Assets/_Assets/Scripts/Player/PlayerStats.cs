@@ -10,6 +10,7 @@ public class PlayerStats : MonoBehaviour
     private float currentHealth;
 
 	[HideInInspector]public bool godMode = false;
+
     // Classes
     HealthBar health;
     Game gameManager;
@@ -30,6 +31,7 @@ public class PlayerStats : MonoBehaviour
 			return;
 		
         currentHealth -= damage;
+        gameManager.dmgReceived += damage;
 
         if (currentHealth <= 0f)
         {
@@ -40,10 +42,16 @@ public class PlayerStats : MonoBehaviour
 
     public void Lifesteal(float damage)
     {
-        currentHealth += damage * lifesteal;
+        if (currentHealth < maxHealth)
+        {
+            currentHealth += damage * lifesteal;
+            gameManager.lifeStolen += damage * lifesteal;
+        }
 
         if (currentHealth > maxHealth)
         {
+            gameManager.lifeStolen -= currentHealth - maxHealth;
+
             currentHealth = maxHealth;
         }
     }

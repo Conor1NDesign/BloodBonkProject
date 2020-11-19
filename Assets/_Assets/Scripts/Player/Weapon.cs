@@ -116,9 +116,9 @@ public class Weapon : MonoBehaviour
 					Instantiate(bloodEffectPrefab, detect.transform);
                 stats.Lifesteal(damage);
 
+                // Knockback
                 Vector3 dir = detect.enemy.transform.position - player.transform.position;
                 dir.y = 0;
-
                 detect.AddImpact(dir);
 
                 // Shake Camera

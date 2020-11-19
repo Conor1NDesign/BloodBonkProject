@@ -30,6 +30,7 @@ public class EnemyManager : MonoBehaviour
 	public List<AkashitaProjectile> akashitaProjectiles = new List<AkashitaProjectile>();
 
 	// Classes
+	Game gameManager;
 	SpawnPower powerupManager;
 	Score score;
 
@@ -37,6 +38,7 @@ public class EnemyManager : MonoBehaviour
     {
 		powerupManager = FindObjectOfType<SpawnPower>();
 		score = FindObjectOfType<Score>();
+		gameManager = FindObjectOfType<Game>();
     }
 
 	void FixedUpdate()
@@ -88,6 +90,7 @@ public class EnemyManager : MonoBehaviour
 
 				// Increase score
 				score.UpdateScore();
+				gameManager.kills++;
 
 				// Chance to spawn rdm powerup
 				powerupManager.SpawnPowerUp(enemy.transform.position);

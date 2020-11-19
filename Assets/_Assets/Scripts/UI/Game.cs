@@ -23,9 +23,18 @@ public class Game : MonoBehaviour
     [Header("Highscore")]
     public Text yourScore;
     public Text bestScore;
+    public Text dmgDealtText;
+    public Text dmgReceivedText;
+    public Text lifeStolenText;
+    public Text killsText;
 
-    [Header("Debug (NO TOUCH)")]
-    public GameObject weaponPrefab;
+
+    GameObject weaponPrefab;
+
+    [HideInInspector] public float dmgDealt;
+    [HideInInspector] public float dmgReceived;
+    [HideInInspector] public float lifeStolen;
+    [HideInInspector] public int kills;
 
     int highscore;
     string weapon;
@@ -114,17 +123,23 @@ public class Game : MonoBehaviour
         buttons[1].onClick.AddListener(MainMenu);
 
         // Preview Score
-        yourScore.text += score.currentScore.ToString();
+        yourScore.text = score.currentScore.ToString();
 
         if (score.currentScore > highscore)
         {
             PlayerPrefs.SetInt("HighScore", score.currentScore);
-            bestScore.text += score.currentScore.ToString() + "  *(New)*";
+            bestScore.text = score.currentScore.ToString() + "  *(New)*";
         }
         else
         {
-            bestScore.text += highscore.ToString();
+            bestScore.text = highscore.ToString();
         }
+
+        dmgDealtText.text = Mathf.FloorToInt(dmgDealt).ToString();
+        dmgReceivedText.text = Mathf.FloorToInt(dmgReceived).ToString();
+        lifeStolenText.text = Mathf.FloorToInt(lifeStolen).ToString();
+        killsText.text = kills.ToString();
+
     }
 
     // Buttons
