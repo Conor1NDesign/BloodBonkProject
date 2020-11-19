@@ -39,10 +39,8 @@ public class EnemyManager : MonoBehaviour
 		score = FindObjectOfType<Score>();
     }
 
-	void FixedUpdate()
+	void Update()
 	{
-		difficulty += difficultyIncreasePerSecond / 60.0f;
-
 		// DEBUG: Debug commands activated with backslash
 		if (Input.GetKey(KeyCode.Backslash))
 		{
@@ -72,6 +70,11 @@ public class EnemyManager : MonoBehaviour
 				playerStats.godMode = !playerStats.godMode;
 			}
 		}
+	}
+	
+	void FixedUpdate()
+	{
+		difficulty += difficultyIncreasePerSecond / 60.0f;
 
 		// Making enemies attack and die
 		for (int i = 0; i < enemies.Count; i++)
