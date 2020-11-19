@@ -31,7 +31,7 @@ public class PlayerStats : MonoBehaviour
 			return;
 		
         currentHealth -= damage;
-        gameManager.dmgReceived += damage;
+        gameManager.dmgReceived += (int)damage;
 
         if (currentHealth <= 0f)
         {
@@ -44,13 +44,16 @@ public class PlayerStats : MonoBehaviour
     {
         if (currentHealth < maxHealth)
         {
-            currentHealth += damage * lifesteal;
-            gameManager.lifeStolen += damage * lifesteal;
+            float lifeStolen = damage * lifesteal;
+
+            currentHealth += lifeStolen;
+            gameManager.lifeStolen += (int)lifeStolen;
         }
 
         if (currentHealth > maxHealth)
         {
-            gameManager.lifeStolen -= currentHealth - maxHealth;
+            float reduce = currentHealth - maxHealth;
+            gameManager.lifeStolen -= (int)reduce;
 
             currentHealth = maxHealth;
         }

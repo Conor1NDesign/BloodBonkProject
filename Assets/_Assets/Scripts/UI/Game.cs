@@ -32,9 +32,9 @@ public class Game : MonoBehaviour
 
     GameObject weaponPrefab;
 
-    [HideInInspector] public float dmgDealt;
-    [HideInInspector] public float dmgReceived;
-    [HideInInspector] public float lifeStolen;
+    [HideInInspector] public int dmgDealt;
+    [HideInInspector] public int dmgReceived;
+    [HideInInspector] public int lifeStolen;
     [HideInInspector] public int kills;
 
     int highscore;
