@@ -111,7 +111,7 @@ public class Weapon : MonoBehaviour
             if (Physics.Raycast(currentHardPointPos[i], currentHardPointPos[i + hardPoints.childCount], out hit, 1f, LayerMask.GetMask("Enemy")))
             {
                 WeaponDetect detect = hit.collider.gameObject.GetComponentInParent<WeaponDetect>();
-                detect.TakeDamage(stats.godMode ? damage : damage * 1000000.0f);
+                detect.TakeDamage(stats.godMode ? damage * 1000000.0f : damage);
                 if (bloodEffectPrefab != null)
 					Instantiate(bloodEffectPrefab, detect.transform);
                 stats.Lifesteal(damage);
