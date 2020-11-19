@@ -17,6 +17,7 @@ public class Game : MonoBehaviour
 
     // Classes
     Score score;
+    PlayerMovement player;
 
     // Components
     Button[] buttons;
@@ -42,7 +43,7 @@ public class Game : MonoBehaviour
 
     void Awake()
     {
-        
+        player = FindObjectOfType<PlayerMovement>();
         SelectWeapon();
     }
 
@@ -87,21 +88,25 @@ public class Game : MonoBehaviour
         {
             weaponPrefab = Instantiate(weapons[0]);
             WeaponSetting(weaponPrefab);
+            player.animator.SetBool("Kanabo", true);
         }
         else if (weapon == "Kanabo")
         {
             weaponPrefab = Instantiate(weapons[0]);
             WeaponSetting(weaponPrefab);
+            player.animator.SetBool("Kanabo", true);
         }
         else if (weapon == "Katana")
         {
             weaponPrefab = Instantiate(weapons[1]);
             WeaponSetting(weaponPrefab);
+            player.animator.SetBool("Katana", true);
         }
         else if (weapon == "Naginata")
         {
             weaponPrefab = Instantiate(weapons[2]);
             WeaponSetting(weaponPrefab);
+            player.animator.SetBool("Naginata", true);
         }
     }
 
@@ -135,9 +140,9 @@ public class Game : MonoBehaviour
             bestScore.text = highscore.ToString();
         }
 
-        dmgDealtText.text = Mathf.FloorToInt(dmgDealt).ToString();
-        dmgReceivedText.text = Mathf.FloorToInt(dmgReceived).ToString();
-        lifeStolenText.text = Mathf.FloorToInt(lifeStolen).ToString();
+        dmgDealtText.text = dmgDealt.ToString();
+        dmgReceivedText.text = dmgReceived.ToString();
+        lifeStolenText.text = lifeStolen.ToString();
         killsText.text = kills.ToString();
 
     }

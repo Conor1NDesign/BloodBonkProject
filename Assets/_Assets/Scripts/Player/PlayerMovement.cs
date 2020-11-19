@@ -43,6 +43,11 @@ public class PlayerMovement : MonoBehaviour
     public Game gameManager;
     public Weapon weapon;
 
+    void Awake()
+    {
+        animator = GetComponentInChildren<Animator>();
+    }
+
     void Start()
     {
         gameManager = FindObjectOfType<Game>();
@@ -50,7 +55,6 @@ public class PlayerMovement : MonoBehaviour
 
         mainCam = FindObjectOfType<CameraFollow>().transform;
         dashMeter = FindObjectOfType<DashMeter>();
-        animator = GetComponentInChildren<Animator>();
 
         currentDashMeter = maxDashMeter;
     }
