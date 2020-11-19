@@ -29,7 +29,6 @@ public class Game : MonoBehaviour
     public Text lifeStolenText;
     public Text killsText;
 
-
     GameObject weaponPrefab;
 
     [HideInInspector] public int dmgDealt;
@@ -124,6 +123,7 @@ public class Game : MonoBehaviour
         if (!isDead)
         {
             isDead = true;
+            weaponPrefab.SetActive(false);
 
             player.animator.SetTrigger("Death");
         }
