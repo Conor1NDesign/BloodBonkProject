@@ -43,7 +43,6 @@ public class Game : MonoBehaviour
 
     void Awake()
     {
-        player = FindObjectOfType<PlayerMovement>();
         SelectWeapon();
     }
 
@@ -51,9 +50,12 @@ public class Game : MonoBehaviour
     {
         highscore = PlayerPrefs.GetInt("HighScore", highscore);
         
-
         score = FindObjectOfType<Score>();
+        player = FindObjectOfType<PlayerMovement>();
+        
         buttons = gameOver.GetComponentsInChildren<Button>();
+
+        EnableAttackAnimation();
     }
 
     void Update()
@@ -88,25 +90,21 @@ public class Game : MonoBehaviour
         {
             weaponPrefab = Instantiate(weapons[0]);
             WeaponSetting(weaponPrefab);
-            player.animator.SetBool("Kanabo", true);
         }
         else if (weapon == "Kanabo")
         {
             weaponPrefab = Instantiate(weapons[0]);
             WeaponSetting(weaponPrefab);
-            player.animator.SetBool("Kanabo", true);
         }
         else if (weapon == "Katana")
         {
             weaponPrefab = Instantiate(weapons[1]);
             WeaponSetting(weaponPrefab);
-            player.animator.SetBool("Katana", true);
         }
         else if (weapon == "Naginata")
         {
             weaponPrefab = Instantiate(weapons[2]);
             WeaponSetting(weaponPrefab);
-            player.animator.SetBool("Naginata", true);
         }
     }
 
@@ -116,6 +114,16 @@ public class Game : MonoBehaviour
         obj.transform.localPosition = weaponHolder.transform.localPosition;
         obj.transform.localRotation = weaponHolder.transform.localRotation;
 		obj.GetComponent<Weapon>().bloodEffectPrefab = bloodEffectPrefab;
+    }
+
+    void EnableAttackAnimation()
+    {
+        if (weapon == "Kanabo")
+            player.animator.SetBool("Kanabo", true);
+        else if (weapon == "Katana")
+            player.animator.SetBool("Katana", true);
+        else if (weapon == "Naginata")
+            player.animator.SetBool("Naginata", true);
     }
 
     public void DeathAnimation()
@@ -152,10 +160,10 @@ public class Game : MonoBehaviour
             bestScore.text = highscore.ToString();
         }
 
-        dmgDealtText.text = dmgDealt.ToString();
-        dmgReceivedText.text = dmgReceived.ToString();
-        lifeStolenText.text = lifeStolen.ToString();
-        killsText.text = kills.ToString();
+        //dmgDealtText.text = dmgDealt.ToString();
+        //dmgReceivedText.text = dmgReceived.ToString();
+        //lifeStolenText.text = lifeStolen.ToString();
+        //killsText.text = kills.ToString();
 
     }
 
