@@ -163,10 +163,10 @@ public class Game : MonoBehaviour
             bestScore.text = highscore.ToString();
         }
 
-        //dmgDealtText.text = dmgDealt.ToString();
-        //dmgReceivedText.text = dmgReceived.ToString();
-        //lifeStolenText.text = lifeStolen.ToString();
-        //killsText.text = kills.ToString();
+        dmgDealtText.text = dmgDealt.ToString();
+        dmgReceivedText.text = dmgReceived.ToString();
+        lifeStolenText.text = lifeStolen.ToString();
+        killsText.text = kills.ToString();
 
     }
 
