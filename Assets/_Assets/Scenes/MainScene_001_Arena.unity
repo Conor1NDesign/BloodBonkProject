@@ -1068,6 +1068,7 @@ MonoBehaviour:
   - {fileID: 1420736033}
   baseWaveSize: 8
   waveSize: 0
+  maxWaveSize: 1000000
   player: {fileID: 2010967849}
   akashitaPrefab: {fileID: 1403625688449953851, guid: 1a7ebc971c2212d498bde54361690fb9,
     type: 3}
@@ -23368,7 +23369,15 @@ MonoBehaviour:
   bloodEffectPrefab: {fileID: 0}
   yourScore: {fileID: 1884578240}
   bestScore: {fileID: 2018044748}
-  weaponPrefab: {fileID: 0}
+  dmgDealtText: {fileID: 0}
+  dmgReceivedText: {fileID: 0}
+  lifeStolenText: {fileID: 0}
+  killsText: {fileID: 0}
+  dmgDealt: 0
+  dmgReceived: 0
+  lifeStolen: 0
+  kills: 0
+  isDead: 0
 --- !u!4 &691310731
 Transform:
   m_ObjectHideFlags: 0
