@@ -112,13 +112,11 @@ public class Weapon : MonoBehaviour
             {
                 WeaponDetect detect = hit.collider.gameObject.GetComponentInParent<WeaponDetect>();
                 detect.TakeDamage(stats.godMode ? damage * 1000000.0f : damage);
-                if (bloodEffectPrefab != null)
-					Instantiate(bloodEffectPrefab, detect.transform);
-                stats.Lifesteal(damage);
+                detect.Lifesteal(damage);
 
+                // Knockback
                 Vector3 dir = detect.enemy.transform.position - player.transform.position;
                 dir.y = 0;
-
                 detect.AddImpact(dir);
 
                 // Shake Camera

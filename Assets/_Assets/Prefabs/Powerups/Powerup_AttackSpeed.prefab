@@ -106,7 +106,7 @@ MonoBehaviour:
   notificationImage: {fileID: 0}
   tempColor: {r: 1, g: 1, b: 1, a: 1}
   currentPowerUp: 2
-  multiplier: 0.05
+  multiplier: 0.15
 --- !u!95 &998905124315285573
 Animator:
   serializedVersion: 3

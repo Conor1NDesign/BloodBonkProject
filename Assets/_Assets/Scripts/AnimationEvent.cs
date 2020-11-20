@@ -5,14 +5,19 @@ using UnityEngine;
 public class AnimationEvent : MonoBehaviour
 {
     PlayerMovement player;
-
+    Game gameManager;
     Weapon weapon;
 
     void Start()
     {
         player = GetComponentInParent<PlayerMovement>();
-
+        gameManager = FindObjectOfType<Game>();
         weapon = FindObjectOfType<Weapon>();
+    }
+
+    void GameOver()
+    {
+        gameManager.GameOver();
     }
 
     void Lunged()
