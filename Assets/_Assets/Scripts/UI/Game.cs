@@ -39,7 +39,7 @@ public class Game : MonoBehaviour
     int highscore;
     string weapon;
     bool isPaused = false;
-    bool isDead = false;
+    [HideInInspector] public bool isDead = false;
 
     void Awake()
     {
@@ -124,6 +124,7 @@ public class Game : MonoBehaviour
         {
             isDead = true;
             weaponPrefab.SetActive(false);
+            player.input = Vector3.zero;
 
             player.animator.SetTrigger("Death");
         }

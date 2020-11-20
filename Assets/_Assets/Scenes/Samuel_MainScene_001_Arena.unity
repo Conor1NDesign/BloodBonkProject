@@ -19972,7 +19972,7 @@ GameObject:
   - component: {fileID: 598217717}
   - component: {fileID: 598217716}
   m_Layer: 5
-  m_Name: Stats
+  m_Name: Highscore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20028,7 +20028,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Stats
+  m_Text: Highscore
 --- !u!222 &598217717
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23410,6 +23410,7 @@ MonoBehaviour:
   dmgReceived: 0
   lifeStolen: 0
   kills: 0
+  isDead: 0
 --- !u!4 &691310731
 Transform:
   m_ObjectHideFlags: 0

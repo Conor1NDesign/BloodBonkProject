@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public bool hasLunged;
     [HideInInspector] public bool isAttacking;
 
-    Vector3 input; // Player Movement
+    [HideInInspector] public Vector3 input; // Player Movement
 
     Transform mainCam;
 
@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
     // Component
     [HideInInspector] public Animator animator;
 
+    Game gameManager;
     Weapon weapon;
 
     void Awake()
@@ -48,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        gameManager = FindObjectOfType<Game>();
         weapon = FindObjectOfType<Weapon>();
 
         mainCam = FindObjectOfType<CameraFollow>().transform;
@@ -72,8 +74,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!weapon.isSwinging)
         {
-            // Get Player Input
-            input = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
+            if (!gameManager.isDead)
+            {
+                // Get Player Input
+                input = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
+            }
         }
         else if (weapon.isSwinging && !isAttacking)
         {
