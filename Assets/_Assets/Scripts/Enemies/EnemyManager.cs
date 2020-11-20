@@ -14,6 +14,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField]List<GameObject> spawnPoints = new List<GameObject>();
 	[SerializeField]int baseWaveSize = 1;
 	[SerializeField]int waveSize = 1;
+	[SerializeField]int maxWaveSize = 1000000;
 
 #pragma warning disable 0649
 	[Header("Prefabs")]
@@ -138,7 +139,7 @@ public class EnemyManager : MonoBehaviour
 	// Spawns a wave of enemies, distributed throughout the spawn points
     void SpawnWave()
     {
-		for (int i = 0; i < waveSize; i++)
+		for (int i = 0; i < waveSize && i < maxWaveSize; i++)
 		{
 			GameObject newEnemy = SpawnEnemy(Random.Range(0, 2) == 0 ? shutenDojiPrefab : akashitaPrefab);
 			enemies.Add(newEnemy);
