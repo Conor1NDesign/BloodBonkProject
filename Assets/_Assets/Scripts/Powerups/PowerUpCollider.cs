@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class PowerUpCollider : MonoBehaviour
 {
+    SpawnPower powerUpManager;
     PowerUp powerUp;
 
     void Start()
     {
         powerUp = GetComponentInParent<PowerUp>();
+        powerUpManager = FindObjectOfType<SpawnPower>();
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            powerUpManager.pickUpSound.Play();
+
             powerUp.Pickup();
         }
     }

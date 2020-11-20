@@ -11,6 +11,10 @@ public class Weapon : MonoBehaviour
     public float lungeDistance = 1f;
 	public GameObject bloodEffectPrefab;
 
+    [Header("Weapon Sounds")]
+    public AudioSource hitSound;
+    public AudioSource swingSound;
+
     [HideInInspector] public bool isSwinging;
 
     List<Vector3> currentHardPointPos;
@@ -57,6 +61,8 @@ public class Weapon : MonoBehaviour
     {
         player.hasLunged = false;
         isSwinging = true; // Enables animation in PlayerMovement script
+
+        swingSound.Play();
 
         player.mouseInput = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         player.posOnScreen = Camera.main.WorldToScreenPoint(player.transform.position);

@@ -19,6 +19,10 @@ public class PlayerMovement : MonoBehaviour
     public float refillTimer = 1f;
     private float currentDashMeter;
 
+    [Header("Player Sounds")]
+    public AudioSource deathSound;
+    public AudioSource dashSound;
+
     [HideInInspector] public Vector2 posOnScreen; // Apply on attack
     [HideInInspector] public Vector2 mouseInput;
     [HideInInspector] public bool hasLunged;
@@ -135,6 +139,9 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
             {
+                dashSound.Play();
+
+                // Check if dash speed is reached
                 if (actualSpeed >= dashSpeed)
                 {
                     actualSpeed = dashSpeed;
@@ -149,6 +156,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            // No longer dashing
             actualSpeed = moveSpeed;
             isDashing = false;
         }

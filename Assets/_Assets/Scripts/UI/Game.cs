@@ -134,6 +134,8 @@ public class Game : MonoBehaviour
             weaponPrefab.SetActive(false);
             player.input = Vector3.zero;
 
+            player.deathSound.Play();
+
             player.animator.SetTrigger("Death");
         }
     }
