@@ -139,7 +139,8 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
             {
-                dashSound.Play();
+                if (dashSound != null)
+                    dashSound.Play();
 
                 // Check if dash speed is reached
                 if (actualSpeed >= dashSpeed)

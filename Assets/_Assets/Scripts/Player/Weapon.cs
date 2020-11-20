@@ -62,7 +62,8 @@ public class Weapon : MonoBehaviour
         player.hasLunged = false;
         isSwinging = true; // Enables animation in PlayerMovement script
 
-        swingSound.Play();
+        if (swingSound != null)
+            swingSound.Play();
 
         player.mouseInput = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         player.posOnScreen = Camera.main.WorldToScreenPoint(player.transform.position);

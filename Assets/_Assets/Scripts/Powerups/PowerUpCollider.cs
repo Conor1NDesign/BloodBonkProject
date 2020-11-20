@@ -17,7 +17,8 @@ public class PowerUpCollider : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            powerUpManager.pickUpSound.Play();
+            if (powerUpManager.pickUpSound != null)
+                powerUpManager.pickUpSound.Play();
 
             powerUp.Pickup();
         }

@@ -81,7 +81,8 @@ public class WeaponDetect : MonoBehaviour
         {
             damageDelay = Time.time + 0.5f; // Enemy invincible for 0.5secs
 
-            weapon.hitSound.Play();
+            if (weapon.hitSound != null)
+                weapon.hitSound.Play();
 
             enemy.TakeDamage(damage);
             gameManager.dmgDealt += (int)damage;
