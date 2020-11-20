@@ -7,9 +7,10 @@ public class PlayerStats : MonoBehaviour
     public float maxHealth = 100f;
     [Tooltip("0.1 = Heal 10% of damage")] public float lifesteal = 0.1f;
 
-    private float currentHealth;
+    [HideInInspector] public float currentHealth;
 
-	[HideInInspector]public bool godMode = false;
+	[HideInInspector] public bool godMode = false;
+
     // Classes
     HealthBar health;
     Game gameManager;
@@ -30,21 +31,12 @@ public class PlayerStats : MonoBehaviour
 			return;
 		
         currentHealth -= damage;
+        gameManager.dmgReceived += (int)damage;
 
         if (currentHealth <= 0f)
         {
-            // Enable Game Over Menu
-            gameManager.GameOver();
-        }
-    }
-
-    public void Lifesteal(float damage)
-    {
-        currentHealth += damage * lifesteal;
-
-        if (currentHealth > maxHealth)
-        {
-            currentHealth = maxHealth;
+            // Plays Death animation
+            gameManager.DeathAnimation();
         }
     }
 

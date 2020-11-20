@@ -17,23 +17,32 @@ public class Game : MonoBehaviour
 
     // Classes
     Score score;
+    PlayerMovement player;
 
     // Components
     Button[] buttons;
     [Header("Highscore")]
     public Text yourScore;
     public Text bestScore;
+    public Text dmgDealtText;
+    public Text dmgReceivedText;
+    public Text lifeStolenText;
+    public Text killsText;
 
-    [Header("Debug (NO TOUCH)")]
-    public GameObject weaponPrefab;
+    GameObject weaponPrefab;
+
+    [HideInInspector] public int dmgDealt;
+    [HideInInspector] public int dmgReceived;
+    [HideInInspector] public int lifeStolen;
+    [HideInInspector] public int kills;
 
     int highscore;
     string weapon;
     bool isPaused = false;
+    [HideInInspector] public bool isDead = false;
 
     void Awake()
     {
-        
         SelectWeapon();
     }
 
@@ -41,9 +50,12 @@ public class Game : MonoBehaviour
     {
         highscore = PlayerPrefs.GetInt("HighScore", highscore);
         
-
         score = FindObjectOfType<Score>();
+        player = FindObjectOfType<PlayerMovement>();
+        
         buttons = gameOver.GetComponentsInChildren<Button>();
+
+        EnableAttackAnimation();
     }
 
     void Update()
@@ -104,6 +116,28 @@ public class Game : MonoBehaviour
 		obj.GetComponent<Weapon>().bloodEffectPrefab = bloodEffectPrefab;
     }
 
+    void EnableAttackAnimation()
+    {
+        if (weapon == "Kanabo")
+            player.animator.SetBool("Kanabo", true);
+        else if (weapon == "Katana")
+            player.animator.SetBool("Katana", true);
+        else if (weapon == "Naginata")
+            player.animator.SetBool("Naginata", true);
+    }
+
+    public void DeathAnimation()
+    {
+        if (!isDead)
+        {
+            isDead = true;
+            weaponPrefab.SetActive(false);
+            player.input = Vector3.zero;
+
+            player.animator.SetTrigger("Death");
+        }
+    }
+
     public void GameOver()
     {
         // GameOver On
@@ -114,17 +148,23 @@ public class Game : MonoBehaviour
         buttons[1].onClick.AddListener(MainMenu);
 
         // Preview Score
-        yourScore.text += score.currentScore.ToString();
+        yourScore.text = score.currentScore.ToString();
 
         if (score.currentScore > highscore)
         {
             PlayerPrefs.SetInt("HighScore", score.currentScore);
-            bestScore.text += score.currentScore.ToString() + "  *(New)*";
+            bestScore.text = score.currentScore.ToString() + "  *(New)*";
         }
         else
         {
-            bestScore.text += highscore.ToString();
+            bestScore.text = highscore.ToString();
         }
+
+        //dmgDealtText.text = dmgDealt.ToString();
+        //dmgReceivedText.text = dmgReceived.ToString();
+        //lifeStolenText.text = lifeStolen.ToString();
+        //killsText.text = kills.ToString();
+
     }
 
     // Buttons
