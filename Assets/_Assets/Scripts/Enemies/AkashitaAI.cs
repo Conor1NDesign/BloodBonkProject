@@ -27,6 +27,7 @@ public class AkashitaAI : EnemyAI
 				// Do the attacky thing
 				AkashitaProjectile projectile = Instantiate(projectilePrefab, transform.position + transform.forward, transform.rotation).GetComponent<AkashitaProjectile>();
 				projectile.velocity = transform.forward * projectileSpeed;
+				projectile.damage = projectile.damage * enemyManager.difficulty;
 				enemyManager.akashitaProjectiles.Add(projectile);
 			}
 			agent.enabled = true;
