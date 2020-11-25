@@ -17,6 +17,7 @@ public class ShutenDojiAI : EnemyAI
 	{
 		// Cache this GameObject's navmesh agent
 		agent = GetComponent<NavMeshAgent>();
+		audioSource = GetComponent<AudioSource>();
 		healthBar = GetComponentInChildren<HealthBar>();
 		animator = GetComponentInChildren<Animator>();
 		health = currentMaxHealth;
@@ -47,6 +48,8 @@ public class ShutenDojiAI : EnemyAI
 			if (Physics.Linecast(bottlePosInitial, bottle.transform.position, LayerMask.GetMask("Player")))
 			{
 				player.GetComponent<PlayerStats>().TakeDamage(damage);
+				audioSource.pitch = Random.Range(minPitch, maxPitch);
+				audioSource.PlayOneShot(hitSound);
 				dealtDamage = true;
 			}
 			else
@@ -81,7 +84,10 @@ public class ShutenDojiAI : EnemyAI
 			agent.enabled = false;
 			dealtDamage = false;
 			if (attackSound != null)
+			{
+				audioSource.pitch = Random.Range(minPitch, maxPitch);
 				audioSource.PlayOneShot(attackSound);
+			}
 			animator.SetTrigger("Shuten_Attacking");
 			bottlePosInitial = bottle.transform.position;
 		}
