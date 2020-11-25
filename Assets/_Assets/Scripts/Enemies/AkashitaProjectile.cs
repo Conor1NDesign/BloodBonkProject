@@ -6,6 +6,8 @@ public class AkashitaProjectile : MonoBehaviour
 	public float timeLeft = 3.0f;
 	[HideInInspector]public float damage = 10.0f;
 
+	public AudioSource projectileHitSound;
+
 	void Update()
 	{
 		timeLeft -= Time.deltaTime;
@@ -15,6 +17,10 @@ public class AkashitaProjectile : MonoBehaviour
 	void OnTriggerEnter(Collider other)
 	{
 		if (!(other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Weapon")))
+		{
+			projectileHitSound.Play();
 			Destroy(gameObject);
+		}
+
 	}
 }
