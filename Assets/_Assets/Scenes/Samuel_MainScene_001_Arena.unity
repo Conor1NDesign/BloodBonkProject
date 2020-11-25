@@ -1068,6 +1068,7 @@ MonoBehaviour:
   - {fileID: 1420736033}
   baseWaveSize: 8
   waveSize: 0
+  maxWaveSize: 1000000
   player: {fileID: 2010967849}
   akashitaPrefab: {fileID: 1403625688449953851, guid: 1a7ebc971c2212d498bde54361690fb9,
     type: 3}
@@ -33717,7 +33718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -355, y: -126.99998}
+  m_AnchoredPosition: {x: -373, y: -126.99998}
   m_SizeDelta: {x: 319.3, y: 69.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &964526536
@@ -55310,7 +55311,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -355, y: -46.999977}
+  m_AnchoredPosition: {x: -373, y: -46.999977}
   m_SizeDelta: {x: 319.3, y: 69.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1719864666
@@ -60210,7 +60211,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -355, y: 85}
+  m_AnchoredPosition: {x: -373, y: 85}
   m_SizeDelta: {x: 319.3, y: 69.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1884578240
