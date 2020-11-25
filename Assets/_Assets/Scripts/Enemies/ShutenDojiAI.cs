@@ -21,6 +21,7 @@ public class ShutenDojiAI : EnemyAI
 		animator = GetComponentInChildren<Animator>();
 		health = currentMaxHealth;
 		canvasObject = GetComponentInChildren<FollowCamera>().gameObject;
+		renderers = gameObject.GetComponentsInChildren<Renderer>();
 		ragdollRbs = GetComponentsInChildren<Rigidbody>();
 		ragdollPositions = new Vector3[ragdollRbs.Length];
 		for (int i = 0; i < ragdollRbs.Length; i++)
