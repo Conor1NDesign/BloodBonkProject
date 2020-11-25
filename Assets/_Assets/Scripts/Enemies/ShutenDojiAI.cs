@@ -21,6 +21,7 @@ public class ShutenDojiAI : EnemyAI
 		animator = GetComponentInChildren<Animator>();
 		health = currentMaxHealth;
 		canvasObject = GetComponentInChildren<FollowCamera>().gameObject;
+		renderers = gameObject.GetComponentsInChildren<Renderer>();
 		ragdollRbs = GetComponentsInChildren<Rigidbody>();
 		ragdollPositions = new Vector3[ragdollRbs.Length];
 		for (int i = 0; i < ragdollRbs.Length; i++)
@@ -61,6 +62,11 @@ public class ShutenDojiAI : EnemyAI
 				agent.enabled = true;
 			}
 		}
+		if (currentFlashTime > 0.0f)
+			currentFlashTime -= 1.0f / 60.0f;
+		else
+			for (int i = 0; i < renderers.Length; i++)
+				renderers[i].material.SetFloat("Vector1_9C3EE106", 1);
 		
 		if (agent.enabled)
 			base.MovementUpdate();
@@ -74,6 +80,8 @@ public class ShutenDojiAI : EnemyAI
 			timeToNextAttack = timeBetweenAttacks;
 			agent.enabled = false;
 			dealtDamage = false;
+			if (attackSound != null)
+				audioSource.PlayOneShot(attackSound);
 			animator.SetTrigger("Shuten_Attacking");
 			bottlePosInitial = bottle.transform.position;
 		}
