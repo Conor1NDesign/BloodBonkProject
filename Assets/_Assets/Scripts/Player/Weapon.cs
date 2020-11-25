@@ -25,6 +25,10 @@ public class Weapon : MonoBehaviour
     PlayerStats stats;
     PlayerMovement player;
 
+    Vector3 playerPos;
+    Vector3 enemyPos;
+    Ray wallDebug;
+
     private void Awake()
     {
         player = FindObjectOfType<PlayerMovement>();
@@ -71,10 +75,14 @@ public class Weapon : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        for (int i = 0; i < currentHardPointPos.Count - 5; i++)
+        Transform hardPoints = transform.GetChild(2);
+
+        for (int i = 0; i < currentHardPointPos.Count - hardPoints.childCount; i++)
         {
-            Gizmos.DrawLine(currentHardPointPos[i], currentHardPointPos[i + 5]);
+            Gizmos.DrawLine(currentHardPointPos[i], currentHardPointPos[i + hardPoints.childCount]);
         }
+
+        Gizmos.DrawRay(wallDebug);
 
         //for (int i = 0; i < debugCurrentHardPointPos.Count - 5; i++)
         //{
@@ -117,17 +125,32 @@ public class Weapon : MonoBehaviour
             // Raycast check if it hits enemy
             if (Physics.Raycast(currentHardPointPos[i], currentHardPointPos[i + hardPoints.childCount], out hit, 1f, LayerMask.GetMask("Enemy")))
             {
-                WeaponDetect detect = hit.collider.gameObject.GetComponentInParent<WeaponDetect>();
-                detect.TakeDamage(stats.godMode ? damage * 1000000.0f : damage);
-                detect.Lifesteal(damage);
+                playerPos = transform.root.position;
+                enemyPos = hit.collider.gameObject.transform.position;
 
-                // Knockback
-                Vector3 dir = detect.enemy.transform.position - player.transform.position;
-                dir.y = 0;
-                detect.AddImpact(dir);
+                playerPos.y += 2f;
+                enemyPos.y += 2f;
 
-                // Shake Camera
-                StartCoroutine(camShake.Shake());
+                float distance = Vector3.Distance(playerPos, enemyPos);
+
+                Ray ray = new Ray(playerPos, enemyPos - playerPos);
+                wallDebug = ray;
+
+                if (!Physics.Raycast(ray, distance, LayerMask.GetMask("Wall")))
+                {
+                    WeaponDetect detect = hit.collider.gameObject.GetComponentInParent<WeaponDetect>();
+                    detect.TakeDamage(stats.godMode ? damage * 1000000.0f : damage);
+                    detect.Lifesteal(damage);
+
+                    // Knockback
+                    Vector3 dir = detect.enemy.transform.position - player.transform.position;
+                    dir.y = 0;
+                    detect.AddImpact(dir);
+
+                    // Shake Camera
+                    StartCoroutine(camShake.Shake());
+                    
+                }
             }
         }
     }
