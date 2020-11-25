@@ -10,8 +10,6 @@ public class AkashitaProjectile : MonoBehaviour
 	public AudioClip hitSound;
 	[HideInInspector]public float damage = 10.0f;
 
-	public AudioSource projectileHitSound;
-
 	void Update()
 	{
 		timeLeft -= Time.deltaTime;
