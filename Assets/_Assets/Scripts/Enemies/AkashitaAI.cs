@@ -27,10 +27,16 @@ public class AkashitaAI : EnemyAI
 				// Do the attacky thing
 				AkashitaProjectile projectile = Instantiate(projectilePrefab, transform.position + transform.forward, transform.rotation).GetComponent<AkashitaProjectile>();
 				projectile.velocity = transform.forward * projectileSpeed;
+				projectile.damage = damage;
 				enemyManager.akashitaProjectiles.Add(projectile);
 			}
 			agent.enabled = true;
 		}
+		if (currentFlashTime > 0.0f)
+			currentFlashTime -= 1.0f / 60.0f;
+		else
+			for (int i = 0; i < renderers.Length; i++)
+				renderers[i].material.SetFloat("Vector1_9C3EE106", 1);
 
 		if (agent.enabled)
 			base.MovementUpdate();
@@ -40,9 +46,10 @@ public class AkashitaAI : EnemyAI
 	{
 		if (timeToNextAttack <= 0.0f)
 		{
-			// Do the attacky thing
 			timeToNextAttack = timeBetweenAttacks;
 			agent.enabled = false;
+			if (attackSound != null)
+				audioSource.PlayOneShot(attackSound);
 			animator.SetTrigger("Akashita_Attacking");
 		}
 	}

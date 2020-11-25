@@ -24,6 +24,16 @@ public abstract class EnemyAI : MonoBehaviour
 	[HideInInspector]public float health = 100.0f;
 	public HealthBar healthBar;
 
+	[Header("Enemy Sound Settings")]
+	public AudioClip hurtSound;
+	public AudioClip attackSound;
+	[HideInInspector]public AudioSource audioSource;
+
+	[Header("Flash Settings")]
+	public float flashTime = 1.0f;
+	public float currentFlashTime = 0.0f;
+	protected Renderer[] renderers;
+
 	[Header("Ragdoll Settings")]
 	public float ragdollTime = 1.0f;
 	[HideInInspector]public float currentRagdollTime = 1.0f;
@@ -44,6 +54,16 @@ public abstract class EnemyAI : MonoBehaviour
 		healthBar.SetHealth(health);
 		currentStaggerTime = staggerTime;
 		agent.enabled = false;
+		if (hurtSound != null)
+			audioSource.PlayOneShot(hurtSound);
+
+		if (health > 0)
+		{
+			animator.SetTrigger("Staggering");
+			for (int i = 0; i < renderers.Length; i++)
+				renderers[i].material.SetFloat("Vector1_9C3EE106", 0);
+			currentFlashTime = flashTime;
+		}
 	}
 
 	public float GetHealth()
@@ -55,10 +75,12 @@ public abstract class EnemyAI : MonoBehaviour
 	{
 		// Cache this GameObject's navmesh agent
 		agent = GetComponent<NavMeshAgent>();
+		audioSource = GetComponent<AudioSource>();
 		healthBar = GetComponentInChildren<HealthBar>();
 		animator = GetComponentInChildren<Animator>();
 		health = currentMaxHealth;
 		canvasObject = GetComponentInChildren<FollowCamera>().gameObject;
+		renderers = gameObject.GetComponentsInChildren<Renderer>();
 	}
 
 	void FixedUpdate()
@@ -71,6 +93,11 @@ public abstract class EnemyAI : MonoBehaviour
 			currentStaggerTime -= 1.0f / 60.0f;
 		if (timeToNextAttack < timeBetweenAttacks - attackLength && currentStaggerTime <= 0.0f)
 			agent.enabled = true;
+		if (currentFlashTime > 0.0f)
+			currentFlashTime -= 1.0f / 60.0f;
+		else
+			for (int i = 0; i < renderers.Length; i++)
+				renderers[i].material.SetFloat("Vector1_9C3EE106", 1);
 
 		if (agent.enabled)
 			MovementUpdate();
@@ -112,6 +139,8 @@ public abstract class EnemyAI : MonoBehaviour
 			// Do the attacky thing
 			timeToNextAttack = timeBetweenAttacks;
 			agent.enabled = false;
+			if (attackSound != null)
+				audioSource.PlayOneShot(attackSound);
 		}
 	}
 
