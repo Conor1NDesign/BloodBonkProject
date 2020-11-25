@@ -32,6 +32,11 @@ public class AkashitaAI : EnemyAI
 			}
 			agent.enabled = true;
 		}
+		if (currentFlashTime > 0.0f)
+			currentFlashTime -= 1.0f / 60.0f;
+		else
+			for (int i = 0; i < renderers.Length; i++)
+				renderers[i].material.SetFloat("Vector1_9C3EE106", 1);
 
 		if (agent.enabled)
 			base.MovementUpdate();
