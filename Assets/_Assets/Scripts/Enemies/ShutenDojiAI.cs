@@ -74,6 +74,8 @@ public class ShutenDojiAI : EnemyAI
 			timeToNextAttack = timeBetweenAttacks;
 			agent.enabled = false;
 			dealtDamage = false;
+			if (attackSound != null)
+				audioSource.PlayOneShot(attackSound);
 			animator.SetTrigger("Shuten_Attacking");
 			bottlePosInitial = bottle.transform.position;
 		}

@@ -41,9 +41,10 @@ public class AkashitaAI : EnemyAI
 	{
 		if (timeToNextAttack <= 0.0f)
 		{
-			// Do the attacky thing
 			timeToNextAttack = timeBetweenAttacks;
 			agent.enabled = false;
+			if (attackSound != null)
+				audioSource.PlayOneShot(attackSound);
 			animator.SetTrigger("Akashita_Attacking");
 		}
 	}

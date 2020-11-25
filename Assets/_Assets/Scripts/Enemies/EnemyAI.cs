@@ -24,6 +24,11 @@ public abstract class EnemyAI : MonoBehaviour
 	[HideInInspector]public float health = 100.0f;
 	public HealthBar healthBar;
 
+	[Header("Enemy Sound Settings")]
+	public AudioClip hurtSound;
+	public AudioClip attackSound;
+	[HideInInspector]public AudioSource audioSource;
+
 	[Header("Ragdoll Settings")]
 	public float ragdollTime = 1.0f;
 	[HideInInspector]public float currentRagdollTime = 1.0f;
@@ -44,6 +49,8 @@ public abstract class EnemyAI : MonoBehaviour
 		healthBar.SetHealth(health);
 		currentStaggerTime = staggerTime;
 		agent.enabled = false;
+		if (hurtSound != null)
+			audioSource.PlayOneShot(hurtSound);
 	}
 
 	public float GetHealth()
@@ -55,6 +62,7 @@ public abstract class EnemyAI : MonoBehaviour
 	{
 		// Cache this GameObject's navmesh agent
 		agent = GetComponent<NavMeshAgent>();
+		audioSource = GetComponent<AudioSource>();
 		healthBar = GetComponentInChildren<HealthBar>();
 		animator = GetComponentInChildren<Animator>();
 		health = currentMaxHealth;
@@ -112,6 +120,8 @@ public abstract class EnemyAI : MonoBehaviour
 			// Do the attacky thing
 			timeToNextAttack = timeBetweenAttacks;
 			agent.enabled = false;
+			if (attackSound != null)
+				audioSource.PlayOneShot(attackSound);
 		}
 	}
 
