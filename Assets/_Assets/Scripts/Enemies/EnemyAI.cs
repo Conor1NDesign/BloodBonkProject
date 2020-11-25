@@ -25,6 +25,8 @@ public abstract class EnemyAI : MonoBehaviour
 	public HealthBar healthBar;
 
 	[Header("Enemy Sound Settings")]
+	public float minPitch = 0.7f;
+	public float maxPitch = 1.3f;
 	public AudioClip hurtSound;
 	public AudioClip attackSound;
 	[HideInInspector]public AudioSource audioSource;
@@ -55,7 +57,10 @@ public abstract class EnemyAI : MonoBehaviour
 		currentStaggerTime = staggerTime;
 		agent.enabled = false;
 		if (hurtSound != null)
+		{
+			audioSource.pitch = Random.Range(minPitch, maxPitch);
 			audioSource.PlayOneShot(hurtSound);
+		}
 
 		if (health > 0)
 		{
@@ -140,7 +145,10 @@ public abstract class EnemyAI : MonoBehaviour
 			timeToNextAttack = timeBetweenAttacks;
 			agent.enabled = false;
 			if (attackSound != null)
+			{
+				audioSource.pitch = Random.Range(minPitch, maxPitch);
 				audioSource.PlayOneShot(attackSound);
+			}
 		}
 	}
 

@@ -81,7 +81,10 @@ public class ShutenDojiAI : EnemyAI
 			agent.enabled = false;
 			dealtDamage = false;
 			if (attackSound != null)
+			{
+				audioSource.pitch = Random.Range(minPitch, maxPitch);
 				audioSource.PlayOneShot(attackSound);
+			}
 			animator.SetTrigger("Shuten_Attacking");
 			bottlePosInitial = bottle.transform.position;
 		}
