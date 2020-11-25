@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource deathSound;
     public AudioSource dashSound;
 
+    bool playDashSound;
+
     [HideInInspector] public Vector2 posOnScreen; // Apply on attack
     [HideInInspector] public Vector2 mouseInput;
     [HideInInspector] public bool hasLunged;
@@ -139,8 +141,19 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
             {
-                if (dashSound != null)
-                    dashSound.Play();
+                if (Input.GetKeyDown(KeyCode.LeftShift) && !Input.GetKey(KeyCode.Space) || Input.GetKeyDown(KeyCode.Space) && !Input.GetKey(KeyCode.LeftShift))
+                {
+                    playDashSound = true;
+                }
+
+                if (actualSpeed >= dashSpeed / 1.5f)
+                {
+                    if (dashSound != null && playDashSound)
+                    {
+                        dashSound.Play();
+                        playDashSound = false;
+                    }
+                }
 
                 // Check if dash speed is reached
                 if (actualSpeed >= dashSpeed)
