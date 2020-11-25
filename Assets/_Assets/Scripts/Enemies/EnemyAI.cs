@@ -29,6 +29,7 @@ public abstract class EnemyAI : MonoBehaviour
 	public float maxPitch = 1.3f;
 	public AudioClip hurtSound;
 	public AudioClip attackSound;
+	public AudioClip hitSound;
 	[HideInInspector]public AudioSource audioSource;
 
 	[Header("Flash Settings")]
