@@ -29,6 +29,11 @@ public abstract class EnemyAI : MonoBehaviour
 	public AudioClip attackSound;
 	[HideInInspector]public AudioSource audioSource;
 
+	[Header("Flash Settings")]
+	public float flashTime = 1.0f;
+	Renderer[] renderers;
+	float currentFlashTime = 0.0f;
+
 	[Header("Ragdoll Settings")]
 	public float ragdollTime = 1.0f;
 	[HideInInspector]public float currentRagdollTime = 1.0f;
@@ -51,6 +56,10 @@ public abstract class EnemyAI : MonoBehaviour
 		agent.enabled = false;
 		if (hurtSound != null)
 			audioSource.PlayOneShot(hurtSound);
+
+		for (int i = 0; i < renderers.Length; i++)
+			renderers[i].material.SetFloat("Vector1_9C3EE106", 0);
+		currentFlashTime = flashTime;
 	}
 
 	public float GetHealth()
@@ -67,6 +76,7 @@ public abstract class EnemyAI : MonoBehaviour
 		animator = GetComponentInChildren<Animator>();
 		health = currentMaxHealth;
 		canvasObject = GetComponentInChildren<FollowCamera>().gameObject;
+		renderers = gameObject.GetComponentsInChildren<Renderer>();
 	}
 
 	void FixedUpdate()
@@ -79,6 +89,11 @@ public abstract class EnemyAI : MonoBehaviour
 			currentStaggerTime -= 1.0f / 60.0f;
 		if (timeToNextAttack < timeBetweenAttacks - attackLength && currentStaggerTime <= 0.0f)
 			agent.enabled = true;
+		if (currentFlashTime > 0.0f)
+			currentFlashTime -= 1.0f / 60.0f;
+		else
+			for (int i = 0; i < renderers.Length; i++)
+				renderers[i].material.SetFloat("Vector1_9C3EE106", 1);
 
 		if (agent.enabled)
 			MovementUpdate();
