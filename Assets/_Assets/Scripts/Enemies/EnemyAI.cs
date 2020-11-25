@@ -31,8 +31,8 @@ public abstract class EnemyAI : MonoBehaviour
 
 	[Header("Flash Settings")]
 	public float flashTime = 1.0f;
+	public float currentFlashTime = 0.0f;
 	protected Renderer[] renderers;
-	float currentFlashTime = 0.0f;
 
 	[Header("Ragdoll Settings")]
 	public float ragdollTime = 1.0f;
