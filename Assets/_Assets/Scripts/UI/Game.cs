@@ -134,6 +134,9 @@ public class Game : MonoBehaviour
             weaponPrefab.SetActive(false);
             player.input = Vector3.zero;
 
+            if (player.deathSound != null)
+                player.deathSound.Play();
+
             player.animator.SetTrigger("Death");
         }
     }
@@ -160,10 +163,10 @@ public class Game : MonoBehaviour
             bestScore.text = highscore.ToString();
         }
 
-        //dmgDealtText.text = dmgDealt.ToString();
-        //dmgReceivedText.text = dmgReceived.ToString();
-        //lifeStolenText.text = lifeStolen.ToString();
-        //killsText.text = kills.ToString();
+        dmgDealtText.text = dmgDealt.ToString();
+        dmgReceivedText.text = dmgReceived.ToString();
+        lifeStolenText.text = lifeStolen.ToString();
+        killsText.text = kills.ToString();
 
     }
 

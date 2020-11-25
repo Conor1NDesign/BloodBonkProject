@@ -14,13 +14,14 @@ public enum AvaliablePowerUp
 
 public class PowerUp : MonoBehaviour
 {
+    [Header("PowerUp Look")]
     public GameObject notificationImage;
     public Color tempColor;
 
+    [Header("PowerUp Stats")]
     public AvaliablePowerUp currentPowerUp;
+    [Range(0.01f, 1f)] [Tooltip("0.1 = Increase value by 10%")] public float multiplier = 0.1f;
 
-    [Range(0.01f, 1f)] [Tooltip("0.1 = Increase value by 10%")] 
-    public float multiplier = 0.1f;
 
     // Classes
     PlayerStats stats;

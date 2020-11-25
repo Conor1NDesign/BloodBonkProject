@@ -8,6 +8,9 @@ public class SpawnPower : MonoBehaviour
 
     [Range(0f, 100f)] public float spawnChance = 100f;
 
+    [Header("PowerUp Sounds")]
+    public AudioSource pickUpSound;
+
     public void SpawnPowerUp(Vector3 position)
     {
         if (spawnChance > Random.Range(0f, 100f))
