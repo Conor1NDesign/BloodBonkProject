@@ -59,6 +59,7 @@ public abstract class EnemyAI : MonoBehaviour
 
 		if (health > 0)
 		{
+			animator.SetTrigger("Staggering");
 			for (int i = 0; i < renderers.Length; i++)
 				renderers[i].material.SetFloat("Vector1_9C3EE106", 0);
 			currentFlashTime = flashTime;
