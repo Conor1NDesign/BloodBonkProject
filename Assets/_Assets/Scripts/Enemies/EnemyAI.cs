@@ -57,9 +57,12 @@ public abstract class EnemyAI : MonoBehaviour
 		if (hurtSound != null)
 			audioSource.PlayOneShot(hurtSound);
 
-		for (int i = 0; i < renderers.Length; i++)
-			renderers[i].material.SetFloat("Vector1_9C3EE106", 0);
-		currentFlashTime = flashTime;
+		if (health > 0)
+		{
+			for (int i = 0; i < renderers.Length; i++)
+				renderers[i].material.SetFloat("Vector1_9C3EE106", 0);
+			currentFlashTime = flashTime;
+		}
 	}
 
 	public float GetHealth()
