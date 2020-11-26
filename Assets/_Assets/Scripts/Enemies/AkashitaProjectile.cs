@@ -14,7 +14,7 @@ public class AkashitaProjectile : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (!(other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Weapon")))
+		if (!(other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Weapon") || other.gameObject.CompareTag("Powerup")))
 			Destroy(gameObject);
 	}
 }
