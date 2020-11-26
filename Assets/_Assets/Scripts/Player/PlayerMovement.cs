@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public Vector3 input; // Player Movement
 
     Transform mainCam;
+    Transform attackDir;
 
     bool isDashing;
     
@@ -56,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        attackDir = transform.GetChild(2).transform;
         dashParticle = GetComponentInChildren<TrailRenderer>();
         gameManager = FindObjectOfType<Game>();
         weapon = FindObjectOfType<Weapon>();
@@ -222,5 +224,15 @@ public class PlayerMovement : MonoBehaviour
                 transform.position += moveDir * weapon.lungeDistance * Time.fixedDeltaTime;
             }
         }
+
+        Vector2 atkDirInput = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        Vector2 mousePos = Camera.main.WorldToScreenPoint(transform.position);
+
+        // Get Angle
+        float atkDirAngle = Mathf.Atan2(atkDirInput.x - mousePos.x, atkDirInput.y - mousePos.y) * Mathf.Rad2Deg + mainCam.eulerAngles.y;
+        // Apply rotation
+        Vector3 atkDir = Quaternion.Euler(0f, atkDirAngle, 0f) * Vector3.up;
+        // Attacking Direction
+        attackDir.rotation = Quaternion.AngleAxis(atkDirAngle + 180f, atkDir);
     }
 }
