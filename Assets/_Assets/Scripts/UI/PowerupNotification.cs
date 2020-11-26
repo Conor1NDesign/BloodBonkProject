@@ -7,13 +7,14 @@ public class PowerupNotification : MonoBehaviour
 {
     public Image notificationImage;
     private Color tempColor;
+    public float startingAlpha;
 
     // Start is called before the first frame update
     void Start()
     {
         notificationImage = GetComponent<Image>();
         tempColor = notificationImage.color;
-        tempColor.a = 0f;
+        tempColor.a = startingAlpha;
         notificationImage.color = tempColor;
     }
 
