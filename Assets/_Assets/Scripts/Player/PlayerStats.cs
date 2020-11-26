@@ -21,6 +21,7 @@ public class PlayerStats : MonoBehaviour
         if (other.gameObject.CompareTag("Projectile"))
 		{
 			TakeDamage(other.transform.root.gameObject.GetComponent<AkashitaProjectile>().damage);
+			GetComponent<PlayerMovement>().akashitaProjectileHitSound.Play();
 			Destroy(other.transform.root.gameObject);
 		}
     }

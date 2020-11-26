@@ -18,10 +18,12 @@ public class PlayerMovement : MonoBehaviour
     public float maxDashMeter = 100f;
     public float refillTimer = 1f;
     private float currentDashMeter;
+    TrailRenderer dashParticle;
 
     [Header("Player Sounds")]
     public AudioSource deathSound;
     public AudioSource dashSound;
+	public AudioSource akashitaProjectileHitSound;
 
     bool playDashSound;
 
@@ -33,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public Vector3 input; // Player Movement
 
     Transform mainCam;
+    Transform attackDir;
 
     bool isDashing;
     
@@ -55,6 +58,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        attackDir = transform.GetChild(2).transform;
+        dashParticle = GetComponentInChildren<TrailRenderer>();
         gameManager = FindObjectOfType<Game>();
         weapon = FindObjectOfType<Weapon>();
 
@@ -141,6 +146,8 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
             {
+                dashParticle.enabled = true;
+
                 if (Input.GetKeyDown(KeyCode.LeftShift) && !Input.GetKey(KeyCode.Space) || Input.GetKeyDown(KeyCode.Space) && !Input.GetKey(KeyCode.LeftShift))
                 {
                     playDashSound = true;
@@ -173,6 +180,7 @@ public class PlayerMovement : MonoBehaviour
             // No longer dashing
             actualSpeed = moveSpeed;
             isDashing = false;
+            dashParticle.enabled = false;
         }
     }
 
@@ -217,5 +225,15 @@ public class PlayerMovement : MonoBehaviour
                 transform.position += moveDir * weapon.lungeDistance * Time.fixedDeltaTime;
             }
         }
+
+        Vector2 atkDirInput = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        Vector2 mousePos = Camera.main.WorldToScreenPoint(transform.position);
+
+        // Get Angle
+        float atkDirAngle = Mathf.Atan2(atkDirInput.x - mousePos.x, atkDirInput.y - mousePos.y) * Mathf.Rad2Deg + mainCam.eulerAngles.y;
+        // Apply rotation
+        Vector3 atkDir = Quaternion.Euler(0f, atkDirAngle, 0f) * Vector3.up;
+        // Attacking Direction
+        attackDir.rotation = Quaternion.AngleAxis(atkDirAngle + 180f, atkDir);
     }
 }
