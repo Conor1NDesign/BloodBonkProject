@@ -17,12 +17,16 @@ public abstract class EnemyAI : MonoBehaviour
 	public float damage = 10.0f;
 	[Tooltip("How long this enemy staggers when hit")]public float staggerTime = 1.0f;
 	[SerializeField]protected float currentStaggerTime = 0.0f;
+
 	//HEALTH!
 	[Header("Health Settings")]
 	public float baseMaxHealth = 100.0f;
 	public float currentMaxHealth = 0.0f;
 	[HideInInspector]public float health = 100.0f;
 	public HealthBar healthBar;
+#pragma warning disable 0649
+	protected GameObject canvasObject;
+#pragma warning restore 0649
 
 	[Header("Enemy Sound Settings")]
 	public float minPitch = 0.7f;
@@ -41,15 +45,13 @@ public abstract class EnemyAI : MonoBehaviour
 	public float ragdollTime = 1.0f;
 	[HideInInspector]public float currentRagdollTime = 1.0f;
 	protected bool ragdolling = false;
-#pragma warning disable 0649
-	protected GameObject canvasObject;
-#pragma warning restore 0649
 	
 	// Cached components of the enemy
 	protected Animator animator;
 	protected NavMeshAgent agent;
 	protected float timeToNextAttack = 0.0f;
 
+	// Handles taking damage, including staggering and flashing
 	public void TakeDamage(float damage)
 	{
 		health -= damage;
@@ -77,9 +79,9 @@ public abstract class EnemyAI : MonoBehaviour
 		return health;
 	}
 	
+	// Cache components when the enemy spawns
 	void Awake()
 	{
-		// Cache this GameObject's navmesh agent
 		agent = GetComponent<NavMeshAgent>();
 		audioSource = GetComponent<AudioSource>();
 		healthBar = GetComponentInChildren<HealthBar>();
@@ -89,6 +91,7 @@ public abstract class EnemyAI : MonoBehaviour
 		renderers = gameObject.GetComponentsInChildren<Renderer>();
 	}
 
+	// Tick ragdoll, attack, and flash timers
 	void FixedUpdate()
 	{
 		if (ragdolling)
@@ -109,6 +112,7 @@ public abstract class EnemyAI : MonoBehaviour
 			MovementUpdate();
 	}
 
+	// Rotates the enemy to face towards the player
 	protected void MovementUpdate()
 	{
 		Vector3 toPlayer = player.transform.position - transform.position;
@@ -116,7 +120,6 @@ public abstract class EnemyAI : MonoBehaviour
 		currentDistanceToPlayer = toPlayer.magnitude;
 		if (currentDistanceToPlayer < range)
 		{
-			// Rotate towards the player
 			float directionToPlayer = Vector3.Dot(Vector3.Cross(transform.forward, toPlayer), transform.up);
 			
 			directionToPlayer = directionToPlayer > 1.0f ? 0.05f :
@@ -153,6 +156,8 @@ public abstract class EnemyAI : MonoBehaviour
 		}
 	}
 
+	// Handles "ragolling" on enemy death
 	public abstract void Ragdoll();
+	// Handles resetting an enemy for respawning
 	public abstract void Unragdoll();
 }

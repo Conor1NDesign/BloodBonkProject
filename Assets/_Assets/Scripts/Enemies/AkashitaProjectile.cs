@@ -14,6 +14,7 @@ public class AkashitaProjectile : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
+		// If the projectile hits a wall or other world objects, remove it
 		if (!(other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Weapon") || other.gameObject.CompareTag("Powerup")))
 			Destroy(gameObject);
 	}
