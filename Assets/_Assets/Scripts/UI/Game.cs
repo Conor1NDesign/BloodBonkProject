@@ -29,6 +29,7 @@ public class Game : MonoBehaviour
     public Text lifeStolenText;
     public Text killsText;
 
+    // Weapon Selection
     GameObject weaponPrefab;
     string weapon;
 
@@ -37,7 +38,6 @@ public class Game : MonoBehaviour
     [HideInInspector] public int dmgReceived;
     [HideInInspector] public int lifeStolen;
     [HideInInspector] public int kills;
-
     int highscore;
     
     // Pause Menu

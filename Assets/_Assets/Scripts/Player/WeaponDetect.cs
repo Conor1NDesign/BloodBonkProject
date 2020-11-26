@@ -10,9 +10,9 @@ public class WeaponDetect : MonoBehaviour
     PlayerStats stats;
     Weapon weapon;
 
+    // Knockback
     public float mass = 3f; // define the character mass
     public float force = 10f;
-
     Vector3 impact = Vector3.zero;
 
     float damageDelay;

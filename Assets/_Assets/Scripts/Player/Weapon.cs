@@ -15,19 +15,20 @@ public class Weapon : MonoBehaviour
     public AudioSource hitSound;
     public AudioSource swingSound;
 
+    // If player is currently attacking
     [HideInInspector] public bool isSwinging;
 
+    // Raycasting
     List<Vector3> currentHardPointPos;
     List<Vector3> debugCurrentHardPointPos;
+    Vector3 playerPos;
+    Vector3 enemyPos;
+    Ray wallDebug;
 
     // Classes
     CameraShake camShake;
     PlayerStats stats;
     PlayerMovement player;
-
-    Vector3 playerPos;
-    Vector3 enemyPos;
-    Ray wallDebug;
 
     private void Awake()
     {
