@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public float maxDashMeter = 100f;
     public float refillTimer = 1f;
     private float currentDashMeter;
+    TrailRenderer dashParticle;
 
     [Header("Player Sounds")]
     public AudioSource deathSound;
@@ -55,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        dashParticle = GetComponentInChildren<TrailRenderer>();
         gameManager = FindObjectOfType<Game>();
         weapon = FindObjectOfType<Weapon>();
 
@@ -141,6 +143,8 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
             {
+                dashParticle.enabled = true;
+
                 if (Input.GetKeyDown(KeyCode.LeftShift) && !Input.GetKey(KeyCode.Space) || Input.GetKeyDown(KeyCode.Space) && !Input.GetKey(KeyCode.LeftShift))
                 {
                     playDashSound = true;
@@ -173,6 +177,7 @@ public class PlayerMovement : MonoBehaviour
             // No longer dashing
             actualSpeed = moveSpeed;
             isDashing = false;
+            dashParticle.enabled = false;
         }
     }
 
