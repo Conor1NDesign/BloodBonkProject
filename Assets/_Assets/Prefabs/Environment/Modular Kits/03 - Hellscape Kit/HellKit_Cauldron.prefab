@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7351329861304759369
 Transform:
@@ -41,13 +41,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7426303122013052035}
-  - component: {fileID: 2668455189214814277}
+  - component: {fileID: 228450797006997452}
   m_Layer: 0
   m_Name: Cauldron_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7426303122013052035
 Transform:
@@ -63,8 +63,8 @@ Transform:
   m_Father: {fileID: 7351329861304759369}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2668455189214814277
-BoxCollider:
+--- !u!136 &228450797006997452
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -73,8 +73,9 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3, y: 3, z: 3}
+  m_Radius: 3
+  m_Height: 8
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &6691549332447164701
 PrefabInstance:
@@ -147,6 +148,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HellKit_Cauldron_Mesh
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: a7ff6ca453bfd98419cf38a0bb395b80,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7ff6ca453bfd98419cf38a0bb395b80, type: 3}

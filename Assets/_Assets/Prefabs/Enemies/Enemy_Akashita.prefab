@@ -144,7 +144,7 @@ MonoBehaviour:
   attackSound: {fileID: 8300000, guid: 7e901ee175f5ea5409c03942552531cc, type: 3}
   hitSound: {fileID: 8300000, guid: eb98bc9f28bb51447884e9621b68a0e2, type: 3}
   audioSource: {fileID: 0}
-  flashTime: 1
+  flashTime: 0.25
   currentFlashTime: 0
   ragdollTime: 1
   currentRagdollTime: 1
