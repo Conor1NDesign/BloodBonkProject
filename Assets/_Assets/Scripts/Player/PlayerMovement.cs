@@ -27,29 +27,29 @@ public class PlayerMovement : MonoBehaviour
 
     bool playDashSound;
 
+    // Attacking Direction
     [HideInInspector] public Vector2 posOnScreen; // Apply on attack
     [HideInInspector] public Vector2 mouseInput;
     [HideInInspector] public bool hasLunged;
     [HideInInspector] public bool isAttacking;
-
-    [HideInInspector] public Vector3 input; // Player Movement
-
-    Transform mainCam;
     Transform attackDir;
-
-    bool isDashing;
-    
-    float actualSpeed; // Sprint or normal movement
-    float maxTime; // Time to start refilling dash
 
     // Classes
     DashMeter dashMeter;
+    Game gameManager;
+    Weapon weapon;
 
     // Component
     [HideInInspector] public Animator animator;
 
-    Game gameManager;
-    Weapon weapon;
+    // Movement Input
+    [HideInInspector] public Vector3 input; // Player Movement
+
+    Transform mainCam; // Get MainCam Position
+    bool isDashing; // If Player is dashing
+
+    float actualSpeed; // Sprint or normal movement
+    float maxTime; // Time to start refilling dash
 
     void Awake()
     {
@@ -226,6 +226,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        // Attacking Direction UI
         Vector2 atkDirInput = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         Vector2 mousePos = Camera.main.WorldToScreenPoint(transform.position);
 

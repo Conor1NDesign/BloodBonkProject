@@ -29,16 +29,19 @@ public class Game : MonoBehaviour
     public Text lifeStolenText;
     public Text killsText;
 
+    // Weapon Selection
     GameObject weaponPrefab;
+    string weapon;
 
+    // Highscore Menu
     [HideInInspector] public int dmgDealt;
     [HideInInspector] public int dmgReceived;
     [HideInInspector] public int lifeStolen;
     [HideInInspector] public int kills;
-
     int highscore;
-    string weapon;
-    bool isPaused = false;
+
+    // Pause Menu
+    [HideInInspector] public bool isPaused = false;
     [HideInInspector] public bool isDead = false;
 
     void Awake()
@@ -66,19 +69,22 @@ public class Game : MonoBehaviour
     // Pause Menu
     void Pause()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
+        if (!isDead)
         {
-            isPaused = true;
+            if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
+            {
+                isPaused = true;
 
-            Time.timeScale = 0f;
-            pause.SetActive(true);
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape) && isPaused)
-        {
-            isPaused = false;
+                Time.timeScale = 0f;
+                pause.SetActive(true);
+            }
+            else if (Input.GetKeyDown(KeyCode.Escape) && isPaused)
+            {
+                isPaused = false;
 
-            Time.timeScale = 1f;
-            pause.SetActive(false);
+                Time.timeScale = 1f;
+                pause.SetActive(false);
+            }
         }
     }
 

@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
+    // Player Health
     public float maxHealth = 100f;
-    [Tooltip("0.1 = Heal 10% of damage")] public float lifesteal = 0.1f;
-
     [HideInInspector] public float currentHealth;
+
+    [Tooltip("0.1 = Heal 10% of damage")] public float lifesteal = 0.1f;
 
 	[HideInInspector] public bool godMode = false;
 

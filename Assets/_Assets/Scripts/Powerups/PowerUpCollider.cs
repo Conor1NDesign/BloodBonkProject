@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PowerUpCollider : MonoBehaviour
 {
+    // Classes
     SpawnPower powerUpManager;
     PowerUp powerUp;
 
