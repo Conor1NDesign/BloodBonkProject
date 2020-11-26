@@ -223,6 +223,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 512832187}
     m_Modifications:
+    - target: {fileID: 4817367637356799439, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6046131713024384395, guid: a287b63384f9a9f48828a9751c08615e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -282,6 +287,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Bones_001 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896218029469944009, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176536158789691814, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a287b63384f9a9f48828a9751c08615e, type: 3}
@@ -2434,6 +2449,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!1 &66848103
@@ -2577,6 +2602,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!1001 &77267181
@@ -2586,6 +2621,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 4639278847537508794, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5424956408281100119, guid: bc5b5c74ff5a2944fb8984d0329d7578,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2646,6 +2686,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_WeaponStand (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 7139700018005297165, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549825060487415497, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc5b5c74ff5a2944fb8984d0329d7578, type: 3}
 --- !u!4 &77267182 stripped
@@ -2661,10 +2711,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -3299,6 +3359,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 4639278847537508794, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5424956408281100119, guid: bc5b5c74ff5a2944fb8984d0329d7578,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3358,6 +3423,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_WeaponStand (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139700018005297165, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549825060487415497, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc5b5c74ff5a2944fb8984d0329d7578, type: 3}
@@ -3926,10 +4001,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -4721,6 +4806,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (61)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!4 &162707682 stripped
@@ -5417,6 +5512,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (85)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -6151,6 +6256,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 512832187}
     m_Modifications:
+    - target: {fileID: 4817367637356799439, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6046131713024384395, guid: a287b63384f9a9f48828a9751c08615e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6210,6 +6320,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Bones_001 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896218029469944009, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176536158789691814, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a287b63384f9a9f48828a9751c08615e, type: 3}
@@ -6321,10 +6441,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -6761,6 +6891,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Rock_003_Medium (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3334034398627507575, guid: 28969490a30ef2945863ffa5a5bdaf40,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623013413166538307, guid: 28969490a30ef2945863ffa5a5bdaf40,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28969490a30ef2945863ffa5a5bdaf40, type: 3}
 --- !u!4 &207836090 stripped
@@ -7046,6 +7186,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (65)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!4 &210325594 stripped
@@ -7126,6 +7276,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_002_Large (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772787146213799707, guid: 04ddb81067eba754cb3f7ea9bf04037c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361068897936931957, guid: 04ddb81067eba754cb3f7ea9bf04037c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04ddb81067eba754cb3f7ea9bf04037c, type: 3}
@@ -7296,6 +7456,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (73)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -7502,10 +7672,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -7954,6 +8134,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (60)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!4 &236173280 stripped
@@ -8184,10 +8374,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -9127,6 +9327,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 4639278847537508794, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5424956408281100119, guid: bc5b5c74ff5a2944fb8984d0329d7578,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9187,6 +9392,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_WeaponStand (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 7139700018005297165, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549825060487415497, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc5b5c74ff5a2944fb8984d0329d7578, type: 3}
 --- !u!4 &284829455 stripped
@@ -9245,6 +9460,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 4639278847537508794, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5424956408281100119, guid: bc5b5c74ff5a2944fb8984d0329d7578,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9304,6 +9524,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_WeaponStand (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139700018005297165, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549825060487415497, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc5b5c74ff5a2944fb8984d0329d7578, type: 3}
@@ -9801,6 +10031,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (56)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -10308,6 +10548,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!1 &323732541
@@ -10327,7 +10577,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &323732542
 Transform:
@@ -10959,6 +11209,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 4639278847537508794, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5424956408281100119, guid: bc5b5c74ff5a2944fb8984d0329d7578,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11019,6 +11274,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_WeaponStand (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 7139700018005297165, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549825060487415497, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc5b5c74ff5a2944fb8984d0329d7578, type: 3}
 --- !u!4 &343439637 stripped
@@ -11034,6 +11299,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 4639278847537508794, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5424956408281100119, guid: bc5b5c74ff5a2944fb8984d0329d7578,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11093,6 +11363,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_WeaponStand
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139700018005297165, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549825060487415497, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc5b5c74ff5a2944fb8984d0329d7578, type: 3}
@@ -11229,6 +11509,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 512832187}
     m_Modifications:
+    - target: {fileID: 4817367637356799439, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6046131713024384395, guid: a287b63384f9a9f48828a9751c08615e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11288,6 +11573,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Bones_001 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896218029469944009, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176536158789691814, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a287b63384f9a9f48828a9751c08615e, type: 3}
@@ -11543,10 +11838,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 512832187}
     m_Modifications:
+    - target: {fileID: 1750022047740174629, guid: c5e3fb7cd6f1b944f9e683bb63a11c53,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4032098131953504182, guid: c5e3fb7cd6f1b944f9e683bb63a11c53,
         type: 3}
       propertyPath: m_Name
       value: HellKit_Gear_001_Large
+      objectReference: {fileID: 0}
+    - target: {fileID: 4032098131953504182, guid: c5e3fb7cd6f1b944f9e683bb63a11c53,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7263076832346323332, guid: c5e3fb7cd6f1b944f9e683bb63a11c53,
         type: 3}
@@ -11768,6 +12073,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!1 &359679868
@@ -11787,7 +12102,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &359679869
 Transform:
@@ -12457,6 +12772,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -13540,6 +13865,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!1001 &405034030
@@ -13608,6 +13943,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (82)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -13847,6 +14192,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Rock_002_Large (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2772787146213799707, guid: 04ddb81067eba754cb3f7ea9bf04037c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361068897936931957, guid: 04ddb81067eba754cb3f7ea9bf04037c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04ddb81067eba754cb3f7ea9bf04037c, type: 3}
 --- !u!4 &407706126 stripped
@@ -14005,6 +14360,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_002_Large (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772787146213799707, guid: 04ddb81067eba754cb3f7ea9bf04037c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361068897936931957, guid: 04ddb81067eba754cb3f7ea9bf04037c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04ddb81067eba754cb3f7ea9bf04037c, type: 3}
@@ -14384,6 +14749,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Bones_002
       objectReference: {fileID: 0}
+    - target: {fileID: 4225136743276102684, guid: db7b73a6543a2224d8b024409a304bab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5296988818168799839, guid: db7b73a6543a2224d8b024409a304bab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14438,6 +14808,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688925891091091787, guid: db7b73a6543a2224d8b024409a304bab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401117649672069383, guid: db7b73a6543a2224d8b024409a304bab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db7b73a6543a2224d8b024409a304bab, type: 3}
@@ -14820,6 +15200,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 512832187}
     m_Modifications:
+    - target: {fileID: 4817367637356799439, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6046131713024384395, guid: a287b63384f9a9f48828a9751c08615e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14880,6 +15265,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Bones_001 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7896218029469944009, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176536158789691814, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a287b63384f9a9f48828a9751c08615e, type: 3}
 --- !u!1001 &424472600
@@ -14889,10 +15284,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -15352,7 +15757,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &430827721
 Transform:
@@ -16154,6 +16559,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!1 &443487560
@@ -16252,6 +16667,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -16526,6 +16951,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 512832187}
     m_Modifications:
+    - target: {fileID: 184206121677794693, guid: 3d3d255ab6b90b74ba69b3982a505832,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1680577734227684277, guid: 3d3d255ab6b90b74ba69b3982a505832,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16585,6 +17015,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Bones_003
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491550685291422817, guid: 3d3d255ab6b90b74ba69b3982a505832,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622557479392646443, guid: 3d3d255ab6b90b74ba69b3982a505832,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d3d255ab6b90b74ba69b3982a505832, type: 3}
@@ -17013,6 +17453,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!1001 &465891498
@@ -17022,10 +17472,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -17551,6 +18011,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!1 &481712492
@@ -17604,10 +18074,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -17789,10 +18269,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -18543,6 +19033,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!4 &503283223 stripped
@@ -18721,6 +19221,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 512832187}
     m_Modifications:
+    - target: {fileID: 4817367637356799439, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6046131713024384395, guid: a287b63384f9a9f48828a9751c08615e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18780,6 +19285,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Bones_001 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896218029469944009, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176536158789691814, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a287b63384f9a9f48828a9751c08615e, type: 3}
@@ -19086,6 +19601,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 512832187}
     m_Modifications:
+    - target: {fileID: 184206121677794693, guid: 3d3d255ab6b90b74ba69b3982a505832,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1680577734227684277, guid: 3d3d255ab6b90b74ba69b3982a505832,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19146,6 +19666,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Bones_003 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2491550685291422817, guid: 3d3d255ab6b90b74ba69b3982a505832,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622557479392646443, guid: 3d3d255ab6b90b74ba69b3982a505832,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d3d255ab6b90b74ba69b3982a505832, type: 3}
 --- !u!1001 &522777793
@@ -19155,6 +19685,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 4639278847537508794, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5424956408281100119, guid: bc5b5c74ff5a2944fb8984d0329d7578,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19214,6 +19749,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_WeaponStand (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139700018005297165, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549825060487415497, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc5b5c74ff5a2944fb8984d0329d7578, type: 3}
@@ -19602,6 +20147,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!43 &540895810
@@ -19834,6 +20389,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!43 &541858511
@@ -20012,6 +20577,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 4639278847537508794, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5424956408281100119, guid: bc5b5c74ff5a2944fb8984d0329d7578,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20071,6 +20641,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_WeaponStand (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139700018005297165, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549825060487415497, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc5b5c74ff5a2944fb8984d0329d7578, type: 3}
@@ -20400,6 +20980,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Rock_002_Large (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2772787146213799707, guid: 04ddb81067eba754cb3f7ea9bf04037c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361068897936931957, guid: 04ddb81067eba754cb3f7ea9bf04037c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04ddb81067eba754cb3f7ea9bf04037c, type: 3}
 --- !u!4 &549206534 stripped
@@ -20578,6 +21168,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (75)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -21262,10 +21862,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1069697503}
     m_Modifications:
+    - target: {fileID: 3457856027096817684, guid: 42744d35878f16e49a537e6a40dd6d69,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6388813139584215503, guid: 42744d35878f16e49a537e6a40dd6d69,
         type: 3}
       propertyPath: m_Name
       value: HellKit_Cauldron
+      objectReference: {fileID: 0}
+    - target: {fileID: 6388813139584215503, guid: 42744d35878f16e49a537e6a40dd6d69,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297970090015062879, guid: 42744d35878f16e49a537e6a40dd6d69,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7351329861304759369, guid: 42744d35878f16e49a537e6a40dd6d69,
         type: 3}
@@ -21883,10 +22498,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -22058,7 +22683,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &589451542
 Transform:
@@ -22201,6 +22826,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -22548,6 +23183,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_DyingTree
       objectReference: {fileID: 0}
+    - target: {fileID: 3325833723438696971, guid: 4a58da9fc56d8574db79d74959e8078b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637531823111496560, guid: 4a58da9fc56d8574db79d74959e8078b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6209066647287676847, guid: 4a58da9fc56d8574db79d74959e8078b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6393703325823413943, guid: 4a58da9fc56d8574db79d74959e8078b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22672,6 +23322,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!4 &605063361 stripped
@@ -22746,6 +23406,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (58)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -22871,6 +23541,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -24665,10 +25345,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -25952,10 +26642,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -26834,6 +27534,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -27753,10 +28463,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -28332,6 +29052,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 512832187}
     m_Modifications:
+    - target: {fileID: 184206121677794693, guid: 3d3d255ab6b90b74ba69b3982a505832,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1680577734227684277, guid: 3d3d255ab6b90b74ba69b3982a505832,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28391,6 +29116,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Bones_003 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491550685291422817, guid: 3d3d255ab6b90b74ba69b3982a505832,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622557479392646443, guid: 3d3d255ab6b90b74ba69b3982a505832,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d3d255ab6b90b74ba69b3982a505832, type: 3}
@@ -28688,6 +29423,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Rock_002_Large (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2772787146213799707, guid: 04ddb81067eba754cb3f7ea9bf04037c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361068897936931957, guid: 04ddb81067eba754cb3f7ea9bf04037c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04ddb81067eba754cb3f7ea9bf04037c, type: 3}
 --- !u!4 &758135010 stripped
@@ -28962,6 +29707,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HellKit_Gear_003_Small (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985580369263409276, guid: c1eaf9872dd096c49a152856311d9e3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7751741836479171637, guid: c1eaf9872dd096c49a152856311d9e3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1eaf9872dd096c49a152856311d9e3c, type: 3}
@@ -29356,6 +30111,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 4639278847537508794, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5424956408281100119, guid: bc5b5c74ff5a2944fb8984d0329d7578,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -29415,6 +30175,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_WeaponStand (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139700018005297165, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549825060487415497, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc5b5c74ff5a2944fb8984d0329d7578, type: 3}
@@ -29939,6 +30709,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HellKit_Gear_002_Regular
       objectReference: {fileID: 0}
+    - target: {fileID: 1854304749651553735, guid: d508cb75212c7e0439517bdf8234a249,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7701296104066015903, guid: d508cb75212c7e0439517bdf8234a249,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -29993,6 +30768,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -22.569
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910606800767839810, guid: d508cb75212c7e0439517bdf8234a249,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d508cb75212c7e0439517bdf8234a249, type: 3}
@@ -30229,6 +31009,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Bones_002 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4225136743276102684, guid: db7b73a6543a2224d8b024409a304bab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5296988818168799839, guid: db7b73a6543a2224d8b024409a304bab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30283,6 +31068,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688925891091091787, guid: db7b73a6543a2224d8b024409a304bab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401117649672069383, guid: db7b73a6543a2224d8b024409a304bab,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db7b73a6543a2224d8b024409a304bab, type: 3}
@@ -30509,10 +31304,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -30738,10 +31543,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -30983,6 +31798,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -32075,6 +32900,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 4639278847537508794, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5424956408281100119, guid: bc5b5c74ff5a2944fb8984d0329d7578,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -32134,6 +32964,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_WeaponStand (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139700018005297165, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549825060487415497, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc5b5c74ff5a2944fb8984d0329d7578, type: 3}
@@ -34505,6 +35345,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!1001 &888187049
@@ -34919,6 +35769,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 512832187}
     m_Modifications:
+    - target: {fileID: 184206121677794693, guid: 3d3d255ab6b90b74ba69b3982a505832,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1680577734227684277, guid: 3d3d255ab6b90b74ba69b3982a505832,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -34978,6 +35833,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Bones_003 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491550685291422817, guid: 3d3d255ab6b90b74ba69b3982a505832,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622557479392646443, guid: 3d3d255ab6b90b74ba69b3982a505832,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d3d255ab6b90b74ba69b3982a505832, type: 3}
@@ -35531,6 +36396,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -36422,6 +37297,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (78)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!4 &938447495 stripped
@@ -36580,6 +37465,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (71)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -36962,6 +37857,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 4639278847537508794, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5424956408281100119, guid: bc5b5c74ff5a2944fb8984d0329d7578,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -37022,6 +37922,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_WeaponStand (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7139700018005297165, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549825060487415497, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc5b5c74ff5a2944fb8984d0329d7578, type: 3}
 --- !u!4 &959142456 stripped
@@ -37037,10 +37947,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -37172,6 +38092,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (63)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!4 &964266403 stripped
@@ -37193,10 +38123,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -37377,7 +38317,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &970550552
 Transform:
@@ -38100,10 +39040,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -38544,6 +39494,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 512832187}
     m_Modifications:
+    - target: {fileID: 4817367637356799439, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6046131713024384395, guid: a287b63384f9a9f48828a9751c08615e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -38603,6 +39558,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Bones_001 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896218029469944009, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176536158789691814, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a287b63384f9a9f48828a9751c08615e, type: 3}
@@ -39705,6 +40670,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 4639278847537508794, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5424956408281100119, guid: bc5b5c74ff5a2944fb8984d0329d7578,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -39764,6 +40734,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_WeaponStand (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139700018005297165, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549825060487415497, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc5b5c74ff5a2944fb8984d0329d7578, type: 3}
@@ -39889,7 +40869,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1063901582
 Transform:
@@ -39973,6 +40953,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 512832187}
     m_Modifications:
+    - target: {fileID: 4817367637356799439, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6046131713024384395, guid: a287b63384f9a9f48828a9751c08615e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -40032,6 +41017,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Bones_001 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896218029469944009, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176536158789691814, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a287b63384f9a9f48828a9751c08615e, type: 3}
@@ -40107,6 +41102,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -40378,6 +41383,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -41195,6 +42210,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (77)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!4 &1091434845 stripped
@@ -41390,6 +42415,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!1001 &1092340947
@@ -41579,6 +42614,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!1 &1100709386
@@ -41728,10 +42773,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -42225,6 +43280,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (53)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!4 &1118899400 stripped
@@ -42707,6 +43772,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (64)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!4 &1131895842 stripped
@@ -42999,6 +44074,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!1 &1144346222
@@ -43265,10 +44350,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -43340,6 +44435,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 4639278847537508794, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5424956408281100119, guid: bc5b5c74ff5a2944fb8984d0329d7578,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -43400,6 +44500,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_WeaponStand (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7139700018005297165, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549825060487415497, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc5b5c74ff5a2944fb8984d0329d7578, type: 3}
 --- !u!4 &1157186713 stripped
@@ -43425,7 +44535,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1159325876
 Transform:
@@ -43678,6 +44788,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -43976,6 +45096,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 512832187}
     m_Modifications:
+    - target: {fileID: 4817367637356799439, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6046131713024384395, guid: a287b63384f9a9f48828a9751c08615e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -44035,6 +45160,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Bones_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896218029469944009, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176536158789691814, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a287b63384f9a9f48828a9751c08615e, type: 3}
@@ -44110,6 +45245,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HellKit_Gear_003_Small
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985580369263409276, guid: c1eaf9872dd096c49a152856311d9e3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7751741836479171637, guid: c1eaf9872dd096c49a152856311d9e3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1eaf9872dd096c49a152856311d9e3c, type: 3}
@@ -44617,7 +45762,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1201915247
 Transform:
@@ -44901,10 +46046,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -45072,10 +46227,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -45285,6 +46450,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_DyingTree (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325833723438696971, guid: 4a58da9fc56d8574db79d74959e8078b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637531823111496560, guid: 4a58da9fc56d8574db79d74959e8078b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6209066647287676847, guid: 4a58da9fc56d8574db79d74959e8078b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6393703325823413943, guid: 4a58da9fc56d8574db79d74959e8078b,
         type: 3}
@@ -45988,10 +47168,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -46332,10 +47522,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -46695,6 +47895,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!1001 &1283567494
@@ -46763,6 +47973,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -46877,6 +48097,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_002_Large (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772787146213799707, guid: 04ddb81067eba754cb3f7ea9bf04037c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361068897936931957, guid: 04ddb81067eba754cb3f7ea9bf04037c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04ddb81067eba754cb3f7ea9bf04037c, type: 3}
@@ -47069,6 +48299,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!1001 &1315371991
@@ -47137,6 +48377,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (81)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -47303,6 +48553,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!4 &1323920252 stripped
@@ -47453,7 +48713,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1335250815
 Transform:
@@ -47644,7 +48904,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1337354904
 Transform:
@@ -48559,6 +49819,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (80)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!4 &1355462507 stripped
@@ -48976,6 +50246,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -49595,6 +50875,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -50318,6 +51608,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 512832187}
     m_Modifications:
+    - target: {fileID: 184206121677794693, guid: 3d3d255ab6b90b74ba69b3982a505832,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1680577734227684277, guid: 3d3d255ab6b90b74ba69b3982a505832,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -50377,6 +51672,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Bones_003 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491550685291422817, guid: 3d3d255ab6b90b74ba69b3982a505832,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622557479392646443, guid: 3d3d255ab6b90b74ba69b3982a505832,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d3d255ab6b90b74ba69b3982a505832, type: 3}
@@ -50651,6 +51956,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!1001 &1418460387
@@ -50664,6 +51979,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_DyingTree (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325833723438696971, guid: 4a58da9fc56d8574db79d74959e8078b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637531823111496560, guid: 4a58da9fc56d8574db79d74959e8078b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6209066647287676847, guid: 4a58da9fc56d8574db79d74959e8078b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6393703325823413943, guid: 4a58da9fc56d8574db79d74959e8078b,
         type: 3}
@@ -51032,6 +52362,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 512832187}
     m_Modifications:
+    - target: {fileID: 4817367637356799439, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6046131713024384395, guid: a287b63384f9a9f48828a9751c08615e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -51092,6 +52427,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Bones_001 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 7896218029469944009, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176536158789691814, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a287b63384f9a9f48828a9751c08615e, type: 3}
 --- !u!4 &1425329674 stripped
@@ -51107,10 +52452,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -51443,6 +52798,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -51986,6 +53351,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!1001 &1436542271
@@ -52054,6 +53429,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (68)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -52136,6 +53521,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Rock_003_Medium (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3334034398627507575, guid: 28969490a30ef2945863ffa5a5bdaf40,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623013413166538307, guid: 28969490a30ef2945863ffa5a5bdaf40,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28969490a30ef2945863ffa5a5bdaf40, type: 3}
 --- !u!4 &1440524566 stripped
@@ -52161,7 +53556,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1442259018
 Transform:
@@ -53134,6 +54529,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Rock_002_Large
       objectReference: {fileID: 0}
+    - target: {fileID: 2772787146213799707, guid: 04ddb81067eba754cb3f7ea9bf04037c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361068897936931957, guid: 04ddb81067eba754cb3f7ea9bf04037c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04ddb81067eba754cb3f7ea9bf04037c, type: 3}
 --- !u!4 &1466218133 stripped
@@ -53711,10 +55116,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -53846,6 +55261,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!1001 &1481529059
@@ -53966,10 +55391,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -54143,6 +55578,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 4639278847537508794, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5424956408281100119, guid: bc5b5c74ff5a2944fb8984d0329d7578,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -54202,6 +55642,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_WeaponStand (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139700018005297165, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549825060487415497, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc5b5c74ff5a2944fb8984d0329d7578, type: 3}
@@ -54348,6 +55798,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_DyingTree (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325833723438696971, guid: 4a58da9fc56d8574db79d74959e8078b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637531823111496560, guid: 4a58da9fc56d8574db79d74959e8078b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6209066647287676847, guid: 4a58da9fc56d8574db79d74959e8078b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6393703325823413943, guid: 4a58da9fc56d8574db79d74959e8078b,
         type: 3}
@@ -54503,6 +55968,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 512832187}
     m_Modifications:
+    - target: {fileID: 184206121677794693, guid: 3d3d255ab6b90b74ba69b3982a505832,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1680577734227684277, guid: 3d3d255ab6b90b74ba69b3982a505832,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -54562,6 +56032,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Bones_003 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2491550685291422817, guid: 3d3d255ab6b90b74ba69b3982a505832,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622557479392646443, guid: 3d3d255ab6b90b74ba69b3982a505832,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d3d255ab6b90b74ba69b3982a505832, type: 3}
@@ -55905,6 +57385,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!1001 &1543316997
@@ -55973,6 +57463,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_003_Medium
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334034398627507575, guid: 28969490a30ef2945863ffa5a5bdaf40,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623013413166538307, guid: 28969490a30ef2945863ffa5a5bdaf40,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28969490a30ef2945863ffa5a5bdaf40, type: 3}
@@ -56490,10 +57990,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -56630,6 +58140,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (66)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -57307,6 +58827,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!43 &1607874230
@@ -57623,6 +59153,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (87)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!4 &1613122006 stripped
@@ -57803,6 +59343,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!4 &1617828198 stripped
@@ -57877,6 +59427,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -58100,6 +59660,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!1001 &1625224894
@@ -58168,6 +59738,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (76)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -58375,10 +59955,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -58557,7 +60147,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1639137929
 Transform:
@@ -58799,6 +60389,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -59414,6 +61014,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Rock_002_Large (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2772787146213799707, guid: 04ddb81067eba754cb3f7ea9bf04037c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361068897936931957, guid: 04ddb81067eba754cb3f7ea9bf04037c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04ddb81067eba754cb3f7ea9bf04037c, type: 3}
 --- !u!4 &1671753640 stripped
@@ -59998,6 +61608,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Rock_002_Large (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2772787146213799707, guid: 04ddb81067eba754cb3f7ea9bf04037c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361068897936931957, guid: 04ddb81067eba754cb3f7ea9bf04037c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04ddb81067eba754cb3f7ea9bf04037c, type: 3}
 --- !u!4 &1687021311 stripped
@@ -60535,6 +62155,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!4 &1696371939 stripped
@@ -60910,6 +62540,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!4 &1706750309 stripped
@@ -61191,6 +62831,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (86)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!4 &1717928283 stripped
@@ -61404,6 +63054,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -61790,6 +63450,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_DyingTree (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3325833723438696971, guid: 4a58da9fc56d8574db79d74959e8078b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637531823111496560, guid: 4a58da9fc56d8574db79d74959e8078b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6209066647287676847, guid: 4a58da9fc56d8574db79d74959e8078b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6393703325823413943, guid: 4a58da9fc56d8574db79d74959e8078b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -62021,6 +63696,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 4639278847537508794, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5424956408281100119, guid: bc5b5c74ff5a2944fb8984d0329d7578,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -62080,6 +63760,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_WeaponStand (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139700018005297165, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549825060487415497, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc5b5c74ff5a2944fb8984d0329d7578, type: 3}
@@ -62429,6 +64119,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (69)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -64421,6 +66121,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (70)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!4 &1794363273 stripped
@@ -64436,10 +66146,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -64621,10 +66341,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -64904,6 +66634,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_DyingTree (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325833723438696971, guid: 4a58da9fc56d8574db79d74959e8078b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637531823111496560, guid: 4a58da9fc56d8574db79d74959e8078b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6209066647287676847, guid: 4a58da9fc56d8574db79d74959e8078b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6393703325823413943, guid: 4a58da9fc56d8574db79d74959e8078b,
         type: 3}
@@ -65239,6 +66984,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!1001 &1824165347
@@ -65307,6 +67062,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (74)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -65432,6 +67197,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -65968,7 +67743,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1851091363
 Transform:
@@ -66409,10 +68184,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -66494,7 +68279,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1860228539
 Transform:
@@ -66643,6 +68428,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -67431,6 +69226,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (79)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -68307,6 +70112,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!1001 &1911268809
@@ -68514,7 +70329,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1914521313
 Transform:
@@ -68753,6 +70568,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -69126,6 +70951,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (67)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!4 &1928647849 stripped
@@ -69272,6 +71107,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_DyingTree (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3325833723438696971, guid: 4a58da9fc56d8574db79d74959e8078b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637531823111496560, guid: 4a58da9fc56d8574db79d74959e8078b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6209066647287676847, guid: 4a58da9fc56d8574db79d74959e8078b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6393703325823413943, guid: 4a58da9fc56d8574db79d74959e8078b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -69402,6 +71252,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!1001 &1945482982
@@ -69470,6 +71330,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -70111,10 +71981,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -70689,6 +72569,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (59)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!4 &1983870313 stripped
@@ -70770,6 +72660,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (57)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!4 &1984656562 stripped
@@ -70785,6 +72685,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 512832187}
     m_Modifications:
+    - target: {fileID: 4817367637356799439, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6046131713024384395, guid: a287b63384f9a9f48828a9751c08615e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -70844,6 +72749,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Bones_001 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896218029469944009, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176536158789691814, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a287b63384f9a9f48828a9751c08615e, type: 3}
@@ -71615,6 +73530,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!4 &2007636291 stripped
@@ -71843,6 +73768,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -72384,6 +74319,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (72)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -72957,6 +74902,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 512832187}
     m_Modifications:
+    - target: {fileID: 4817367637356799439, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6046131713024384395, guid: a287b63384f9a9f48828a9751c08615e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -73016,6 +74966,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Bones_001 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896218029469944009, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176536158789691814, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a287b63384f9a9f48828a9751c08615e, type: 3}
@@ -73195,6 +75155,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 512832187}
     m_Modifications:
+    - target: {fileID: 4817367637356799439, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6046131713024384395, guid: a287b63384f9a9f48828a9751c08615e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -73254,6 +75219,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Bones_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896218029469944009, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176536158789691814, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a287b63384f9a9f48828a9751c08615e, type: 3}
@@ -73464,6 +75439,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 4639278847537508794, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5424956408281100119, guid: bc5b5c74ff5a2944fb8984d0329d7578,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -73523,6 +75503,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_WeaponStand (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139700018005297165, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549825060487415497, guid: bc5b5c74ff5a2944fb8984d0329d7578,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc5b5c74ff5a2944fb8984d0329d7578, type: 3}
@@ -73604,6 +75594,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (83)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -73826,10 +75826,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1335250815}
     m_Modifications:
+    - target: {fileID: 2285073239155771896, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_001_Small (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452060516165841080, guid: 42a5008f731d35940b464b5b75878047,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7655592021842354222, guid: 42a5008f731d35940b464b5b75878047,
         type: 3}
@@ -74280,6 +76290,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: SetDressing_Shrub (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
 --- !u!4 &2092210495 stripped
@@ -74673,6 +76693,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 512832187}
     m_Modifications:
+    - target: {fileID: 4817367637356799439, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6046131713024384395, guid: a287b63384f9a9f48828a9751c08615e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -74732,6 +76757,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Bones_001 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896218029469944009, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176536158789691814, guid: a287b63384f9a9f48828a9751c08615e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a287b63384f9a9f48828a9751c08615e, type: 3}
@@ -74906,6 +76941,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (84)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -76387,6 +78432,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: HellKit_Gear_003_Small (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4985580369263409276, guid: c1eaf9872dd096c49a152856311d9e3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7751741836479171637, guid: c1eaf9872dd096c49a152856311d9e3c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1eaf9872dd096c49a152856311d9e3c, type: 3}
 --- !u!4 &2130321356 stripped
@@ -76461,6 +78516,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Shrub (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5349259687579921822, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6516780988718006526, guid: 5b8f2664fadd2b04eb80c27ba0b1172e,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b8f2664fadd2b04eb80c27ba0b1172e, type: 3}
@@ -76634,6 +78699,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SetDressing_Rock_003_Medium (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334034398627507575, guid: 28969490a30ef2945863ffa5a5bdaf40,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623013413166538307, guid: 28969490a30ef2945863ffa5a5bdaf40,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28969490a30ef2945863ffa5a5bdaf40, type: 3}
