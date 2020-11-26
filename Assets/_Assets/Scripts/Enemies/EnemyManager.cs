@@ -108,6 +108,8 @@ public class EnemyManager : MonoBehaviour
 				agent.updateRotation = true;
 		}
 
+		// Resets enemies that have been ragdolling for long enough
+		// and returns them to the inactive pools
 		for (int i = 0; i < ragdollingEnemies.Count; i++)
 		{
 			GameObject enemy = ragdollingEnemies[i];
@@ -124,6 +126,7 @@ public class EnemyManager : MonoBehaviour
 			}
 		}
 		
+		// Clears old projectiles
 		for (int i = 0; i < akashitaProjectiles.Count; i++)
 			if (akashitaProjectiles[i].timeLeft <= 0)
 			{

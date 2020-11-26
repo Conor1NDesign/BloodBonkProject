@@ -15,7 +15,6 @@ public class ShutenDojiAI : EnemyAI
 
 	void Awake()
 	{
-		// Cache this GameObject's navmesh agent
 		agent = GetComponent<NavMeshAgent>();
 		audioSource = GetComponent<AudioSource>();
 		healthBar = GetComponentInChildren<HealthBar>();
@@ -23,6 +22,8 @@ public class ShutenDojiAI : EnemyAI
 		health = currentMaxHealth;
 		canvasObject = GetComponentInChildren<FollowCamera>().gameObject;
 		renderers = gameObject.GetComponentsInChildren<Renderer>();
+
+		// Caching ragdoll components
 		ragdollRbs = GetComponentsInChildren<Rigidbody>();
 		ragdollPositions = new Vector3[ragdollRbs.Length];
 		for (int i = 0; i < ragdollRbs.Length; i++)
@@ -45,6 +46,7 @@ public class ShutenDojiAI : EnemyAI
 			!dealtDamage &&
 			!ragdolling)
 		{
+			// Linecast along the bottle's path to detect hits
 			if (Physics.Linecast(bottlePosInitial, bottle.transform.position, LayerMask.GetMask("Player")))
 			{
 				player.GetComponent<PlayerStats>().TakeDamage(damage);
@@ -79,7 +81,6 @@ public class ShutenDojiAI : EnemyAI
 	{
 		if (timeToNextAttack <= 0.0f)
 		{
-			// Do the attacky thing
 			timeToNextAttack = timeBetweenAttacks;
 			agent.enabled = false;
 			dealtDamage = false;

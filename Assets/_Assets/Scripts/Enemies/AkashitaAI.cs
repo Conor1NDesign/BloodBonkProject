@@ -24,7 +24,7 @@ public class AkashitaAI : EnemyAI
 		{
 			if (!agent.enabled)
 			{
-				// Do the attacky thing
+				// Spawn a projectile and send it towards the palyer
 				AkashitaProjectile projectile = Instantiate(projectilePrefab, transform.position + transform.forward, transform.rotation).GetComponent<AkashitaProjectile>();
 				projectile.velocity = transform.forward * projectileSpeed;
 				projectile.damage = damage;
