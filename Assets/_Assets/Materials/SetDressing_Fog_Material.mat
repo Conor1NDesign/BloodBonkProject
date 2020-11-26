@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FogMaterial
+  m_Name: SetDressing_Fog_Material
   m_Shader: {fileID: -6465566751694194690, guid: 7dab5777fa35e944b8c0349562ca675f,
     type: 3}
   m_ShaderKeywords: 
