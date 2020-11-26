@@ -29,12 +29,14 @@ public class Weapon : MonoBehaviour
     CameraShake camShake;
     PlayerStats stats;
     PlayerMovement player;
+    Game gameManager;
 
     private void Awake()
     {
         player = FindObjectOfType<PlayerMovement>();
         camShake = FindObjectOfType<CameraShake>();
         stats = FindObjectOfType<PlayerStats>();
+        gameManager = FindObjectOfType<Game>();
 
         currentHardPointPos = new List<Vector3>();
         debugCurrentHardPointPos = new List<Vector3>();
@@ -64,14 +66,17 @@ public class Weapon : MonoBehaviour
     // Plays attacking animation
     void Attack()
     {
-        player.hasLunged = false;
-        isSwinging = true; // Enables animation in PlayerMovement script
+        if (!gameManager.isPaused)
+        {
+            player.hasLunged = false;
+            isSwinging = true; // Enables animation in PlayerMovement script
 
-        if (swingSound != null)
-            swingSound.Play();
+            if (swingSound != null)
+                swingSound.Play();
 
-        player.mouseInput = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-        player.posOnScreen = Camera.main.WorldToScreenPoint(player.transform.position);
+            player.mouseInput = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+            player.posOnScreen = Camera.main.WorldToScreenPoint(player.transform.position);
+        }
     }
 
     void OnDrawGizmos()

@@ -39,9 +39,9 @@ public class Game : MonoBehaviour
     [HideInInspector] public int lifeStolen;
     [HideInInspector] public int kills;
     int highscore;
-    
+
     // Pause Menu
-    bool isPaused = false;
+    [HideInInspector] public bool isPaused = false;
     [HideInInspector] public bool isDead = false;
 
     void Awake()
