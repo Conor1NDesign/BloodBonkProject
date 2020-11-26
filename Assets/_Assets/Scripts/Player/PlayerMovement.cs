@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Player Sounds")]
     public AudioSource deathSound;
     public AudioSource dashSound;
+	public AudioSource akashitaProjectileHitSound;
 
     bool playDashSound;
 
