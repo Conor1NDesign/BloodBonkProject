@@ -87,8 +87,13 @@ public class PlayerMovement : MonoBehaviour
         {
             if (!gameManager.isDead)
             {
-                // Get Player Input
-                input = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
+                input = new Vector3();
+
+                if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+                {
+                    // Get Player Input
+                    input = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical")).normalized;
+                }
             }
         }
         else if (weapon.isSwinging && !isAttacking)
