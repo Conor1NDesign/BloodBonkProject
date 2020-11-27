@@ -239,8 +239,8 @@ MonoBehaviour:
   timeBetweenAttacks: 5
   attackLength: 1.5
   distanceFromPlayer: 6
-  baseDamage: 30
-  damage: 30
+  baseDamage: 25
+  damage: 25
   staggerTime: 0.5
   currentStaggerTime: 0
   baseMaxHealth: 150
