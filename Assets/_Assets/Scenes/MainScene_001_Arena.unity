@@ -1456,8 +1456,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difficulty: 1
-  difficultyIncreasePerWave: 0.18
-  difficultyIncreasePerSecond: 0.015
+  difficultyIncreasePerWave: 0.15
+  difficultyIncreasePerSecond: 0.025
   distributeEnemiesEvenly: 1
   spawnPoints:
   - {fileID: 1002941920}
@@ -1480,7 +1480,7 @@ MonoBehaviour:
   - {fileID: 1420736033}
   baseWaveSize: 8
   waveSize: 0
-  maxWaveSize: 1000000
+  maxWaveSize: 30
   player: {fileID: 2010967849}
   akashitaPrefab: {fileID: 1403625688449953851, guid: 1a7ebc971c2212d498bde54361690fb9,
     type: 3}
